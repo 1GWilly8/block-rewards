@@ -9,7 +9,11 @@ gulp.task("build", function() {
 	// exec('rm dist/bundle.js')
 	// exec('touch dist/bundle.js')
     exec('browserify src/fauxIndex.js -o dist/bundle.js', function (err, stdout, stderr) {
-        console.log("bundle built");
+      if (err) {
+          console.log(err)
+        } else {
+          console.log("bundle built");
+        }
       });
 });
 

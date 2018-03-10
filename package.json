@@ -25,12 +25,15 @@
   },
   "homepage": "https://github.com/gayw18/block-rewards#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babelify": "^8.0.0",
     "browserify": "^15.2.0",
     "chai": "^4.1.2",
     "ethereum-console": "0.0.4",
     "ethereumjs-tx": "^1.3.3",
     "ethereumjs-wallet": "^0.6.0",
     "keythereum": "^1.0.2",
+    "mithril": "^1.1.6",
     "mocha": "^4.0.1",
     "requirejs": "^2.3.5",
     "sinon": "^4.1.2"
