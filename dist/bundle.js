@@ -53592,6 +53592,7 @@ module.exports={
 module.exports = XMLHttpRequest;
 
 },{}],295:[function(require,module,exports){
+(function (Buffer){
 // Home.js
 
 var ethUtil = require('ethereumjs-util')
@@ -53607,8 +53608,8 @@ var Accounts = require('web3-eth-accounts')
 
 var privKey = "829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706"
 var curNonce = "00"
-var curGasPrice = '1'
-var curGasLimit = '100'
+var curGasPrice = '20'
+var curGasLimit = '80'
 var contractAddr = '0x851312A022267E37f107a04818eBd20E98230485'
 var contractABI = '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"burn","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_value","type":"uint256"}],"name":"burnFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"initialSupply","type":"uint256"},{"name":"tokenName","type":"string"},{"name":"tokenSymbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burn","type":"event"}]'
 
@@ -53665,9 +53666,10 @@ var BlockRewards = {
           // EIP 155 chainId - mainnet: 1, ropsten: 3
           chainId: 3
         })
-      console.log("UNSIGNED", ethUtil.bufferToHex(tx))
-      tx.sign(ethUtil.toBuffer(privKey))
-      console.log("SIGNED", ethUtil.bufferToHex(tx))
+      console.log("UNSIGNED", tx)
+      var privateKey = new Buffer("829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706", 'hex')
+      tx.sign(privateKey)
+      console.log("SIGNED", tx)
       var raw = '0x' + tx.serialize().toString('hex')
 
       console.log("DATA: ", raw)
@@ -53749,7 +53751,8 @@ var BlockRewards = {
 };
 
 module.exports = BlockRewards
-},{"bs58check":52,"crypto":351,"ethereumjs-tx":129,"ethereumjs-util":131,"ethereumjs-wallet":132,"rlp":193,"scrypt.js":195,"uuid":215,"web3":242,"web3-eth-accounts":231}],296:[function(require,module,exports){
+}).call(this,require("buffer").Buffer)
+},{"bs58check":52,"buffer":342,"crypto":351,"ethereumjs-tx":129,"ethereumjs-util":131,"ethereumjs-wallet":132,"rlp":193,"scrypt.js":195,"uuid":215,"web3":242,"web3-eth-accounts":231}],296:[function(require,module,exports){
 var blckR = require('./Home.js')
 var m = require("mithril")
 var Web3 = require('web3')
