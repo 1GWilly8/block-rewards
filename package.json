@@ -36,7 +36,8 @@
     "mithril": "^1.1.6",
     "mocha": "^4.0.1",
     "requirejs": "^2.3.5",
-    "sinon": "^4.1.2"
+    "sinon": "^4.1.2",
+    "web3-eth-accounts": "^1.0.0-beta.31"
   },
   "devDependencies": {
     "connect": "^3.6.5",
