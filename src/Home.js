@@ -1,5 +1,4 @@
 // Home.js
-
 var ethUtil = require('ethereumjs-util')
 var ethWallet = require('ethereumjs-wallet')
 var crypto = require('crypto')
@@ -76,38 +75,25 @@ var BlockRewards = {
     // 
     giveFunds: function(toAddress, amount) {
       var data = abi.simpleEncode('transfer(address,uint256)', '0xaC3Fea682D63E3dDAb07e66b84061A29DF510Ca1', '5000000000000000000' ).toString('hex')
-      
-      var tx = this.createTx(contractAddr, 0.0001, data)
-
+      var tx = this.createTx(contractAddr, 0.0, data)
       this.publishTx(tx)
-      // curNonce++
     },
 
-    // sendFunds: function() 
-    //     const tx = new EthereumTx(txParams)
-    //     tx.sign(privKey)
-    //     const serializedTx = tx.serialize()const tx = new EthereumTx(txParams)
-    //     tx.sign(privKey)
-    //     const serializedTx = tx.serialize()
-
-    //     const serializedTx = tx.serialize();
-    //     const rawTx = '0x' + serializedTx.toString('hex');
-    //     console.log(rawTx)
-
-    //     web3.transferToAddress()
-    //   },
+    sendFunds: function(amount, privateKey = privKey, address = pubKey) {
+      if (privateKey !== privKey) {
+        privateKey = new Buffer(privateKey, 'hex')
+      }
+      console.log("ADDRRESS", address)
+      var data = abi.simpleEncode('transfer(address,uint256)', address, amount).toString('hex')
+      var tx = this.createTx(contractAddr, 0.0, data, privateKey, address)
+      this.publishTx(tx)
+    },
 
     publishTx: function(TX) {
-
-      
-
       web3.eth.sendRawTransaction(TX, (err, hash) => {
           if (err) { console.log(err); return; }
           console.log('tx hash: ' + hash);
-      });
-      // var txPak = EthereumTx.Transaction(TX)
-      // console.log(txPak)
-      // nonce++
+      })
     }
     // currencySwap: function () {}
     // checkPrice: function () {}

@@ -8,7 +8,7 @@ const serveStatic = require('serve-static');
 gulp.task("build", function() {
 	// exec('rm dist/bundle.js')
 	// exec('touch dist/bundle.js')
-    exec('browserify src/fauxIndex.js -o dist/bundle.js', function (err, stdout, stderr) {
+    exec('browserify src/index.js -o dist/bundle.js', function (err, stdout, stderr) {
       if (err) {
           console.log(err)
         } else {

@@ -1,44 +1,32 @@
+var blckR = require('./Home.js')
+var m = require("mithril")
+var Web3 = require('web3')
+var builder = require('./ContractMaker.js')
 
-// Defines a module that works in Node and AMD.
 
-// This version can be used as common boilerplate for a library module
-// that you only want to expose to Node and AMD loaders. It will not work
-// well for defining browser globals.
+const web3 = new Web3()
 
-// If you need a version of this file that works CommonJS-like environments
-// that do not support module.exports or if you want to define a module
-// with a circular dependency, see commonjsAdapter.js
 
-// (function(define) {
-
-//     define(function (require, exports, module) {
-//         var b = require('b'); //include wallet & dependancies here
-//         var ethUtil = require('ethereumjs-util');
-//         var crypto = require('crypto');
-//         var scryptsy = require('scrypt.js');
-//         var uuid = require('uuid');
-//         var bs58check = require('bs58check');
-//         var Web3 = require('web3');
-
-//         var BlockRewards = {
-//             // startWallet: function() {}
-// 	        generateWallet: function(password, salt) {
-//                 var combined = password + salt
-//                 console.log(ethUtil.sha3(combined)) 
-//             }
-// 	        // migrateWallet: function () {}
-// 	        // sendFunds: function () {}
-// 	        // currencySwap: function () {}
-// 	        // checkPrice: function () {}
-        	
-//         };
-
-//         return BlockRewards;
-//     });
-
+// var test = function() {
+// 	console.log("Running test")
+// 	blckR.generateWallet("hello", "0xeuh43982")
 // }
-// ( // Help Node out by setting up define.
-//     typeof module === 'object' && module.exports && typeof define !== 'function' ?
-//     function (factory) { module.exports = factory(require, exports, module); } :
-//     define
-// ));
+
+// test()
+
+var root = document.body
+
+m.render(root, [
+	m("button",
+	{onclick:() => {blckR.giveFunds("aC3Fea682D63E3dDAb07e66b84061A29DF510Ca1", 5)}},
+	"Give Away My Money!"),
+
+	m("button",
+	{onclick:() => {builder.build(12, "mncvr", "∆", 0)}},
+	"Make My Money!"),
+
+	m("button",
+	{onclick:() => {blckR.sendFunds('500000000000000000', 'c3a3ac8e011f2e0674bce1f3a9feeb39d7893a44fb21b060e1fd0b36dbe6748e', '0x50089de735D7cecc8499666d0645EF6E3c837435')}},
+	"Send from acct #2")
+	
+	])
