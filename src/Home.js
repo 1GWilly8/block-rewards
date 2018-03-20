@@ -10,16 +10,42 @@ var Web3 = require('web3')
 const EthereumTx = require('ethereumjs-tx')
 var rlp = require('rlp')
 var Accounts = require('web3-eth-accounts')
+var Contract = require('web3-eth-contract')
+var abi = require('ethereumjs-abi')
 
 var privKey = "829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706"
-var curNonce = "00"
-var curGasPrice = '20'
-var curGasLimit = '150'
+var curNonce = "0x12"
+var curGasPrice = '0x2000000000000'
+var curGasLimit = '0x5a000'
 var contractAddr = '0x851312A022267E37f107a04818eBd20E98230485'
 var contractABI = '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"burn","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_value","type":"uint256"}],"name":"burnFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"initialSupply","type":"uint256"},{"name":"tokenName","type":"string"},{"name":"tokenSymbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burn","type":"event"}]'
 
+const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 var accounts = new Accounts()
 
+// web3.setProvider(new web3.providers.HttpProvider('http://127.0.0.1:8545/'));
+console.log(web3)
+
+// const contract = new self.web3.eth.Contract(contractABI, contractAddr)
+// console.log("CONTRACTT", contract)
+
+var bigNum0 = web3.toBigNumber('0x05')
+var bigNum1 = web3.toBigNumber('0xaC3Fea682D63E3dDAb07e66b84061A29DF510Ca1')
+var data1 =  abi.simpleEncode('transfer(address,uint256)', '0xaC3Fea682D63E3dDAb07e66b84061A29DF510Ca1', '50000000000000' ).toString('hex')
+
+var acc = accounts.privateKeyToAccount('829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706');
+console.log("ACCOUNT", accounts)
+console.log("ACC", acc)
+
+
+
+var block = web3.eth.getBlock("latest");
+console.log("lBLOCK", block)
+// console.log("gasLimit: " + block.gasLimit);
+// curGasLimit = block.gasLimit
+// web3.eth.getGasPrice(function(e,r){
+//   curGasPrice = r.c[0]
+// })
 
 var BlockRewards = {
     // startWallet: function() {}
@@ -56,6 +82,7 @@ var BlockRewards = {
       console.log(funcCall.toString('hex'))
       fullData = "0x" + funcCall.toString('hex') + toAddress + "0000000000000000000000000000000000000000000000000000000000000005"
       
+      console.log("GAS: ", fullData)
       var contract = web3.eth.contract(contractABI, contractAddr)
       // var contractInstance = contract.at(contractAddr)
       // console.log("CONTRACT OBJ: ", contract)
@@ -66,18 +93,25 @@ var BlockRewards = {
           gasPrice: curGasPrice, 
           gasLimit: curGasLimit,
           to: contractAddr,
-          value: "00", 
-          data: fullData,
+          value: "0x01", 
+          data: '0x' + data1,
           // EIP 155 chainId - mainnet: 1, ropsten: 3
           chainId: 3
         })
-      console.log("UNSIGNED", tx)
-      var privateKey = new Buffer("829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706", 'hex')
+      var privateKey = new Buffer(privKey, 'hex')
       tx.sign(privateKey)
-      console.log("SIGNED", tx)
       var raw = '0x' + tx.serialize().toString('hex')
 
-      console.log("DATA: ", raw)
+      console.log("RAWW!!!", raw)
+
+      web3.eth.sendRawTransaction(raw, (err, hash) => {
+          if (err) { console.log(err); return; }
+
+          // Log the tx, you can explore status manually with eth.getTransaction()
+          console.log('tx hash: ' + hash);
+      });
+
+      curNonce++
 
       // console.log(fullData)
       // const txParams = {
