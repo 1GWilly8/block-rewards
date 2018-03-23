@@ -5,16 +5,19 @@ const http = require('http');
 const connect = require('connect');
 const serveStatic = require('serve-static');
 
-gulp.task("build", function() {
+gulp.task("build", function(done) {
 	// exec('rm dist/bundle.js')
 	// exec('touch dist/bundle.js')
     exec('browserify src/index.js -o dist/bundle.js', function (err, stdout, stderr) {
       if (err) {
           console.log(err)
+          done()
         } else {
           console.log("bundle built");
+          done()
         }
       });
+
 });
 
 gulp.task("watch", function() {
@@ -35,3 +38,28 @@ gulp.task('http', (done) => {
 // geth --rpc --rpccorsdomain "*" --light --testnet
 // parity --chain=ropsten --light --rpccorsdomain "*" -lrpc=trace
 
+// require('./src/exec');
+// require('./src/cd');
+// require('./src/chmod');
+// require('./src/cp');
+// require('./src/dirs');
+// require('./src/echo');
+// require('./src/find');
+// require('./src/grep');
+// require('./src/head');
+// require('./src/ln');
+// require('./src/ls');
+// require('./src/mkdir');
+// require('./src/mv');
+// require('./src/pwd');
+// require('./src/rm');
+// require('./src/sed');
+// require('./src/set');
+// require('./src/sort');
+// require('./src/tail');
+// require('./src/tempdir');
+// require('./src/test');
+// require('./src/to');
+// require('./src/toEnd');
+// require('./src/touch');
+// require('./src/uniq');

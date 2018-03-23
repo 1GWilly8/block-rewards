@@ -2479,7 +2479,7 @@ module.exports = {
     isJson: isJson
 };
 
-},{"./sha3.js":20,"bignumber.js":68,"utf8":264}],22:[function(require,module,exports){
+},{"./sha3.js":20,"bignumber.js":68,"utf8":290}],22:[function(require,module,exports){
 module.exports={
     "version": "0.15.3"
 }
@@ -6594,7 +6594,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":53,"inherits":203,"vm":508}],55:[function(require,module,exports){
+},{"../asn1":53,"inherits":203,"vm":524}],55:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -6712,7 +6712,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":56,"buffer":407,"inherits":203}],56:[function(require,module,exports){
+},{"../base":56,"buffer":421,"inherits":203}],56:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -7927,7 +7927,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"./der":61,"buffer":407,"inherits":203}],64:[function(require,module,exports){
+},{"./der":61,"buffer":421,"inherits":203}],64:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -8224,7 +8224,7 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":53,"buffer":407,"inherits":203}],65:[function(require,module,exports){
+},{"../../asn1":53,"buffer":421,"inherits":203}],65:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
@@ -11027,7 +11027,7 @@ module.exports = function base (ALPHABET) {
     }
 })(this);
 
-},{"crypto":416}],69:[function(require,module,exports){
+},{"crypto":430}],69:[function(require,module,exports){
 // Reference https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki
 // Format: 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S]
 // NOTE: SIGHASH byte ignored AND restricted, truncate before use
@@ -14571,7 +14571,7 @@ module.exports = {
   };
 })(typeof module === 'undefined' || module, this);
 
-},{"buffer":380}],71:[function(require,module,exports){
+},{"buffer":394}],71:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -14638,7 +14638,7 @@ if (typeof self === 'object') {
   }
 }
 
-},{"crypto":380}],72:[function(require,module,exports){
+},{"crypto":394}],72:[function(require,module,exports){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
 // which is in turn based on the one from crypto-js
@@ -15748,7 +15748,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"buffer-xor":102}],88:[function(require,module,exports){
+},{"buffer":421,"buffer-xor":102}],88:[function(require,module,exports){
 var aes = require('./aes')
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('cipher-base')
@@ -15899,7 +15899,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"cipher-base":103,"des.js":145,"inherits":203}],91:[function(require,module,exports){
+},{"buffer":421,"cipher-base":103,"des.js":145,"inherits":203}],91:[function(require,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -15969,7 +15969,7 @@ function getr(priv) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":70,"buffer":407,"randombytes":238}],93:[function(require,module,exports){
+},{"bn.js":70,"buffer":421,"randombytes":238}],93:[function(require,module,exports){
 (function (Buffer){
 const Sha3 = require('js-sha3')
 
@@ -16007,7 +16007,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"js-sha3":205}],94:[function(require,module,exports){
+},{"buffer":421,"js-sha3":205}],94:[function(require,module,exports){
 module.exports = require('./browser/algorithms.json')
 
 },{"./browser/algorithms.json":95}],95:[function(require,module,exports){
@@ -16269,7 +16269,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algorithms.json":95,"./sign":98,"./verify":99,"buffer":407,"create-hash":105,"inherits":203,"stream":502}],98:[function(require,module,exports){
+},{"./algorithms.json":95,"./sign":98,"./verify":99,"buffer":421,"create-hash":105,"inherits":203,"stream":518}],98:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -16418,7 +16418,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":96,"bn.js":70,"browserify-rsa":92,"buffer":407,"create-hmac":108,"elliptic":155,"parse-asn1":226}],99:[function(require,module,exports){
+},{"./curves.json":96,"bn.js":70,"browserify-rsa":92,"buffer":421,"create-hmac":108,"elliptic":155,"parse-asn1":226}],99:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var BN = require('bn.js')
@@ -16505,7 +16505,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":96,"bn.js":70,"buffer":407,"elliptic":155,"parse-asn1":226}],100:[function(require,module,exports){
+},{"./curves.json":96,"bn.js":70,"buffer":421,"elliptic":155,"parse-asn1":226}],100:[function(require,module,exports){
 var basex = require('base-x')
 var ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
@@ -16574,7 +16574,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bs58":100,"buffer":407,"create-hash":105}],102:[function(require,module,exports){
+},{"bs58":100,"buffer":421,"create-hash":105}],102:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -16588,7 +16588,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],103:[function(require,module,exports){
+},{"buffer":421}],103:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
 var StringDecoder = require('string_decoder').StringDecoder
@@ -16689,7 +16689,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 
 module.exports = CipherBase
 
-},{"inherits":203,"safe-buffer":245,"stream":502,"string_decoder":503}],104:[function(require,module,exports){
+},{"inherits":203,"safe-buffer":245,"stream":518,"string_decoder":519}],104:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -16815,7 +16815,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":70,"buffer":407,"elliptic":155}],105:[function(require,module,exports){
+},{"bn.js":70,"buffer":421,"elliptic":155}],105:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -16871,7 +16871,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":107,"buffer":407,"cipher-base":103,"inherits":203,"ripemd160":243,"sha.js":255}],106:[function(require,module,exports){
+},{"./md5":107,"buffer":421,"cipher-base":103,"inherits":203,"ripemd160":243,"sha.js":255}],106:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var intSize = 4
@@ -16905,7 +16905,7 @@ module.exports = function hash (buf, fn) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],107:[function(require,module,exports){
+},{"buffer":421}],107:[function(require,module,exports){
 'use strict'
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -24601,7 +24601,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/dh":152,"./lib/generatePrime":153,"./lib/primes.json":154,"buffer":407}],152:[function(require,module,exports){
+},{"./lib/dh":152,"./lib/generatePrime":153,"./lib/primes.json":154,"buffer":421}],152:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -24769,7 +24769,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":153,"bn.js":70,"buffer":407,"miller-rabin":215,"randombytes":238}],153:[function(require,module,exports){
+},{"./generatePrime":153,"bn.js":70,"buffer":421,"miller-rabin":215,"randombytes":238}],153:[function(require,module,exports){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -28939,7 +28939,7 @@ module.exports = {
   decodeSignature: decodeSignature
 };
 }).call(this,require("buffer").Buffer)
-},{"./bytes":173,"./hash":174,"./nat":175,"./rlp":176,"buffer":407,"elliptic":155}],172:[function(require,module,exports){
+},{"./bytes":173,"./hash":174,"./nat":175,"./rlp":176,"buffer":421,"elliptic":155}],172:[function(require,module,exports){
 var generate = function generate(num, fn) {
   var a = [];
   for (var i = 0; i < num; ++i) {
@@ -30449,7 +30449,7 @@ ABI.toSerpent = function (types) {
 module.exports = ABI
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":70,"buffer":407,"ethereumjs-util":182}],180:[function(require,module,exports){
+},{"bn.js":70,"buffer":421,"ethereumjs-util":182}],180:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -30777,7 +30777,7 @@ var Transaction = function () {
 
 module.exports = Transaction;
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"ethereum-common/params.json":177,"ethereumjs-util":181}],181:[function(require,module,exports){
+},{"buffer":421,"ethereum-common/params.json":177,"ethereumjs-util":181}],181:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -31470,7 +31470,7 @@ exports.defineProperties = function (self, fields, data) {
     }
   }
 };
-},{"assert":376,"bn.js":70,"create-hash":105,"ethjs-util":186,"keccak":206,"rlp":244,"safe-buffer":245,"secp256k1":248}],182:[function(require,module,exports){
+},{"assert":390,"bn.js":70,"create-hash":105,"ethjs-util":186,"keccak":206,"rlp":244,"safe-buffer":245,"secp256k1":248}],182:[function(require,module,exports){
 (function (Buffer){
 const SHA3 = require('keccakjs')
 const secp256k1 = require('secp256k1')
@@ -32175,7 +32175,7 @@ exports.defineProperties = function (self, fields, data) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"assert":376,"bn.js":70,"buffer":407,"create-hash":105,"keccakjs":212,"rlp":244,"secp256k1":248}],183:[function(require,module,exports){
+},{"assert":390,"bn.js":70,"buffer":421,"create-hash":105,"keccakjs":212,"rlp":244,"secp256k1":248}],183:[function(require,module,exports){
 (function (Buffer){
 var ethUtil = require('ethereumjs-util')
 var crypto = require('crypto')
@@ -32472,7 +32472,7 @@ Wallet.fromEthSale = function (input, password) {
 module.exports = Wallet
 
 }).call(this,require("buffer").Buffer)
-},{"bs58check":101,"buffer":407,"crypto":416,"ethereumjs-util":182,"scrypt.js":246,"uuid":266}],184:[function(require,module,exports){
+},{"bs58check":101,"buffer":421,"crypto":430,"ethereumjs-util":182,"scrypt.js":246,"uuid":292}],184:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -36293,7 +36293,7 @@ module.exports = {
   isHexString: isHexString
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"is-hex-prefixed":204,"strip-hex-prefix":262}],187:[function(require,module,exports){
+},{"buffer":421,"is-hex-prefixed":204,"strip-hex-prefix":288}],187:[function(require,module,exports){
 'use strict';
 
 //
@@ -36691,7 +36691,7 @@ HashBase.prototype._digest = function () {
 module.exports = HashBase
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"inherits":203,"stream":502}],190:[function(require,module,exports){
+},{"buffer":421,"inherits":203,"stream":518}],190:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -38610,7 +38610,7 @@ module.exports = function (KeccakState) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"inherits":203,"stream":502}],209:[function(require,module,exports){
+},{"buffer":421,"inherits":203,"stream":518}],209:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var Transform = require('stream').Transform
@@ -38688,7 +38688,7 @@ module.exports = function (KeccakState) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"inherits":203,"stream":502}],210:[function(require,module,exports){
+},{"buffer":421,"inherits":203,"stream":518}],210:[function(require,module,exports){
 'use strict'
 var P1600_ROUND_CONSTANTS = [1, 0, 32898, 0, 32906, 2147483648, 2147516416, 2147483648, 32907, 0, 2147483649, 0, 2147516545, 2147483648, 32777, 2147483648, 138, 0, 136, 0, 2147516425, 0, 2147483658, 0, 2147516555, 0, 139, 2147483648, 32905, 2147483648, 32771, 2147483648, 32770, 2147483648, 128, 2147483648, 32778, 0, 2147483658, 2147483648, 2147516545, 2147483648, 32896, 2147483648, 2147483649, 0, 2147516424, 2147483648]
 
@@ -38950,7 +38950,7 @@ Keccak.prototype.copy = function (dest) {
 module.exports = Keccak
 
 }).call(this,require("buffer").Buffer)
-},{"./keccak-state-unroll":210,"buffer":407}],212:[function(require,module,exports){
+},{"./keccak-state-unroll":210,"buffer":421}],212:[function(require,module,exports){
 module.exports = require('browserify-sha3').SHA3Hash
 
 },{"browserify-sha3":93}],213:[function(require,module,exports){
@@ -39102,7 +39102,7 @@ function fnI (a, b, c, d, m, k, s) {
 module.exports = MD5
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"hash-base":214,"inherits":203}],214:[function(require,module,exports){
+},{"buffer":421,"hash-base":214,"inherits":203}],214:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -39199,7 +39199,7 @@ HashBase.prototype._digest = function () {
 
 module.exports = HashBase
 
-},{"inherits":203,"safe-buffer":245,"stream":502}],215:[function(require,module,exports){
+},{"inherits":203,"safe-buffer":245,"stream":518}],215:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -40691,7 +40691,7 @@ module.exports = function numberToBN(arg) {
   throw new Error('[number-to-bn] while converting number ' + JSON.stringify(arg) + ' to BN.js instance, error: invalid number value. Value must be an integer, hex string, BN or BigNumber instance. Note, decimals are not supported.');
 }
 
-},{"bn.js":219,"strip-hex-prefix":262}],221:[function(require,module,exports){
+},{"bn.js":219,"strip-hex-prefix":288}],221:[function(require,module,exports){
 // This file is the concatenation of many js files.
 // See http://github.com/jimhigson/oboe.js for the raw source
 
@@ -43657,7 +43657,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"browserify-aes":74,"buffer":407,"evp_bytestokey":188}],226:[function(require,module,exports){
+},{"browserify-aes":74,"buffer":421,"evp_bytestokey":188}],226:[function(require,module,exports){
 (function (Buffer){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -43767,7 +43767,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":222,"./asn1":223,"./fixProc":225,"browserify-aes":74,"buffer":407,"pbkdf2":227}],227:[function(require,module,exports){
+},{"./aesid.json":222,"./asn1":223,"./fixProc":225,"browserify-aes":74,"buffer":421,"pbkdf2":227}],227:[function(require,module,exports){
 
 exports.pbkdf2 = require('./lib/async')
 
@@ -43875,7 +43875,7 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./default-encoding":229,"./precondition":230,"./sync":231,"_process":472,"safe-buffer":245}],229:[function(require,module,exports){
+},{"./default-encoding":229,"./precondition":230,"./sync":231,"_process":488,"safe-buffer":245}],229:[function(require,module,exports){
 (function (process){
 var defaultEncoding
 /* istanbul ignore next */
@@ -43889,7 +43889,7 @@ if (process.browser) {
 module.exports = defaultEncoding
 
 }).call(this,require('_process'))
-},{"_process":472}],230:[function(require,module,exports){
+},{"_process":488}],230:[function(require,module,exports){
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
 module.exports = function (iterations, keylen) {
   if (typeof iterations !== 'number') {
@@ -44042,7 +44042,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"create-hash":105}],234:[function(require,module,exports){
+},{"buffer":421,"create-hash":105}],234:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -44153,7 +44153,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":233,"./withPublic":236,"./xor":237,"bn.js":70,"browserify-rsa":92,"buffer":407,"create-hash":105,"parse-asn1":226}],235:[function(require,module,exports){
+},{"./mgf":233,"./withPublic":236,"./xor":237,"bn.js":70,"browserify-rsa":92,"buffer":421,"create-hash":105,"parse-asn1":226}],235:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -44251,7 +44251,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":233,"./withPublic":236,"./xor":237,"bn.js":70,"browserify-rsa":92,"buffer":407,"create-hash":105,"parse-asn1":226,"randombytes":238}],236:[function(require,module,exports){
+},{"./mgf":233,"./withPublic":236,"./xor":237,"bn.js":70,"browserify-rsa":92,"buffer":421,"create-hash":105,"parse-asn1":226,"randombytes":238}],236:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -44264,7 +44264,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
-},{"bn.js":70,"buffer":407}],237:[function(require,module,exports){
+},{"bn.js":70,"buffer":421}],237:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -44315,7 +44315,7 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":472,"safe-buffer":245}],239:[function(require,module,exports){
+},{"_process":488,"safe-buffer":245}],239:[function(require,module,exports){
 (function (process,global){
 'use strict'
 
@@ -44427,7 +44427,7 @@ function randomFillSync (buf, offset, size) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":472,"randombytes":238,"safe-buffer":245}],240:[function(require,module,exports){
+},{"_process":488,"randombytes":238,"safe-buffer":245}],240:[function(require,module,exports){
 module.exports = window.crypto;
 },{}],241:[function(require,module,exports){
 module.exports = require('crypto');
@@ -44792,7 +44792,7 @@ function fn5 (a, b, c, d, e, m, k, s) {
 module.exports = RIPEMD160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"hash-base":189,"inherits":203}],244:[function(require,module,exports){
+},{"buffer":421,"hash-base":189,"inherits":203}],244:[function(require,module,exports){
 (function (Buffer){
 const assert = require('assert')
 /**
@@ -45025,7 +45025,7 @@ function toBuffer (v) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"assert":376,"buffer":407}],245:[function(require,module,exports){
+},{"assert":390,"buffer":421}],245:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -45089,7 +45089,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":407}],246:[function(require,module,exports){
+},{"buffer":421}],246:[function(require,module,exports){
 module.exports = require('scryptsy')
 
 },{"scryptsy":247}],247:[function(require,module,exports){
@@ -45275,7 +45275,7 @@ function arraycopy (src, srcPos, dest, destPos, length) {
 module.exports = scrypt
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"pbkdf2":227}],248:[function(require,module,exports){
+},{"buffer":421,"pbkdf2":227}],248:[function(require,module,exports){
 'use strict'
 module.exports = require('./lib')(require('./lib/elliptic'))
 
@@ -45327,7 +45327,7 @@ exports.isNumberInInterval = function (number, x, y, message) {
 }
 
 }).call(this,{"isBuffer":require("../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":456}],250:[function(require,module,exports){
+},{"../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":470}],250:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var bip66 = require('bip66')
@@ -46854,6 +46854,2670 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 },{"./hash":254,"inherits":203,"safe-buffer":245}],262:[function(require,module,exports){
+(function (process){
+//
+// ShellJS
+// Unix shell commands on top of Node's API
+//
+// Copyright (c) 2012 Artur Adib
+// http://github.com/arturadib/shelljs
+//
+
+var common = require('./src/common');
+
+
+//@
+//@ All commands run synchronously, unless otherwise stated.
+//@
+
+//@include ./src/cd
+var _cd = require('./src/cd');
+exports.cd = common.wrap('cd', _cd);
+
+//@include ./src/pwd
+var _pwd = require('./src/pwd');
+exports.pwd = common.wrap('pwd', _pwd);
+
+//@include ./src/ls
+var _ls = require('./src/ls');
+exports.ls = common.wrap('ls', _ls);
+
+//@include ./src/find
+var _find = require('./src/find');
+exports.find = common.wrap('find', _find);
+
+//@include ./src/cp
+var _cp = require('./src/cp');
+exports.cp = common.wrap('cp', _cp);
+
+//@include ./src/rm
+var _rm = require('./src/rm');
+exports.rm = common.wrap('rm', _rm);
+
+//@include ./src/mv
+var _mv = require('./src/mv');
+exports.mv = common.wrap('mv', _mv);
+
+//@include ./src/mkdir
+var _mkdir = require('./src/mkdir');
+exports.mkdir = common.wrap('mkdir', _mkdir);
+
+//@include ./src/test
+var _test = require('./src/test');
+exports.test = common.wrap('test', _test);
+
+//@include ./src/cat
+var _cat = require('./src/cat');
+exports.cat = common.wrap('cat', _cat);
+
+//@include ./src/to
+var _to = require('./src/to');
+String.prototype.to = common.wrap('to', _to);
+
+//@include ./src/toEnd
+var _toEnd = require('./src/toEnd');
+String.prototype.toEnd = common.wrap('toEnd', _toEnd);
+
+//@include ./src/sed
+var _sed = require('./src/sed');
+exports.sed = common.wrap('sed', _sed);
+
+//@include ./src/grep
+var _grep = require('./src/grep');
+exports.grep = common.wrap('grep', _grep);
+
+//@include ./src/which
+var _which = require('./src/which');
+exports.which = common.wrap('which', _which);
+
+//@include ./src/echo
+var _echo = require('./src/echo');
+exports.echo = _echo; // don't common.wrap() as it could parse '-options'
+
+//@include ./src/dirs
+var _dirs = require('./src/dirs').dirs;
+exports.dirs = common.wrap("dirs", _dirs);
+var _pushd = require('./src/dirs').pushd;
+exports.pushd = common.wrap('pushd', _pushd);
+var _popd = require('./src/dirs').popd;
+exports.popd = common.wrap("popd", _popd);
+
+//@include ./src/ln
+var _ln = require('./src/ln');
+exports.ln = common.wrap('ln', _ln);
+
+//@
+//@ ### exit(code)
+//@ Exits the current process with the given exit code.
+exports.exit = process.exit;
+
+//@
+//@ ### env['VAR_NAME']
+//@ Object containing environment variables (both getter and setter). Shortcut to process.env.
+exports.env = process.env;
+
+//@include ./src/exec
+var _exec = require('./src/exec');
+exports.exec = common.wrap('exec', _exec, {notUnix:true});
+
+//@include ./src/chmod
+var _chmod = require('./src/chmod');
+exports.chmod = common.wrap('chmod', _chmod);
+
+//@include ./src/touch
+var _touch = require('./src/touch');
+exports.touch = common.wrap('touch', _touch);
+
+//@include ./src/set
+var _set = require('./src/set');
+exports.set = common.wrap('set', _set);
+
+
+//@
+//@ ## Non-Unix commands
+//@
+
+//@include ./src/tempdir
+var _tempDir = require('./src/tempdir');
+exports.tempdir = common.wrap('tempdir', _tempDir);
+
+
+//@include ./src/error
+var _error = require('./src/error');
+exports.error = _error;
+
+
+
+//@
+//@ ## Configuration
+//@
+
+exports.config = common.config;
+
+//@
+//@ ### config.silent
+//@ Example:
+//@
+//@ ```javascript
+//@ var sh = require('shelljs');
+//@ var silentState = sh.config.silent; // save old silent state
+//@ sh.config.silent = true;
+//@ /* ... */
+//@ sh.config.silent = silentState; // restore old silent state
+//@ ```
+//@
+//@ Suppresses all command output if `true`, except for `echo()` calls.
+//@ Default is `false`.
+
+//@
+//@ ### config.fatal
+//@ Example:
+//@
+//@ ```javascript
+//@ require('shelljs/global');
+//@ config.fatal = true; // or set('-e');
+//@ cp('this_file_does_not_exist', '/dev/null'); // dies here
+//@ /* more commands... */
+//@ ```
+//@
+//@ If `true` the script will die on errors. Default is `false`. This is
+//@ analogous to Bash's `set -e`
+
+//@
+//@ ### config.verbose
+//@ Example:
+//@
+//@ ```javascript
+//@ config.verbose = true; // or set('-v');
+//@ cd('dir/');
+//@ ls('subdir/');
+//@ ```
+//@
+//@ Will print each command as follows:
+//@
+//@ ```
+//@ cd dir/
+//@ ls subdir/
+//@ ```
+
+}).call(this,require('_process'))
+},{"./src/cat":263,"./src/cd":264,"./src/chmod":265,"./src/common":266,"./src/cp":267,"./src/dirs":268,"./src/echo":269,"./src/error":270,"./src/exec":271,"./src/find":272,"./src/grep":273,"./src/ln":274,"./src/ls":275,"./src/mkdir":276,"./src/mv":277,"./src/pwd":278,"./src/rm":279,"./src/sed":280,"./src/set":281,"./src/tempdir":282,"./src/test":283,"./src/to":284,"./src/toEnd":285,"./src/touch":286,"./src/which":287,"_process":488}],263:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+
+//@
+//@ ### cat(file [, file ...])
+//@ ### cat(file_array)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ var str = cat('file*.txt');
+//@ var str = cat('file1', 'file2');
+//@ var str = cat(['file1', 'file2']); // same as above
+//@ ```
+//@
+//@ Returns a string containing the given file, or a concatenated string
+//@ containing the files if more than one file is given (a new line character is
+//@ introduced between each file). Wildcard `*` accepted.
+function _cat(options, files) {
+  var cat = '';
+
+  if (!files)
+    common.error('no paths given');
+
+  if (typeof files === 'string')
+    files = [].slice.call(arguments, 1);
+  // if it's array leave it as it is
+
+  files = common.expand(files);
+
+  files.forEach(function(file) {
+    if (!fs.existsSync(file))
+      common.error('no such file or directory: ' + file);
+
+    cat += fs.readFileSync(file, 'utf8');
+  });
+
+  return common.ShellString(cat);
+}
+module.exports = _cat;
+
+},{"./common":266,"fs":375}],264:[function(require,module,exports){
+(function (process){
+var fs = require('fs');
+var common = require('./common');
+
+//@
+//@ ### cd([dir])
+//@ Changes to directory `dir` for the duration of the script. Changes to home
+//@ directory if no argument is supplied.
+function _cd(options, dir) {
+  if (!dir)
+    dir = common.getUserHome();
+
+  if (dir === '-') {
+    if (!common.state.previousDir)
+      common.error('could not find previous directory');
+    else
+      dir = common.state.previousDir;
+  }
+
+  if (!fs.existsSync(dir))
+    common.error('no such file or directory: ' + dir);
+
+  if (!fs.statSync(dir).isDirectory())
+    common.error('not a directory: ' + dir);
+
+  common.state.previousDir = process.cwd();
+  process.chdir(dir);
+}
+module.exports = _cd;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"fs":375}],265:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+var path = require('path');
+
+var PERMS = (function (base) {
+  return {
+    OTHER_EXEC  : base.EXEC,
+    OTHER_WRITE : base.WRITE,
+    OTHER_READ  : base.READ,
+
+    GROUP_EXEC  : base.EXEC  << 3,
+    GROUP_WRITE : base.WRITE << 3,
+    GROUP_READ  : base.READ << 3,
+
+    OWNER_EXEC  : base.EXEC << 6,
+    OWNER_WRITE : base.WRITE << 6,
+    OWNER_READ  : base.READ << 6,
+
+    // Literal octal numbers are apparently not allowed in "strict" javascript.  Using parseInt is
+    // the preferred way, else a jshint warning is thrown.
+    STICKY      : parseInt('01000', 8),
+    SETGID      : parseInt('02000', 8),
+    SETUID      : parseInt('04000', 8),
+
+    TYPE_MASK   : parseInt('0770000', 8)
+  };
+})({
+  EXEC  : 1,
+  WRITE : 2,
+  READ  : 4
+});
+
+//@
+//@ ### chmod(octal_mode || octal_string, file)
+//@ ### chmod(symbolic_mode, file)
+//@
+//@ Available options:
+//@
+//@ + `-v`: output a diagnostic for every file processed//@
+//@ + `-c`: like verbose but report only when a change is made//@
+//@ + `-R`: change files and directories recursively//@
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ chmod(755, '/Users/brandon');
+//@ chmod('755', '/Users/brandon'); // same as above
+//@ chmod('u+x', '/Users/brandon');
+//@ ```
+//@
+//@ Alters the permissions of a file or directory by either specifying the
+//@ absolute permissions in octal form or expressing the changes in symbols.
+//@ This command tries to mimic the POSIX behavior as much as possible.
+//@ Notable exceptions:
+//@
+//@ + In symbolic modes, 'a-r' and '-r' are identical.  No consideration is
+//@   given to the umask.
+//@ + There is no "quiet" option since default behavior is to run silent.
+function _chmod(options, mode, filePattern) {
+  if (!filePattern) {
+    if (options.length > 0 && options.charAt(0) === '-') {
+      // Special case where the specified file permissions started with - to subtract perms, which
+      // get picked up by the option parser as command flags.
+      // If we are down by one argument and options starts with -, shift everything over.
+      filePattern = mode;
+      mode = options;
+      options = '';
+    }
+    else {
+      common.error('You must specify a file.');
+    }
+  }
+
+  options = common.parseOptions(options, {
+    'R': 'recursive',
+    'c': 'changes',
+    'v': 'verbose'
+  });
+
+  if (typeof filePattern === 'string') {
+    filePattern = [ filePattern ];
+  }
+
+  var files;
+
+  if (options.recursive) {
+    files = [];
+    common.expand(filePattern).forEach(function addFile(expandedFile) {
+      var stat = fs.lstatSync(expandedFile);
+
+      if (!stat.isSymbolicLink()) {
+        files.push(expandedFile);
+
+        if (stat.isDirectory()) {  // intentionally does not follow symlinks.
+          fs.readdirSync(expandedFile).forEach(function (child) {
+            addFile(expandedFile + '/' + child);
+          });
+        }
+      }
+    });
+  }
+  else {
+    files = common.expand(filePattern);
+  }
+
+  files.forEach(function innerChmod(file) {
+    file = path.resolve(file);
+    if (!fs.existsSync(file)) {
+      common.error('File not found: ' + file);
+    }
+
+    // When recursing, don't follow symlinks.
+    if (options.recursive && fs.lstatSync(file).isSymbolicLink()) {
+      return;
+    }
+
+    var stat = fs.statSync(file);
+    var isDir = stat.isDirectory();
+    var perms = stat.mode;
+    var type = perms & PERMS.TYPE_MASK;
+
+    var newPerms = perms;
+
+    if (isNaN(parseInt(mode, 8))) {
+      // parse options
+      mode.split(',').forEach(function (symbolicMode) {
+        /*jshint regexdash:true */
+        var pattern = /([ugoa]*)([=\+-])([rwxXst]*)/i;
+        var matches = pattern.exec(symbolicMode);
+
+        if (matches) {
+          var applyTo = matches[1];
+          var operator = matches[2];
+          var change = matches[3];
+
+          var changeOwner = applyTo.indexOf('u') != -1 || applyTo === 'a' || applyTo === '';
+          var changeGroup = applyTo.indexOf('g') != -1 || applyTo === 'a' || applyTo === '';
+          var changeOther = applyTo.indexOf('o') != -1 || applyTo === 'a' || applyTo === '';
+
+          var changeRead    = change.indexOf('r') != -1;
+          var changeWrite   = change.indexOf('w') != -1;
+          var changeExec    = change.indexOf('x') != -1;
+          var changeExecDir = change.indexOf('X') != -1;
+          var changeSticky  = change.indexOf('t') != -1;
+          var changeSetuid  = change.indexOf('s') != -1;
+
+          if (changeExecDir && isDir)
+            changeExec = true;
+
+          var mask = 0;
+          if (changeOwner) {
+            mask |= (changeRead ? PERMS.OWNER_READ : 0) + (changeWrite ? PERMS.OWNER_WRITE : 0) + (changeExec ? PERMS.OWNER_EXEC : 0) + (changeSetuid ? PERMS.SETUID : 0);
+          }
+          if (changeGroup) {
+            mask |= (changeRead ? PERMS.GROUP_READ : 0) + (changeWrite ? PERMS.GROUP_WRITE : 0) + (changeExec ? PERMS.GROUP_EXEC : 0) + (changeSetuid ? PERMS.SETGID : 0);
+          }
+          if (changeOther) {
+            mask |= (changeRead ? PERMS.OTHER_READ : 0) + (changeWrite ? PERMS.OTHER_WRITE : 0) + (changeExec ? PERMS.OTHER_EXEC : 0);
+          }
+
+          // Sticky bit is special - it's not tied to user, group or other.
+          if (changeSticky) {
+            mask |= PERMS.STICKY;
+          }
+
+          switch (operator) {
+            case '+':
+              newPerms |= mask;
+              break;
+
+            case '-':
+              newPerms &= ~mask;
+              break;
+
+            case '=':
+              newPerms = type + mask;
+
+              // According to POSIX, when using = to explicitly set the permissions, setuid and setgid can never be cleared.
+              if (fs.statSync(file).isDirectory()) {
+                newPerms |= (PERMS.SETUID + PERMS.SETGID) & perms;
+              }
+              break;
+          }
+
+          if (options.verbose) {
+            console.log(file + ' -> ' + newPerms.toString(8));
+          }
+
+          if (perms != newPerms) {
+            if (!options.verbose && options.changes) {
+              console.log(file + ' -> ' + newPerms.toString(8));
+            }
+            fs.chmodSync(file, newPerms);
+            perms = newPerms; // for the next round of changes!
+          }
+        }
+        else {
+          common.error('Invalid symbolic mode change: ' + symbolicMode);
+        }
+      });
+    }
+    else {
+      // they gave us a full number
+      newPerms = type + parseInt(mode, 8);
+
+      // POSIX rules are that setuid and setgid can only be added using numeric form, but not cleared.
+      if (fs.statSync(file).isDirectory()) {
+        newPerms |= (PERMS.SETUID + PERMS.SETGID) & perms;
+      }
+
+      fs.chmodSync(file, newPerms);
+    }
+  });
+}
+module.exports = _chmod;
+
+},{"./common":266,"fs":375,"path":481}],266:[function(require,module,exports){
+(function (process){
+var os = require('os');
+var fs = require('fs');
+var _ls = require('./ls');
+
+// Module globals
+var config = {
+  silent: false,
+  fatal: false,
+  verbose: false,
+};
+exports.config = config;
+
+var state = {
+  error: null,
+  currentCmd: 'shell.js',
+  previousDir: null,
+  tempDir: null
+};
+exports.state = state;
+
+var platform = os.type().match(/^Win/) ? 'win' : 'unix';
+exports.platform = platform;
+
+function log() {
+  if (!config.silent)
+    console.error.apply(console, arguments);
+}
+exports.log = log;
+
+// Shows error message. Throws unless _continue or config.fatal are true
+function error(msg, _continue) {
+  if (state.error === null)
+    state.error = '';
+  var log_entry = state.currentCmd + ': ' + msg;
+  if (state.error === '')
+    state.error = log_entry;
+  else
+    state.error += '\n' + log_entry;
+
+  if (msg.length > 0)
+    log(log_entry);
+
+  if (config.fatal)
+    process.exit(1);
+
+  if (!_continue)
+    throw '';
+}
+exports.error = error;
+
+// In the future, when Proxies are default, we can add methods like `.to()` to primitive strings.
+// For now, this is a dummy function to bookmark places we need such strings
+function ShellString(str) {
+  return str;
+}
+exports.ShellString = ShellString;
+
+// Return the home directory in a platform-agnostic way, with consideration for
+// older versions of node
+function getUserHome() {
+  var result;
+  if (os.homedir)
+    result = os.homedir(); // node 3+
+  else
+    result = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
+  return result;
+}
+exports.getUserHome = getUserHome;
+
+// Returns {'alice': true, 'bob': false} when passed a string and dictionary as follows:
+//   parseOptions('-a', {'a':'alice', 'b':'bob'});
+// Returns {'reference': 'string-value', 'bob': false} when passed two dictionaries of the form:
+//   parseOptions({'-r': 'string-value'}, {'r':'reference', 'b':'bob'});
+function parseOptions(opt, map) {
+  if (!map)
+    error('parseOptions() internal error: no map given');
+
+  // All options are false by default
+  var options = {};
+  for (var letter in map) {
+    if (map[letter][0] !== '!')
+      options[map[letter]] = false;
+  }
+
+  if (!opt)
+    return options; // defaults
+
+  var optionName;
+  if (typeof opt === 'string') {
+    if (opt[0] !== '-')
+      return options;
+
+    // e.g. chars = ['R', 'f']
+    var chars = opt.slice(1).split('');
+
+    chars.forEach(function(c) {
+      if (c in map) {
+        optionName = map[c];
+        if (optionName[0] === '!')
+          options[optionName.slice(1, optionName.length-1)] = false;
+        else
+          options[optionName] = true;
+      } else {
+        error('option not recognized: '+c);
+      }
+    });
+  } else if (typeof opt === 'object') {
+    for (var key in opt) {
+      // key is a string of the form '-r', '-d', etc.
+      var c = key[1];
+      if (c in map) {
+        optionName = map[c];
+        options[optionName] = opt[key]; // assign the given value
+      } else {
+        error('option not recognized: '+c);
+      }
+    }
+  } else {
+    error('options must be strings or key-value pairs');
+  }
+  return options;
+}
+exports.parseOptions = parseOptions;
+
+// Expands wildcards with matching (ie. existing) file names.
+// For example:
+//   expand(['file*.js']) = ['file1.js', 'file2.js', ...]
+//   (if the files 'file1.js', 'file2.js', etc, exist in the current dir)
+function expand(list) {
+  var expanded = [];
+  list.forEach(function(listEl) {
+    // Wildcard present on directory names ?
+    if(listEl.search(/\*[^\/]*\//) > -1 || listEl.search(/\*\*[^\/]*\//) > -1) {
+      var match = listEl.match(/^([^*]+\/|)(.*)/);
+      var root = match[1];
+      var rest = match[2];
+      var restRegex = rest.replace(/\*\*/g, ".*").replace(/\*/g, "[^\\/]*");
+      restRegex = new RegExp(restRegex);
+
+      _ls('-R', root).filter(function (e) {
+        return restRegex.test(e);
+      }).forEach(function(file) {
+        expanded.push(file);
+      });
+    }
+    // Wildcard present on file names ?
+    else if (listEl.search(/\*/) > -1) {
+      _ls('', listEl).forEach(function(file) {
+        expanded.push(file);
+      });
+    } else {
+      expanded.push(listEl);
+    }
+  });
+  return expanded;
+}
+exports.expand = expand;
+
+// Normalizes _unlinkSync() across platforms to match Unix behavior, i.e.
+// file can be unlinked even if it's read-only, see https://github.com/joyent/node/issues/3006
+function unlinkSync(file) {
+  try {
+    fs.unlinkSync(file);
+  } catch(e) {
+    // Try to override file permission
+    if (e.code === 'EPERM') {
+      fs.chmodSync(file, '0666');
+      fs.unlinkSync(file);
+    } else {
+      throw e;
+    }
+  }
+}
+exports.unlinkSync = unlinkSync;
+
+// e.g. 'shelljs_a5f185d0443ca...'
+function randomFileName() {
+  function randomHash(count) {
+    if (count === 1)
+      return parseInt(16*Math.random(), 10).toString(16);
+    else {
+      var hash = '';
+      for (var i=0; i<count; i++)
+        hash += randomHash(1);
+      return hash;
+    }
+  }
+
+  return 'shelljs_'+randomHash(20);
+}
+exports.randomFileName = randomFileName;
+
+// extend(target_obj, source_obj1 [, source_obj2 ...])
+// Shallow extend, e.g.:
+//    extend({A:1}, {b:2}, {c:3}) returns {A:1, b:2, c:3}
+function extend(target) {
+  var sources = [].slice.call(arguments, 1);
+  sources.forEach(function(source) {
+    for (var key in source)
+      target[key] = source[key];
+  });
+
+  return target;
+}
+exports.extend = extend;
+
+// Common wrapper for all Unix-like commands
+function wrap(cmd, fn, options) {
+  return function() {
+    var retValue = null;
+
+    state.currentCmd = cmd;
+    state.error = null;
+
+    try {
+      var args = [].slice.call(arguments, 0);
+
+      if (config.verbose) {
+        args.unshift(cmd);
+        console.log.apply(console, args);
+        args.shift();
+      }
+
+      if (options && options.notUnix) {
+        retValue = fn.apply(this, args);
+      } else {
+        if (typeof args[0] === 'object' && args[0].constructor.name === 'Object') {
+          args = args; // object count as options
+        } else if (args.length === 0 || typeof args[0] !== 'string' || args[0].length <= 1 || args[0][0] !== '-') {
+          args.unshift(''); // only add dummy option if '-option' not already present
+        }
+        // Expand the '~' if appropriate
+        var homeDir = getUserHome();
+        args = args.map(function(arg) {
+          if (typeof arg === 'string' && arg.slice(0, 2) === '~/' || arg === '~')
+            return arg.replace(/^~/, homeDir);
+          else
+            return arg;
+        });
+        retValue = fn.apply(this, args);
+      }
+    } catch (e) {
+      if (!state.error) {
+        // If state.error hasn't been set it's an error thrown by Node, not us - probably a bug...
+        console.log('shell.js: internal error');
+        console.log(e.stack || e);
+        process.exit(1);
+      }
+      if (config.fatal)
+        throw e;
+    }
+
+    state.currentCmd = 'shell.js';
+    return retValue;
+  };
+} // wrap
+exports.wrap = wrap;
+
+}).call(this,require('_process'))
+},{"./ls":275,"_process":488,"fs":375,"os":475}],267:[function(require,module,exports){
+(function (Buffer){
+var fs = require('fs');
+var path = require('path');
+var common = require('./common');
+var os = require('os');
+
+// Buffered file copy, synchronous
+// (Using readFileSync() + writeFileSync() could easily cause a memory overflow
+//  with large files)
+function copyFileSync(srcFile, destFile) {
+  if (!fs.existsSync(srcFile))
+    common.error('copyFileSync: no such file or directory: ' + srcFile);
+
+  var BUF_LENGTH = 64*1024,
+      buf = new Buffer(BUF_LENGTH),
+      bytesRead = BUF_LENGTH,
+      pos = 0,
+      fdr = null,
+      fdw = null;
+
+  try {
+    fdr = fs.openSync(srcFile, 'r');
+  } catch(e) {
+    common.error('copyFileSync: could not read src file ('+srcFile+')');
+  }
+
+  try {
+    fdw = fs.openSync(destFile, 'w');
+  } catch(e) {
+    common.error('copyFileSync: could not write to dest file (code='+e.code+'):'+destFile);
+  }
+
+  while (bytesRead === BUF_LENGTH) {
+    bytesRead = fs.readSync(fdr, buf, 0, BUF_LENGTH, pos);
+    fs.writeSync(fdw, buf, 0, bytesRead);
+    pos += bytesRead;
+  }
+
+  fs.closeSync(fdr);
+  fs.closeSync(fdw);
+
+  fs.chmodSync(destFile, fs.statSync(srcFile).mode);
+}
+
+// Recursively copies 'sourceDir' into 'destDir'
+// Adapted from https://github.com/ryanmcgrath/wrench-js
+//
+// Copyright (c) 2010 Ryan McGrath
+// Copyright (c) 2012 Artur Adib
+//
+// Licensed under the MIT License
+// http://www.opensource.org/licenses/mit-license.php
+function cpdirSyncRecursive(sourceDir, destDir, opts) {
+  if (!opts) opts = {};
+
+  /* Create the directory where all our junk is moving to; read the mode of the source directory and mirror it */
+  var checkDir = fs.statSync(sourceDir);
+  try {
+    fs.mkdirSync(destDir, checkDir.mode);
+  } catch (e) {
+    //if the directory already exists, that's okay
+    if (e.code !== 'EEXIST') throw e;
+  }
+
+  var files = fs.readdirSync(sourceDir);
+
+  for (var i = 0; i < files.length; i++) {
+    var srcFile = sourceDir + "/" + files[i];
+    var destFile = destDir + "/" + files[i];
+    var srcFileStat = fs.lstatSync(srcFile);
+
+    if (srcFileStat.isDirectory()) {
+      /* recursion this thing right on back. */
+      cpdirSyncRecursive(srcFile, destFile, opts);
+    } else if (srcFileStat.isSymbolicLink()) {
+      var symlinkFull = fs.readlinkSync(srcFile);
+      fs.symlinkSync(symlinkFull, destFile, os.platform() === "win32" ? "junction" : null);
+    } else {
+      /* At this point, we've hit a file actually worth copying... so copy it on over. */
+      if (fs.existsSync(destFile) && opts.no_force) {
+        common.log('skipping existing file: ' + files[i]);
+      } else {
+        copyFileSync(srcFile, destFile);
+      }
+    }
+
+  } // for files
+} // cpdirSyncRecursive
+
+
+//@
+//@ ### cp([options,] source [, source ...], dest)
+//@ ### cp([options,] source_array, dest)
+//@ Available options:
+//@
+//@ + `-f`: force (default behavior)
+//@ + `-n`: no-clobber
+//@ + `-r, -R`: recursive
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ cp('file1', 'dir1');
+//@ cp('-Rf', '/tmp/*', '/usr/local/*', '/home/tmp');
+//@ cp('-Rf', ['/tmp/*', '/usr/local/*'], '/home/tmp'); // same as above
+//@ ```
+//@
+//@ Copies files. The wildcard `*` is accepted.
+function _cp(options, sources, dest) {
+  options = common.parseOptions(options, {
+    'f': '!no_force',
+    'n': 'no_force',
+    'R': 'recursive',
+    'r': 'recursive'
+  });
+
+  // Get sources, dest
+  if (arguments.length < 3) {
+    common.error('missing <source> and/or <dest>');
+  } else if (arguments.length > 3) {
+    sources = [].slice.call(arguments, 1, arguments.length - 1);
+    dest = arguments[arguments.length - 1];
+  } else if (typeof sources === 'string') {
+    sources = [sources];
+  } else if ('length' in sources) {
+    sources = sources; // no-op for array
+  } else {
+    common.error('invalid arguments');
+  }
+
+  var exists = fs.existsSync(dest),
+      stats = exists && fs.statSync(dest);
+
+  // Dest is not existing dir, but multiple sources given
+  if ((!exists || !stats.isDirectory()) && sources.length > 1)
+    common.error('dest is not a directory (too many sources)');
+
+  // Dest is an existing file, but no -f given
+  if (exists && stats.isFile() && options.no_force)
+    common.error('dest file already exists: ' + dest);
+
+  if (options.recursive) {
+    // Recursive allows the shortcut syntax "sourcedir/" for "sourcedir/*"
+    // (see Github issue #15)
+    sources.forEach(function(src, i) {
+      if (src[src.length - 1] === '/') {
+        sources[i] += '*';
+      // If src is a directory and dest doesn't exist, 'cp -r src dest' should copy src/* into dest
+      } else if (fs.statSync(src).isDirectory() && !exists) {
+        sources[i] += '/*';
+      }
+    });
+
+    // Create dest
+    try {
+      fs.mkdirSync(dest, parseInt('0777', 8));
+    } catch (e) {
+      // like Unix's cp, keep going even if we can't create dest dir
+    }
+  }
+
+  sources = common.expand(sources);
+
+  sources.forEach(function(src) {
+    if (!fs.existsSync(src)) {
+      common.error('no such file or directory: '+src, true);
+      return; // skip file
+    }
+
+    // If here, src exists
+    if (fs.statSync(src).isDirectory()) {
+      if (!options.recursive) {
+        // Non-Recursive
+        common.log(src + ' is a directory (not copied)');
+      } else {
+        // Recursive
+        // 'cp /a/source dest' should create 'source' in 'dest'
+        var newDest = path.join(dest, path.basename(src)),
+            checkDir = fs.statSync(src);
+        try {
+          fs.mkdirSync(newDest, checkDir.mode);
+        } catch (e) {
+          //if the directory already exists, that's okay
+          if (e.code !== 'EEXIST') {
+            common.error('dest file no such file or directory: ' + newDest, true);
+            throw e;
+          }
+        }
+
+        cpdirSyncRecursive(src, newDest, {no_force: options.no_force});
+      }
+      return; // done with dir
+    }
+
+    // If here, src is a file
+
+    // When copying to '/path/dir':
+    //    thisDest = '/path/dir/file1'
+    var thisDest = dest;
+    if (fs.existsSync(dest) && fs.statSync(dest).isDirectory())
+      thisDest = path.normalize(dest + '/' + path.basename(src));
+
+    if (fs.existsSync(thisDest) && options.no_force) {
+      common.error('dest file already exists: ' + thisDest, true);
+      return; // skip file
+    }
+
+    copyFileSync(src, thisDest);
+  }); // forEach(src)
+}
+module.exports = _cp;
+
+}).call(this,require("buffer").Buffer)
+},{"./common":266,"buffer":421,"fs":375,"os":475,"path":481}],268:[function(require,module,exports){
+(function (process){
+var common = require('./common');
+var _cd = require('./cd');
+var path = require('path');
+
+// Pushd/popd/dirs internals
+var _dirStack = [];
+
+function _isStackIndex(index) {
+  return (/^[\-+]\d+$/).test(index);
+}
+
+function _parseStackIndex(index) {
+  if (_isStackIndex(index)) {
+    if (Math.abs(index) < _dirStack.length + 1) { // +1 for pwd
+      return (/^-/).test(index) ? Number(index) - 1 : Number(index);
+    } else {
+      common.error(index + ': directory stack index out of range');
+    }
+  } else {
+    common.error(index + ': invalid number');
+  }
+}
+
+function _actualDirStack() {
+  return [process.cwd()].concat(_dirStack);
+}
+
+//@
+//@ ### pushd([options,] [dir | '-N' | '+N'])
+//@
+//@ Available options:
+//@
+//@ + `-n`: Suppresses the normal change of directory when adding directories to the stack, so that only the stack is manipulated.
+//@
+//@ Arguments:
+//@
+//@ + `dir`: Makes the current working directory be the top of the stack, and then executes the equivalent of `cd dir`.
+//@ + `+N`: Brings the Nth directory (counting from the left of the list printed by dirs, starting with zero) to the top of the list by rotating the stack.
+//@ + `-N`: Brings the Nth directory (counting from the right of the list printed by dirs, starting with zero) to the top of the list by rotating the stack.
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ // process.cwd() === '/usr'
+//@ pushd('/etc'); // Returns /etc /usr
+//@ pushd('+1');   // Returns /usr /etc
+//@ ```
+//@
+//@ Save the current directory on the top of the directory stack and then cd to `dir`. With no arguments, pushd exchanges the top two directories. Returns an array of paths in the stack.
+function _pushd(options, dir) {
+  if (_isStackIndex(options)) {
+    dir = options;
+    options = '';
+  }
+
+  options = common.parseOptions(options, {
+    'n' : 'no-cd'
+  });
+
+  var dirs = _actualDirStack();
+
+  if (dir === '+0') {
+    return dirs; // +0 is a noop
+  } else if (!dir) {
+    if (dirs.length > 1) {
+      dirs = dirs.splice(1, 1).concat(dirs);
+    } else {
+      return common.error('no other directory');
+    }
+  } else if (_isStackIndex(dir)) {
+    var n = _parseStackIndex(dir);
+    dirs = dirs.slice(n).concat(dirs.slice(0, n));
+  } else {
+    if (options['no-cd']) {
+      dirs.splice(1, 0, dir);
+    } else {
+      dirs.unshift(dir);
+    }
+  }
+
+  if (options['no-cd']) {
+    dirs = dirs.slice(1);
+  } else {
+    dir = path.resolve(dirs.shift());
+    _cd('', dir);
+  }
+
+  _dirStack = dirs;
+  return _dirs('');
+}
+exports.pushd = _pushd;
+
+//@
+//@ ### popd([options,] ['-N' | '+N'])
+//@
+//@ Available options:
+//@
+//@ + `-n`: Suppresses the normal change of directory when removing directories from the stack, so that only the stack is manipulated.
+//@
+//@ Arguments:
+//@
+//@ + `+N`: Removes the Nth directory (counting from the left of the list printed by dirs), starting with zero.
+//@ + `-N`: Removes the Nth directory (counting from the right of the list printed by dirs), starting with zero.
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ echo(process.cwd()); // '/usr'
+//@ pushd('/etc');       // '/etc /usr'
+//@ echo(process.cwd()); // '/etc'
+//@ popd();              // '/usr'
+//@ echo(process.cwd()); // '/usr'
+//@ ```
+//@
+//@ When no arguments are given, popd removes the top directory from the stack and performs a cd to the new top directory. The elements are numbered from 0 starting at the first directory listed with dirs; i.e., popd is equivalent to popd +0. Returns an array of paths in the stack.
+function _popd(options, index) {
+  if (_isStackIndex(options)) {
+    index = options;
+    options = '';
+  }
+
+  options = common.parseOptions(options, {
+    'n' : 'no-cd'
+  });
+
+  if (!_dirStack.length) {
+    return common.error('directory stack empty');
+  }
+
+  index = _parseStackIndex(index || '+0');
+
+  if (options['no-cd'] || index > 0 || _dirStack.length + index === 0) {
+    index = index > 0 ? index - 1 : index;
+    _dirStack.splice(index, 1);
+  } else {
+    var dir = path.resolve(_dirStack.shift());
+    _cd('', dir);
+  }
+
+  return _dirs('');
+}
+exports.popd = _popd;
+
+//@
+//@ ### dirs([options | '+N' | '-N'])
+//@
+//@ Available options:
+//@
+//@ + `-c`: Clears the directory stack by deleting all of the elements.
+//@
+//@ Arguments:
+//@
+//@ + `+N`: Displays the Nth directory (counting from the left of the list printed by dirs when invoked without options), starting with zero.
+//@ + `-N`: Displays the Nth directory (counting from the right of the list printed by dirs when invoked without options), starting with zero.
+//@
+//@ Display the list of currently remembered directories. Returns an array of paths in the stack, or a single path if +N or -N was specified.
+//@
+//@ See also: pushd, popd
+function _dirs(options, index) {
+  if (_isStackIndex(options)) {
+    index = options;
+    options = '';
+  }
+
+  options = common.parseOptions(options, {
+    'c' : 'clear'
+  });
+
+  if (options['clear']) {
+    _dirStack = [];
+    return _dirStack;
+  }
+
+  var stack = _actualDirStack();
+
+  if (index) {
+    index = _parseStackIndex(index);
+
+    if (index < 0) {
+      index = stack.length + index;
+    }
+
+    common.log(stack[index]);
+    return stack[index];
+  }
+
+  common.log(stack.join(' '));
+
+  return stack;
+}
+exports.dirs = _dirs;
+
+}).call(this,require('_process'))
+},{"./cd":264,"./common":266,"_process":488,"path":481}],269:[function(require,module,exports){
+var common = require('./common');
+
+//@
+//@ ### echo(string [, string ...])
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ echo('hello world');
+//@ var str = echo('hello world');
+//@ ```
+//@
+//@ Prints string to stdout, and returns string with additional utility methods
+//@ like `.to()`.
+function _echo() {
+  var messages = [].slice.call(arguments, 0);
+  console.log.apply(console, messages);
+  return common.ShellString(messages.join(' '));
+}
+module.exports = _echo;
+
+},{"./common":266}],270:[function(require,module,exports){
+var common = require('./common');
+
+//@
+//@ ### error()
+//@ Tests if error occurred in the last command. Returns `null` if no error occurred,
+//@ otherwise returns string explaining the error
+function error() {
+  return common.state.error;
+}
+module.exports = error;
+
+},{"./common":266}],271:[function(require,module,exports){
+(function (process){
+var common = require('./common');
+var _tempDir = require('./tempdir');
+var _pwd = require('./pwd');
+var path = require('path');
+var fs = require('fs');
+var child = require('child_process');
+
+var DEFAULT_MAXBUFFER_SIZE = 20*1024*1024;
+
+// Hack to run child_process.exec() synchronously (sync avoids callback hell)
+// Uses a custom wait loop that checks for a flag file, created when the child process is done.
+// (Can't do a wait loop that checks for internal Node variables/messages as
+// Node is single-threaded; callbacks and other internal state changes are done in the
+// event loop).
+function execSync(cmd, opts) {
+  var tempDir = _tempDir();
+  var stdoutFile = path.resolve(tempDir+'/'+common.randomFileName()),
+      stderrFile = path.resolve(tempDir+'/'+common.randomFileName()),
+      codeFile = path.resolve(tempDir+'/'+common.randomFileName()),
+      scriptFile = path.resolve(tempDir+'/'+common.randomFileName()),
+      sleepFile = path.resolve(tempDir+'/'+common.randomFileName());
+
+  opts = common.extend({
+    silent: common.config.silent,
+    cwd: _pwd(),
+    env: process.env,
+    maxBuffer: DEFAULT_MAXBUFFER_SIZE
+  }, opts);
+
+  var previousStdoutContent = '',
+      previousStderrContent = '';
+  // Echoes stdout and stderr changes from running process, if not silent
+  function updateStream(streamFile) {
+    if (opts.silent || !fs.existsSync(streamFile))
+      return;
+
+    var previousStreamContent,
+        proc_stream;
+    if (streamFile === stdoutFile) {
+      previousStreamContent = previousStdoutContent;
+      proc_stream = process.stdout;
+    } else { // assume stderr
+      previousStreamContent = previousStderrContent;
+      proc_stream = process.stderr;
+    }
+
+    var streamContent = fs.readFileSync(streamFile, 'utf8');
+    // No changes since last time?
+    if (streamContent.length <= previousStreamContent.length)
+      return;
+
+    proc_stream.write(streamContent.substr(previousStreamContent.length));
+    previousStreamContent = streamContent;
+  }
+
+  function escape(str) {
+    return (str+'').replace(/([\\"'])/g, "\\$1").replace(/\0/g, "\\0");
+  }
+
+  if (fs.existsSync(scriptFile)) common.unlinkSync(scriptFile);
+  if (fs.existsSync(stdoutFile)) common.unlinkSync(stdoutFile);
+  if (fs.existsSync(stderrFile)) common.unlinkSync(stderrFile);
+  if (fs.existsSync(codeFile)) common.unlinkSync(codeFile);
+
+  var execCommand = '"'+process.execPath+'" '+scriptFile;
+  var script;
+
+  if (typeof child.execSync === 'function') {
+    script = [
+      "var child = require('child_process')",
+      "  , fs = require('fs');",
+      "var childProcess = child.exec('"+escape(cmd)+"', {env: process.env, maxBuffer: "+opts.maxBuffer+"}, function(err) {",
+      "  fs.writeFileSync('"+escape(codeFile)+"', err ? err.code.toString() : '0');",
+      "});",
+      "var stdoutStream = fs.createWriteStream('"+escape(stdoutFile)+"');",
+      "var stderrStream = fs.createWriteStream('"+escape(stderrFile)+"');",
+      "childProcess.stdout.pipe(stdoutStream, {end: false});",
+      "childProcess.stderr.pipe(stderrStream, {end: false});",
+      "childProcess.stdout.pipe(process.stdout);",
+      "childProcess.stderr.pipe(process.stderr);",
+      "var stdoutEnded = false, stderrEnded = false;",
+      "function tryClosingStdout(){ if(stdoutEnded){ stdoutStream.end(); } }",
+      "function tryClosingStderr(){ if(stderrEnded){ stderrStream.end(); } }",
+      "childProcess.stdout.on('end', function(){ stdoutEnded = true; tryClosingStdout(); });",
+      "childProcess.stderr.on('end', function(){ stderrEnded = true; tryClosingStderr(); });"
+    ].join('\n');
+
+    fs.writeFileSync(scriptFile, script);
+
+    if (opts.silent) {
+      opts.stdio = 'ignore';
+    } else {
+      opts.stdio = [0, 1, 2];
+    }
+
+    // Welcome to the future
+    child.execSync(execCommand, opts);
+  } else {
+    cmd += ' > '+stdoutFile+' 2> '+stderrFile; // works on both win/unix
+
+    script = [
+      "var child = require('child_process')",
+      "  , fs = require('fs');",
+      "var childProcess = child.exec('"+escape(cmd)+"', {env: process.env, maxBuffer: "+opts.maxBuffer+"}, function(err) {",
+      "  fs.writeFileSync('"+escape(codeFile)+"', err ? err.code.toString() : '0');",
+      "});"
+    ].join('\n');
+
+    fs.writeFileSync(scriptFile, script);
+
+    child.exec(execCommand, opts);
+
+    // The wait loop
+    // sleepFile is used as a dummy I/O op to mitigate unnecessary CPU usage
+    // (tried many I/O sync ops, writeFileSync() seems to be only one that is effective in reducing
+    // CPU usage, though apparently not so much on Windows)
+    while (!fs.existsSync(codeFile)) { updateStream(stdoutFile); fs.writeFileSync(sleepFile, 'a'); }
+    while (!fs.existsSync(stdoutFile)) { updateStream(stdoutFile); fs.writeFileSync(sleepFile, 'a'); }
+    while (!fs.existsSync(stderrFile)) { updateStream(stderrFile); fs.writeFileSync(sleepFile, 'a'); }
+  }
+
+  // At this point codeFile exists, but it's not necessarily flushed yet.
+  // Keep reading it until it is.
+  var code = parseInt('', 10);
+  while (isNaN(code)) {
+    code = parseInt(fs.readFileSync(codeFile, 'utf8'), 10);
+  }
+
+  var stdout = fs.readFileSync(stdoutFile, 'utf8');
+  var stderr = fs.readFileSync(stderrFile, 'utf8');
+
+  // No biggie if we can't erase the files now -- they're in a temp dir anyway
+  try { common.unlinkSync(scriptFile); } catch(e) {}
+  try { common.unlinkSync(stdoutFile); } catch(e) {}
+  try { common.unlinkSync(stderrFile); } catch(e) {}
+  try { common.unlinkSync(codeFile); } catch(e) {}
+  try { common.unlinkSync(sleepFile); } catch(e) {}
+
+  // some shell return codes are defined as errors, per http://tldp.org/LDP/abs/html/exitcodes.html
+  if (code === 1 || code === 2 || code >= 126)  {
+      common.error('', true); // unix/shell doesn't really give an error message after non-zero exit codes
+  }
+  // True if successful, false if not
+  var obj = {
+    code: code,
+    output: stdout, // deprecated
+    stdout: stdout,
+    stderr: stderr
+  };
+  return obj;
+} // execSync()
+
+// Wrapper around exec() to enable echoing output to console in real time
+function execAsync(cmd, opts, callback) {
+  var stdout = '';
+  var stderr = '';
+
+  opts = common.extend({
+    silent: common.config.silent,
+    cwd: _pwd(),
+    env: process.env,
+    maxBuffer: DEFAULT_MAXBUFFER_SIZE
+  }, opts);
+
+  var c = child.exec(cmd, opts, function(err) {
+    if (callback)
+      callback(err ? err.code : 0, stdout, stderr);
+  });
+
+  c.stdout.on('data', function(data) {
+    stdout += data;
+    if (!opts.silent)
+      process.stdout.write(data);
+  });
+
+  c.stderr.on('data', function(data) {
+    stderr += data;
+    if (!opts.silent)
+      process.stderr.write(data);
+  });
+
+  return c;
+}
+
+//@
+//@ ### exec(command [, options] [, callback])
+//@ Available options (all `false` by default):
+//@
+//@ + `async`: Asynchronous execution. If a callback is provided, it will be set to
+//@   `true`, regardless of the passed value.
+//@ + `silent`: Do not echo program output to console.
+//@ + and any option available to NodeJS's
+//@   [child_process.exec()](https://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ var version = exec('node --version', {silent:true}).stdout;
+//@
+//@ var child = exec('some_long_running_process', {async:true});
+//@ child.stdout.on('data', function(data) {
+//@   /* ... do something with data ... */
+//@ });
+//@
+//@ exec('some_long_running_process', function(code, stdout, stderr) {
+//@   console.log('Exit code:', code);
+//@   console.log('Program output:', stdout);
+//@   console.log('Program stderr:', stderr);
+//@ });
+//@ ```
+//@
+//@ Executes the given `command` _synchronously_, unless otherwise specified.  When in synchronous
+//@ mode returns the object `{ code:..., stdout:... , stderr:... }`, containing the program's
+//@ `stdout`, `stderr`, and its exit `code`. Otherwise returns the child process object,
+//@ and the `callback` gets the arguments `(code, stdout, stderr)`.
+//@
+//@ **Note:** For long-lived processes, it's best to run `exec()` asynchronously as
+//@ the current synchronous implementation uses a lot of CPU. This should be getting
+//@ fixed soon.
+function _exec(command, options, callback) {
+  if (!command)
+    common.error('must specify command');
+
+  // Callback is defined instead of options.
+  if (typeof options === 'function') {
+    callback = options;
+    options = { async: true };
+  }
+
+  // Callback is defined with options.
+  if (typeof options === 'object' && typeof callback === 'function') {
+    options.async = true;
+  }
+
+  options = common.extend({
+    silent: common.config.silent,
+    async: false
+  }, options);
+
+  try {
+    if (options.async)
+      return execAsync(command, options, callback);
+    else
+      return execSync(command, options);
+  } catch (e) {
+    common.error('internal error');
+  }
+}
+module.exports = _exec;
+
+}).call(this,require('_process'))
+},{"./common":266,"./pwd":278,"./tempdir":282,"_process":488,"child_process":375,"fs":375,"path":481}],272:[function(require,module,exports){
+var fs = require('fs');
+var common = require('./common');
+var _ls = require('./ls');
+
+//@
+//@ ### find(path [, path ...])
+//@ ### find(path_array)
+//@ Examples:
+//@
+//@ ```javascript
+//@ find('src', 'lib');
+//@ find(['src', 'lib']); // same as above
+//@ find('.').filter(function(file) { return file.match(/\.js$/); });
+//@ ```
+//@
+//@ Returns array of all files (however deep) in the given paths.
+//@
+//@ The main difference from `ls('-R', path)` is that the resulting file names
+//@ include the base directories, e.g. `lib/resources/file1` instead of just `file1`.
+function _find(options, paths) {
+  if (!paths)
+    common.error('no path specified');
+  else if (typeof paths === 'object')
+    paths = paths; // assume array
+  else if (typeof paths === 'string')
+    paths = [].slice.call(arguments, 1);
+
+  var list = [];
+
+  function pushFile(file) {
+    if (common.platform === 'win')
+      file = file.replace(/\\/g, '/');
+    list.push(file);
+  }
+
+  // why not simply do ls('-R', paths)? because the output wouldn't give the base dirs
+  // to get the base dir in the output, we need instead ls('-R', 'dir/*') for every directory
+
+  paths.forEach(function(file) {
+    pushFile(file);
+
+    if (fs.statSync(file).isDirectory()) {
+      _ls('-RA', file+'/*').forEach(function(subfile) {
+        pushFile(subfile);
+      });
+    }
+  });
+
+  return list;
+}
+module.exports = _find;
+
+},{"./common":266,"./ls":275,"fs":375}],273:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+
+//@
+//@ ### grep([options,] regex_filter, file [, file ...])
+//@ ### grep([options,] regex_filter, file_array)
+//@ Available options:
+//@
+//@ + `-v`: Inverse the sense of the regex and print the lines not matching the criteria.
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ grep('-v', 'GLOBAL_VARIABLE', '*.js');
+//@ grep('GLOBAL_VARIABLE', '*.js');
+//@ ```
+//@
+//@ Reads input string from given files and returns a string containing all lines of the
+//@ file that match the given `regex_filter`. Wildcard `*` accepted.
+function _grep(options, regex, files) {
+  options = common.parseOptions(options, {
+    'v': 'inverse'
+  });
+
+  if (!files)
+    common.error('no paths given');
+
+  if (typeof files === 'string')
+    files = [].slice.call(arguments, 2);
+  // if it's array leave it as it is
+
+  files = common.expand(files);
+
+  var grep = '';
+  files.forEach(function(file) {
+    if (!fs.existsSync(file)) {
+      common.error('no such file or directory: ' + file, true);
+      return;
+    }
+
+    var contents = fs.readFileSync(file, 'utf8'),
+        lines = contents.split(/\r*\n/);
+    lines.forEach(function(line) {
+      var matched = line.match(regex);
+      if ((options.inverse && !matched) || (!options.inverse && matched))
+        grep += line + '\n';
+    });
+  });
+
+  return common.ShellString(grep);
+}
+module.exports = _grep;
+
+},{"./common":266,"fs":375}],274:[function(require,module,exports){
+(function (process){
+var fs = require('fs');
+var path = require('path');
+var common = require('./common');
+
+//@
+//@ ### ln([options,] source, dest)
+//@ Available options:
+//@
+//@ + `-s`: symlink
+//@ + `-f`: force
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ ln('file', 'newlink');
+//@ ln('-sf', 'file', 'existing');
+//@ ```
+//@
+//@ Links source to dest. Use -f to force the link, should dest already exist.
+function _ln(options, source, dest) {
+  options = common.parseOptions(options, {
+    's': 'symlink',
+    'f': 'force'
+  });
+
+  if (!source || !dest) {
+    common.error('Missing <source> and/or <dest>');
+  }
+
+  source = String(source);
+  var sourcePath = path.normalize(source).replace(RegExp(path.sep + '$'), '');
+  var isAbsolute = (path.resolve(source) === sourcePath);
+  dest = path.resolve(process.cwd(), String(dest));
+
+  if (fs.existsSync(dest)) {
+    if (!options.force) {
+      common.error('Destination file exists', true);
+    }
+
+    fs.unlinkSync(dest);
+  }
+
+  if (options.symlink) {
+    var isWindows = common.platform === 'win';
+    var linkType = isWindows ? 'file' : null;
+    var resolvedSourcePath = isAbsolute ? sourcePath : path.resolve(process.cwd(), path.dirname(dest), source);
+    if (!fs.existsSync(resolvedSourcePath)) {
+      common.error('Source file does not exist', true);
+    } else if (isWindows && fs.statSync(resolvedSourcePath).isDirectory()) {
+      linkType =  'junction';
+    }
+
+    try {
+      fs.symlinkSync(linkType === 'junction' ? resolvedSourcePath: source, dest, linkType);
+    } catch (err) {
+      common.error(err.message);
+    }
+  } else {
+    if (!fs.existsSync(source)) {
+      common.error('Source file does not exist', true);
+    }
+    try {
+      fs.linkSync(source, dest);
+    } catch (err) {
+      common.error(err.message);
+    }
+  }
+}
+module.exports = _ln;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"fs":375,"path":481}],275:[function(require,module,exports){
+var path = require('path');
+var fs = require('fs');
+var common = require('./common');
+var _cd = require('./cd');
+var _pwd = require('./pwd');
+
+//@
+//@ ### ls([options,] [path, ...])
+//@ ### ls([options,] path_array)
+//@ Available options:
+//@
+//@ + `-R`: recursive
+//@ + `-A`: all files (include files beginning with `.`, except for `.` and `..`)
+//@ + `-d`: list directories themselves, not their contents
+//@ + `-l`: list objects representing each file, each with fields containing `ls
+//@         -l` output fields. See
+//@         [fs.Stats](https://nodejs.org/api/fs.html#fs_class_fs_stats)
+//@         for more info
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ ls('projs/*.js');
+//@ ls('-R', '/users/me', '/tmp');
+//@ ls('-R', ['/users/me', '/tmp']); // same as above
+//@ ls('-l', 'file.txt'); // { name: 'file.txt', mode: 33188, nlink: 1, ...}
+//@ ```
+//@
+//@ Returns array of files in the given path, or in current directory if no path provided.
+function _ls(options, paths) {
+  options = common.parseOptions(options, {
+    'R': 'recursive',
+    'A': 'all',
+    'a': 'all_deprecated',
+    'd': 'directory',
+    'l': 'long'
+  });
+
+  if (options.all_deprecated) {
+    // We won't support the -a option as it's hard to image why it's useful
+    // (it includes '.' and '..' in addition to '.*' files)
+    // For backwards compatibility we'll dump a deprecated message and proceed as before
+    common.log('ls: Option -a is deprecated. Use -A instead');
+    options.all = true;
+  }
+
+  if (!paths)
+    paths = ['.'];
+  else if (typeof paths === 'object')
+    paths = paths; // assume array
+  else if (typeof paths === 'string')
+    paths = [].slice.call(arguments, 1);
+
+  var list = [];
+
+  // Conditionally pushes file to list - returns true if pushed, false otherwise
+  // (e.g. prevents hidden files to be included unless explicitly told so)
+  function pushFile(file, query) {
+    var name = file.name || file;
+    // hidden file?
+    if (path.basename(name)[0] === '.') {
+      // not explicitly asking for hidden files?
+      if (!options.all && !(path.basename(query)[0] === '.' && path.basename(query).length > 1))
+        return false;
+    }
+
+    if (common.platform === 'win')
+      name = name.replace(/\\/g, '/');
+
+    if (file.name) {
+      file.name = name;
+    } else {
+      file = name;
+    }
+    list.push(file);
+    return true;
+  }
+
+  paths.forEach(function(p) {
+    if (fs.existsSync(p)) {
+      var stats = ls_stat(p);
+      // Simple file?
+      if (stats.isFile()) {
+        if (options.long) {
+          pushFile(stats, p);
+        } else {
+          pushFile(p, p);
+        }
+        return; // continue
+      }
+
+      // Simple dir?
+      if (options.directory) {
+        pushFile(p, p);
+        return;
+      } else if (stats.isDirectory()) {
+        // Iterate over p contents
+        fs.readdirSync(p).forEach(function(file) {
+          var orig_file = file;
+          if (options.long)
+            file = ls_stat(path.join(p, file));
+          if (!pushFile(file, p))
+            return;
+
+          // Recursive?
+          if (options.recursive) {
+            var oldDir = _pwd();
+            _cd('', p);
+            if (fs.statSync(orig_file).isDirectory())
+              list = list.concat(_ls('-R'+(options.all?'A':''), orig_file+'/*'));
+            _cd('', oldDir);
+          }
+        });
+        return; // continue
+      }
+    }
+
+    // p does not exist - possible wildcard present
+
+    var basename = path.basename(p);
+    var dirname = path.dirname(p);
+    // Wildcard present on an existing dir? (e.g. '/tmp/*.js')
+    if (basename.search(/\*/) > -1 && fs.existsSync(dirname) && fs.statSync(dirname).isDirectory) {
+      // Escape special regular expression chars
+      var regexp = basename.replace(/(\^|\$|\(|\)|<|>|\[|\]|\{|\}|\.|\+|\?)/g, '\\$1');
+      // Translates wildcard into regex
+      regexp = '^' + regexp.replace(/\*/g, '.*') + '$';
+      // Iterate over directory contents
+      fs.readdirSync(dirname).forEach(function(file) {
+        if (file.match(new RegExp(regexp))) {
+          var file_path = path.join(dirname,  file);
+          file_path = options.long ? ls_stat(file_path) : file_path;
+          if (file_path.name)
+            file_path.name = path.normalize(file_path.name);
+          else
+            file_path = path.normalize(file_path);
+          if (!pushFile(file_path, basename))
+            return;
+
+          // Recursive?
+          if (options.recursive) {
+            var pp = dirname + '/' + file;
+            if (fs.lstatSync(pp).isDirectory())
+              list = list.concat(_ls('-R'+(options.all?'A':''), pp+'/*'));
+          } // recursive
+        } // if file matches
+      }); // forEach
+      return;
+    }
+
+    common.error('no such file or directory: ' + p, true);
+  });
+
+  return list;
+}
+module.exports = _ls;
+
+
+function ls_stat(path) {
+  var stats = fs.statSync(path);
+  // Note: this object will contain more information than .toString() returns
+  stats.name = path;
+  stats.toString = function() {
+    // Return a string resembling unix's `ls -l` format
+    return [this.mode, this.nlink, this.uid, this.gid, this.size, this.mtime, this.name].join(' ');
+  };
+  return stats;
+}
+
+},{"./cd":264,"./common":266,"./pwd":278,"fs":375,"path":481}],276:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+var path = require('path');
+
+// Recursively creates 'dir'
+function mkdirSyncRecursive(dir) {
+  var baseDir = path.dirname(dir);
+
+  // Base dir exists, no recursion necessary
+  if (fs.existsSync(baseDir)) {
+    fs.mkdirSync(dir, parseInt('0777', 8));
+    return;
+  }
+
+  // Base dir does not exist, go recursive
+  mkdirSyncRecursive(baseDir);
+
+  // Base dir created, can create dir
+  fs.mkdirSync(dir, parseInt('0777', 8));
+}
+
+//@
+//@ ### mkdir([options,] dir [, dir ...])
+//@ ### mkdir([options,] dir_array)
+//@ Available options:
+//@
+//@ + `-p`: full path (will create intermediate dirs if necessary)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ mkdir('-p', '/tmp/a/b/c/d', '/tmp/e/f/g');
+//@ mkdir('-p', ['/tmp/a/b/c/d', '/tmp/e/f/g']); // same as above
+//@ ```
+//@
+//@ Creates directories.
+function _mkdir(options, dirs) {
+  options = common.parseOptions(options, {
+    'p': 'fullpath'
+  });
+  if (!dirs)
+    common.error('no paths given');
+
+  if (typeof dirs === 'string')
+    dirs = [].slice.call(arguments, 1);
+  // if it's array leave it as it is
+
+  dirs.forEach(function(dir) {
+    if (fs.existsSync(dir)) {
+      if (!options.fullpath)
+          common.error('path already exists: ' + dir, true);
+      return; // skip dir
+    }
+
+    // Base dir does not exist, and no -p option given
+    var baseDir = path.dirname(dir);
+    if (!fs.existsSync(baseDir) && !options.fullpath) {
+      common.error('no such file or directory: ' + baseDir, true);
+      return; // skip dir
+    }
+
+    if (options.fullpath)
+      mkdirSyncRecursive(dir);
+    else
+      fs.mkdirSync(dir, parseInt('0777', 8));
+  });
+} // mkdir
+module.exports = _mkdir;
+
+},{"./common":266,"fs":375,"path":481}],277:[function(require,module,exports){
+var fs = require('fs');
+var path = require('path');
+var common = require('./common');
+
+//@
+//@ ### mv([options ,] source [, source ...], dest')
+//@ ### mv([options ,] source_array, dest')
+//@ Available options:
+//@
+//@ + `-f`: force (default behavior)
+//@ + `-n`: no-clobber
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ mv('-n', 'file', 'dir/');
+//@ mv('file1', 'file2', 'dir/');
+//@ mv(['file1', 'file2'], 'dir/'); // same as above
+//@ ```
+//@
+//@ Moves files. The wildcard `*` is accepted.
+function _mv(options, sources, dest) {
+  options = common.parseOptions(options, {
+    'f': '!no_force',
+    'n': 'no_force'
+  });
+
+  // Get sources, dest
+  if (arguments.length < 3) {
+    common.error('missing <source> and/or <dest>');
+  } else if (arguments.length > 3) {
+    sources = [].slice.call(arguments, 1, arguments.length - 1);
+    dest = arguments[arguments.length - 1];
+  } else if (typeof sources === 'string') {
+    sources = [sources];
+  } else if ('length' in sources) {
+    sources = sources; // no-op for array
+  } else {
+    common.error('invalid arguments');
+  }
+
+  sources = common.expand(sources);
+
+  var exists = fs.existsSync(dest),
+      stats = exists && fs.statSync(dest);
+
+  // Dest is not existing dir, but multiple sources given
+  if ((!exists || !stats.isDirectory()) && sources.length > 1)
+    common.error('dest is not a directory (too many sources)');
+
+  // Dest is an existing file, but no -f given
+  if (exists && stats.isFile() && options.no_force)
+    common.error('dest file already exists: ' + dest);
+
+  sources.forEach(function(src) {
+    if (!fs.existsSync(src)) {
+      common.error('no such file or directory: '+src, true);
+      return; // skip file
+    }
+
+    // If here, src exists
+
+    // When copying to '/path/dir':
+    //    thisDest = '/path/dir/file1'
+    var thisDest = dest;
+    if (fs.existsSync(dest) && fs.statSync(dest).isDirectory())
+      thisDest = path.normalize(dest + '/' + path.basename(src));
+
+    if (fs.existsSync(thisDest) && options.no_force) {
+      common.error('dest file already exists: ' + thisDest, true);
+      return; // skip file
+    }
+
+    if (path.resolve(src) === path.dirname(path.resolve(thisDest))) {
+      common.error('cannot move to self: '+src, true);
+      return; // skip file
+    }
+
+    fs.renameSync(src, thisDest);
+  }); // forEach(src)
+} // mv
+module.exports = _mv;
+
+},{"./common":266,"fs":375,"path":481}],278:[function(require,module,exports){
+(function (process){
+var path = require('path');
+var common = require('./common');
+
+//@
+//@ ### pwd()
+//@ Returns the current directory.
+function _pwd() {
+  var pwd = path.resolve(process.cwd());
+  return common.ShellString(pwd);
+}
+module.exports = _pwd;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"path":481}],279:[function(require,module,exports){
+(function (process){
+var common = require('./common');
+var fs = require('fs');
+
+// Recursively removes 'dir'
+// Adapted from https://github.com/ryanmcgrath/wrench-js
+//
+// Copyright (c) 2010 Ryan McGrath
+// Copyright (c) 2012 Artur Adib
+//
+// Licensed under the MIT License
+// http://www.opensource.org/licenses/mit-license.php
+function rmdirSyncRecursive(dir, force) {
+  var files;
+
+  files = fs.readdirSync(dir);
+
+  // Loop through and delete everything in the sub-tree after checking it
+  for(var i = 0; i < files.length; i++) {
+    var file = dir + "/" + files[i],
+        currFile = fs.lstatSync(file);
+
+    if(currFile.isDirectory()) { // Recursive function back to the beginning
+      rmdirSyncRecursive(file, force);
+    }
+
+    else if(currFile.isSymbolicLink()) { // Unlink symlinks
+      if (force || isWriteable(file)) {
+        try {
+          common.unlinkSync(file);
+        } catch (e) {
+          common.error('could not remove file (code '+e.code+'): ' + file, true);
+        }
+      }
+    }
+
+    else // Assume it's a file - perhaps a try/catch belongs here?
+      if (force || isWriteable(file)) {
+        try {
+          common.unlinkSync(file);
+        } catch (e) {
+          common.error('could not remove file (code '+e.code+'): ' + file, true);
+        }
+      }
+  }
+
+  // Now that we know everything in the sub-tree has been deleted, we can delete the main directory.
+  // Huzzah for the shopkeep.
+
+  var result;
+  try {
+    // Retry on windows, sometimes it takes a little time before all the files in the directory are gone
+    var start = Date.now();
+    while (true) {
+      try {
+        result = fs.rmdirSync(dir);
+        if (fs.existsSync(dir)) throw { code: "EAGAIN" };
+        break;
+      } catch(er) {
+        // In addition to error codes, also check if the directory still exists and loop again if true
+        if (process.platform === "win32" && (er.code === "ENOTEMPTY" || er.code === "EBUSY" || er.code === "EPERM" || er.code === "EAGAIN")) {
+          if (Date.now() - start > 1000) throw er;
+        } else if (er.code === "ENOENT") {
+          // Directory did not exist, deletion was successful
+          break;
+        } else {
+          throw er;
+        }
+      }
+    }
+  } catch(e) {
+    common.error('could not remove directory (code '+e.code+'): ' + dir, true);
+  }
+
+  return result;
+} // rmdirSyncRecursive
+
+// Hack to determine if file has write permissions for current user
+// Avoids having to check user, group, etc, but it's probably slow
+function isWriteable(file) {
+  var writePermission = true;
+  try {
+    var __fd = fs.openSync(file, 'a');
+    fs.closeSync(__fd);
+  } catch(e) {
+    writePermission = false;
+  }
+
+  return writePermission;
+}
+
+//@
+//@ ### rm([options,] file [, file ...])
+//@ ### rm([options,] file_array)
+//@ Available options:
+//@
+//@ + `-f`: force
+//@ + `-r, -R`: recursive
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ rm('-rf', '/tmp/*');
+//@ rm('some_file.txt', 'another_file.txt');
+//@ rm(['some_file.txt', 'another_file.txt']); // same as above
+//@ ```
+//@
+//@ Removes files. The wildcard `*` is accepted.
+function _rm(options, files) {
+  options = common.parseOptions(options, {
+    'f': 'force',
+    'r': 'recursive',
+    'R': 'recursive'
+  });
+  if (!files)
+    common.error('no paths given');
+
+  if (typeof files === 'string')
+    files = [].slice.call(arguments, 1);
+  // if it's array leave it as it is
+
+  files = common.expand(files);
+
+  files.forEach(function(file) {
+    if (!fs.existsSync(file)) {
+      // Path does not exist, no force flag given
+      if (!options.force)
+        common.error('no such file or directory: '+file, true);
+
+      return; // skip file
+    }
+
+    // If here, path exists
+
+    var stats = fs.lstatSync(file);
+    if (stats.isFile() || stats.isSymbolicLink()) {
+
+      // Do not check for file writing permissions
+      if (options.force) {
+        common.unlinkSync(file);
+        return;
+      }
+
+      if (isWriteable(file))
+        common.unlinkSync(file);
+      else
+        common.error('permission denied: '+file, true);
+
+      return;
+    } // simple file
+
+    // Path is an existing directory, but no -r flag given
+    if (stats.isDirectory() && !options.recursive) {
+      common.error('path is a directory', true);
+      return; // skip path
+    }
+
+    // Recursively remove existing directory
+    if (stats.isDirectory() && options.recursive) {
+      rmdirSyncRecursive(file, options.force);
+    }
+  }); // forEach(file)
+} // rm
+module.exports = _rm;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"fs":375}],280:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+
+//@
+//@ ### sed([options,] search_regex, replacement, file [, file ...])
+//@ ### sed([options,] search_regex, replacement, file_array)
+//@ Available options:
+//@
+//@ + `-i`: Replace contents of 'file' in-place. _Note that no backups will be created!_
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ sed('-i', 'PROGRAM_VERSION', 'v0.1.3', 'source.js');
+//@ sed(/.*DELETE_THIS_LINE.*\n/, '', 'source.js');
+//@ ```
+//@
+//@ Reads an input string from `files` and performs a JavaScript `replace()` on the input
+//@ using the given search regex and replacement string or function. Returns the new string after replacement.
+function _sed(options, regex, replacement, files) {
+  options = common.parseOptions(options, {
+    'i': 'inplace'
+  });
+
+  if (typeof replacement === 'string' || typeof replacement === 'function')
+    replacement = replacement; // no-op
+  else if (typeof replacement === 'number')
+    replacement = replacement.toString(); // fallback
+  else
+    common.error('invalid replacement string');
+
+  // Convert all search strings to RegExp
+  if (typeof regex === 'string')
+    regex = RegExp(regex);
+
+  if (!files)
+    common.error('no files given');
+
+  if (typeof files === 'string')
+    files = [].slice.call(arguments, 3);
+  // if it's array leave it as it is
+
+  files = common.expand(files);
+
+  var sed = [];
+  files.forEach(function(file) {
+    if (!fs.existsSync(file)) {
+      common.error('no such file or directory: ' + file, true);
+      return;
+    }
+
+    var result = fs.readFileSync(file, 'utf8').split('\n').map(function (line) {
+      return line.replace(regex, replacement);
+    }).join('\n');
+
+    sed.push(result);
+
+    if (options.inplace)
+      fs.writeFileSync(file, result, 'utf8');
+  });
+
+  return common.ShellString(sed.join('\n'));
+}
+module.exports = _sed;
+
+},{"./common":266,"fs":375}],281:[function(require,module,exports){
+var common = require('./common');
+
+//@
+//@ ### set(options)
+//@ Available options:
+//@
+//@ + `+/-e`: exit upon error (`config.fatal`)
+//@ + `+/-v`: verbose: show all commands (`config.verbose`)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ set('-e'); // exit upon first error
+//@ set('+e'); // this undoes a "set('-e')"
+//@ ```
+//@
+//@ Sets global configuration variables
+function _set(options) {
+  if (!options) {
+    var args = [].slice.call(arguments, 0);
+    if (args.length < 2)
+      common.error('must provide an argument');
+    options = args[1];
+  }
+  var negate = (options[0] === '+');
+  if (negate) {
+    options = '-' + options.slice(1); // parseOptions needs a '-' prefix
+  }
+  options = common.parseOptions(options, {
+    'e': 'fatal',
+    'v': 'verbose'
+  });
+
+  var key;
+  if (negate) {
+    for (key in options)
+      options[key] = !options[key];
+  }
+
+  for (key in options) {
+    // Only change the global config if `negate` is false and the option is true
+    // or if `negate` is true and the option is false (aka negate !== option)
+    if (negate !== options[key]) {
+      common.config[key] = options[key];
+    }
+  }
+  return;
+}
+module.exports = _set;
+
+},{"./common":266}],282:[function(require,module,exports){
+(function (process){
+var common = require('./common');
+var os = require('os');
+var fs = require('fs');
+
+// Returns false if 'dir' is not a writeable directory, 'dir' otherwise
+function writeableDir(dir) {
+  if (!dir || !fs.existsSync(dir))
+    return false;
+
+  if (!fs.statSync(dir).isDirectory())
+    return false;
+
+  var testFile = dir+'/'+common.randomFileName();
+  try {
+    fs.writeFileSync(testFile, ' ');
+    common.unlinkSync(testFile);
+    return dir;
+  } catch (e) {
+    return false;
+  }
+}
+
+
+//@
+//@ ### tempdir()
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ var tmp = tempdir(); // "/tmp" for most *nix platforms
+//@ ```
+//@
+//@ Searches and returns string containing a writeable, platform-dependent temporary directory.
+//@ Follows Python's [tempfile algorithm](http://docs.python.org/library/tempfile.html#tempfile.tempdir).
+function _tempDir() {
+  var state = common.state;
+  if (state.tempDir)
+    return state.tempDir; // from cache
+
+  state.tempDir = writeableDir(os.tmpdir && os.tmpdir()) || // node 0.10+
+                  writeableDir(os.tmpDir && os.tmpDir()) || // node 0.8+
+                  writeableDir(process.env['TMPDIR']) ||
+                  writeableDir(process.env['TEMP']) ||
+                  writeableDir(process.env['TMP']) ||
+                  writeableDir(process.env['Wimp$ScrapDir']) || // RiscOS
+                  writeableDir('C:\\TEMP') || // Windows
+                  writeableDir('C:\\TMP') || // Windows
+                  writeableDir('\\TEMP') || // Windows
+                  writeableDir('\\TMP') || // Windows
+                  writeableDir('/tmp') ||
+                  writeableDir('/var/tmp') ||
+                  writeableDir('/usr/tmp') ||
+                  writeableDir('.'); // last resort
+
+  return state.tempDir;
+}
+module.exports = _tempDir;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"fs":375,"os":475}],283:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+
+//@
+//@ ### test(expression)
+//@ Available expression primaries:
+//@
+//@ + `'-b', 'path'`: true if path is a block device
+//@ + `'-c', 'path'`: true if path is a character device
+//@ + `'-d', 'path'`: true if path is a directory
+//@ + `'-e', 'path'`: true if path exists
+//@ + `'-f', 'path'`: true if path is a regular file
+//@ + `'-L', 'path'`: true if path is a symbolic link
+//@ + `'-p', 'path'`: true if path is a pipe (FIFO)
+//@ + `'-S', 'path'`: true if path is a socket
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ if (test('-d', path)) { /* do something with dir */ };
+//@ if (!test('-f', path)) continue; // skip if it's a regular file
+//@ ```
+//@
+//@ Evaluates expression using the available primaries and returns corresponding value.
+function _test(options, path) {
+  if (!path)
+    common.error('no path given');
+
+  // hack - only works with unary primaries
+  options = common.parseOptions(options, {
+    'b': 'block',
+    'c': 'character',
+    'd': 'directory',
+    'e': 'exists',
+    'f': 'file',
+    'L': 'link',
+    'p': 'pipe',
+    'S': 'socket'
+  });
+
+  var canInterpret = false;
+  for (var key in options)
+    if (options[key] === true) {
+      canInterpret = true;
+      break;
+    }
+
+  if (!canInterpret)
+    common.error('could not interpret expression');
+
+  if (options.link) {
+    try {
+      return fs.lstatSync(path).isSymbolicLink();
+    } catch(e) {
+      return false;
+    }
+  }
+
+  if (!fs.existsSync(path))
+    return false;
+
+  if (options.exists)
+    return true;
+
+  var stats = fs.statSync(path);
+
+  if (options.block)
+    return stats.isBlockDevice();
+
+  if (options.character)
+    return stats.isCharacterDevice();
+
+  if (options.directory)
+    return stats.isDirectory();
+
+  if (options.file)
+    return stats.isFile();
+
+  if (options.pipe)
+    return stats.isFIFO();
+
+  if (options.socket)
+    return stats.isSocket();
+} // test
+module.exports = _test;
+
+},{"./common":266,"fs":375}],284:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+var path = require('path');
+
+//@
+//@ ### 'string'.to(file)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ cat('input.txt').to('output.txt');
+//@ ```
+//@
+//@ Analogous to the redirection operator `>` in Unix, but works with JavaScript strings (such as
+//@ those returned by `cat`, `grep`, etc). _Like Unix redirections, `to()` will overwrite any existing file!_
+function _to(options, file) {
+  if (!file)
+    common.error('wrong arguments');
+
+  if (!fs.existsSync( path.dirname(file) ))
+      common.error('no such file or directory: ' + path.dirname(file));
+
+  try {
+    fs.writeFileSync(file, this.toString(), 'utf8');
+    return this;
+  } catch(e) {
+    common.error('could not write to file (code '+e.code+'): '+file, true);
+  }
+}
+module.exports = _to;
+
+},{"./common":266,"fs":375,"path":481}],285:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+var path = require('path');
+
+//@
+//@ ### 'string'.toEnd(file)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ cat('input.txt').toEnd('output.txt');
+//@ ```
+//@
+//@ Analogous to the redirect-and-append operator `>>` in Unix, but works with JavaScript strings (such as
+//@ those returned by `cat`, `grep`, etc).
+function _toEnd(options, file) {
+  if (!file)
+    common.error('wrong arguments');
+
+  if (!fs.existsSync( path.dirname(file) ))
+      common.error('no such file or directory: ' + path.dirname(file));
+
+  try {
+    fs.appendFileSync(file, this.toString(), 'utf8');
+    return this;
+  } catch(e) {
+    common.error('could not append to file (code '+e.code+'): '+file, true);
+  }
+}
+module.exports = _toEnd;
+
+},{"./common":266,"fs":375,"path":481}],286:[function(require,module,exports){
+var common = require('./common');
+var fs = require('fs');
+
+//@
+//@ ### touch([options,] file)
+//@ Available options:
+//@
+//@ + `-a`: Change only the access time
+//@ + `-c`: Do not create any files
+//@ + `-m`: Change only the modification time
+//@ + `-d DATE`: Parse DATE and use it instead of current time
+//@ + `-r FILE`: Use FILE's times instead of current time
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ touch('source.js');
+//@ touch('-c', '/path/to/some/dir/source.js');
+//@ touch({ '-r': FILE }, '/path/to/some/dir/source.js');
+//@ ```
+//@
+//@ Update the access and modification times of each FILE to the current time.
+//@ A FILE argument that does not exist is created empty, unless -c is supplied.
+//@ This is a partial implementation of *[touch(1)](http://linux.die.net/man/1/touch)*.
+function _touch(opts, files) {
+  opts = common.parseOptions(opts, {
+    'a': 'atime_only',
+    'c': 'no_create',
+    'd': 'date',
+    'm': 'mtime_only',
+    'r': 'reference',
+  });
+
+  if (!files) {
+    common.error('no paths given');
+  }
+
+  if (Array.isArray(files)) {
+    files.forEach(function(f) {
+      touchFile(opts, f);
+    });
+  } else if (typeof files === 'string') {
+    touchFile(opts, files);
+  } else {
+    common.error('file arg should be a string file path or an Array of string file paths');
+  }
+
+}
+
+function touchFile(opts, file) {
+  var stat = tryStatFile(file);
+
+  if (stat && stat.isDirectory()) {
+    // don't error just exit
+    return;
+  }
+
+  // if the file doesn't already exist and the user has specified --no-create then
+  // this script is finished
+  if (!stat && opts.no_create) {
+    return;
+  }
+
+  // open the file and then close it. this will create it if it doesn't exist but will
+  // not truncate the file
+  fs.closeSync(fs.openSync(file, 'a'));
+
+  //
+  // Set timestamps
+  //
+
+  // setup some defaults
+  var now = new Date();
+  var mtime = opts.date || now;
+  var atime = opts.date || now;
+
+  // use reference file
+  if (opts.reference) {
+    var refStat = tryStatFile(opts.reference);
+    if (!refStat) {
+      common.error('failed to get attributess of ' + opts.reference);
+    }
+    mtime = refStat.mtime;
+    atime = refStat.atime;
+  } else if (opts.date) {
+    mtime = opts.date;
+    atime = opts.date;
+  }
+
+  if (opts.atime_only && opts.mtime_only) {
+    // keep the new values of mtime and atime like GNU
+  } else if (opts.atime_only) {
+    mtime = stat.mtime;
+  } else if (opts.mtime_only) {
+    atime = stat.atime;
+  }
+
+  fs.utimesSync(file, atime, mtime);
+}
+
+module.exports = _touch;
+
+function tryStatFile(filePath) {
+  try {
+    return fs.statSync(filePath);
+  } catch (e) {
+    return null;
+  }
+}
+
+},{"./common":266,"fs":375}],287:[function(require,module,exports){
+(function (process){
+var common = require('./common');
+var fs = require('fs');
+var path = require('path');
+
+// XP's system default value for PATHEXT system variable, just in case it's not
+// set on Windows.
+var XP_DEFAULT_PATHEXT = '.com;.exe;.bat;.cmd;.vbs;.vbe;.js;.jse;.wsf;.wsh';
+
+// Cross-platform method for splitting environment PATH variables
+function splitPath(p) {
+  if (!p)
+    return [];
+
+  if (common.platform === 'win')
+    return p.split(';');
+  else
+    return p.split(':');
+}
+
+function checkPath(path) {
+  return fs.existsSync(path) && !fs.statSync(path).isDirectory();
+}
+
+//@
+//@ ### which(command)
+//@
+//@ Examples:
+//@
+//@ ```javascript
+//@ var nodeExec = which('node');
+//@ ```
+//@
+//@ Searches for `command` in the system's PATH. On Windows, this uses the
+//@ `PATHEXT` variable to append the extension if it's not already executable.
+//@ Returns string containing the absolute path to the command.
+function _which(options, cmd) {
+  if (!cmd)
+    common.error('must specify command');
+
+  var pathEnv = process.env.path || process.env.Path || process.env.PATH,
+      pathArray = splitPath(pathEnv),
+      where = null;
+
+  // No relative/absolute paths provided?
+  if (cmd.search(/\//) === -1) {
+    // Search for command in PATH
+    pathArray.forEach(function(dir) {
+      if (where)
+        return; // already found it
+
+      var attempt = path.resolve(dir, cmd);
+
+      if (common.platform === 'win') {
+        attempt = attempt.toUpperCase();
+
+        // In case the PATHEXT variable is somehow not set (e.g.
+        // child_process.spawn with an empty environment), use the XP default.
+        var pathExtEnv = process.env.PATHEXT || XP_DEFAULT_PATHEXT;
+        var pathExtArray = splitPath(pathExtEnv.toUpperCase());
+        var i;
+
+        // If the extension is already in PATHEXT, just return that.
+        for (i = 0; i < pathExtArray.length; i++) {
+          var ext = pathExtArray[i];
+          if (attempt.slice(-ext.length) === ext && checkPath(attempt)) {
+            where = attempt;
+            return;
+          }
+        }
+
+        // Cycle through the PATHEXT variable
+        var baseAttempt = attempt;
+        for (i = 0; i < pathExtArray.length; i++) {
+          attempt = baseAttempt + pathExtArray[i];
+          if (checkPath(attempt)) {
+            where = attempt;
+            return;
+          }
+        }
+      } else {
+        // Assume it's Unix-like
+        if (checkPath(attempt)) {
+          where = attempt;
+          return;
+        }
+      }
+    });
+  }
+
+  // Command not found anywhere?
+  if (!checkPath(cmd) && !where)
+    return null;
+
+  where = where || path.resolve(cmd);
+
+  return common.ShellString(where);
+}
+module.exports = _which;
+
+}).call(this,require('_process'))
+},{"./common":266,"_process":488,"fs":375,"path":481}],288:[function(require,module,exports){
 var isHexPrefixed = require('is-hex-prefixed');
 
 /**
@@ -46869,7 +49533,7 @@ module.exports = function stripHexPrefix(str) {
   return isHexPrefixed(str) ? str.slice(2) : str;
 }
 
-},{"is-hex-prefixed":204}],263:[function(require,module,exports){
+},{"is-hex-prefixed":204}],289:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -48419,7 +51083,7 @@ module.exports = function stripHexPrefix(str) {
   }
 }.call(this));
 
-},{}],264:[function(require,module,exports){
+},{}],290:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/utf8js v2.1.2 by @mathias */
 ;(function(root) {
@@ -48667,7 +51331,7 @@ module.exports = function stripHexPrefix(str) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],265:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -48703,7 +51367,7 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],266:[function(require,module,exports){
+},{}],292:[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -48888,7 +51552,7 @@ uuid.unparse = unparse;
 
 module.exports = uuid;
 
-},{"./rng":265}],267:[function(require,module,exports){
+},{"./rng":291}],293:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -48937,7 +51601,7 @@ module.exports = {
     }
 };
 
-},{}],268:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -49371,7 +52035,7 @@ module.exports = {
 };
 
 
-},{"underscore":263,"web3-eth-iban":296,"web3-utils":303}],269:[function(require,module,exports){
+},{"underscore":289,"web3-eth-iban":309,"web3-utils":316}],295:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -49405,7 +52069,7 @@ module.exports = {
 };
 
 
-},{"./errors":267,"./formatters":268}],270:[function(require,module,exports){
+},{"./errors":293,"./formatters":294}],296:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50008,7 +52672,7 @@ Method.prototype.request = function () {
 
 module.exports = Method;
 
-},{"underscore":263,"web3-core-helpers":269,"web3-core-promievent":271,"web3-core-subscriptions":276,"web3-utils":303}],271:[function(require,module,exports){
+},{"underscore":289,"web3-core-helpers":295,"web3-core-promievent":297,"web3-core-subscriptions":302,"web3-utils":316}],297:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -50085,7 +52749,7 @@ PromiEvent.resolve = function(value) {
 
 module.exports = PromiEvent;
 
-},{"any-promise":50,"eventemitter3":187}],272:[function(require,module,exports){
+},{"any-promise":50,"eventemitter3":187}],298:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50159,7 +52823,7 @@ Batch.prototype.execute = function () {
 module.exports = Batch;
 
 
-},{"./jsonrpc":275,"web3-core-helpers":269}],273:[function(require,module,exports){
+},{"./jsonrpc":301,"web3-core-helpers":295}],299:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -50247,7 +52911,7 @@ if(typeof global.ethereumProvider !== 'undefined') {
 
 module.exports = givenProvider;
 
-},{}],274:[function(require,module,exports){
+},{}],300:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50495,7 +53159,7 @@ module.exports = {
     BatchManager: BatchManager
 };
 
-},{"./batch.js":272,"./givenProvider.js":273,"./jsonrpc.js":275,"underscore":263,"web3-core-helpers":269,"web3-providers-http":297,"web3-providers-ipc":298,"web3-providers-ws":299}],275:[function(require,module,exports){
+},{"./batch.js":298,"./givenProvider.js":299,"./jsonrpc.js":301,"underscore":289,"web3-core-helpers":295,"web3-providers-http":310,"web3-providers-ipc":311,"web3-providers-ws":312}],301:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50586,7 +53250,7 @@ Jsonrpc.toBatchPayload = function (messages) {
 module.exports = Jsonrpc;
 
 
-},{}],276:[function(require,module,exports){
+},{}],302:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50664,7 +53328,7 @@ module.exports = {
     subscription: Subscription
 };
 
-},{"./subscription.js":277}],277:[function(require,module,exports){
+},{"./subscription.js":303}],303:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -50981,7 +53645,7 @@ Subscription.prototype.subscribe = function() {
 
 module.exports = Subscription;
 
-},{"eventemitter3":187,"underscore":263,"web3-core-helpers":269}],278:[function(require,module,exports){
+},{"eventemitter3":187,"underscore":289,"web3-core-helpers":295}],304:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -51052,7 +53716,7 @@ var extend = function (pckg) {
 module.exports = extend;
 
 
-},{"web3-core-helpers":269,"web3-core-method":270,"web3-utils":303}],279:[function(require,module,exports){
+},{"web3-core-helpers":295,"web3-core-method":296,"web3-utils":316}],305:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -51140,1325 +53804,7 @@ module.exports = {
 };
 
 
-},{"./extend.js":278,"web3-core-requestmanager":274}],280:[function(require,module,exports){
-arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],281:[function(require,module,exports){
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/**
- * @file formatters.js
- * @author Marek Kotewicz <marek@parity.io>
- * @author Fabian Vogelsteller <fabian@frozeman.de>
- * @date 2017
- */
-
-var _ = require('underscore');
-var utils = require('web3-utils');
-var BN = require('bn.js');
-var SolidityParam = require('./param');
-
-
-
-/**
- * Formats input value to byte representation of int
- * If value is negative, return it's two's complement
- * If the value is floating point, round it down
- *
- * @method formatInputInt
- * @param {String|Number|BN} value that needs to be formatted
- * @returns {SolidityParam}
- */
-var formatInputInt = function (value) {
-    if(_.isNumber(value)) {
-        value = Math.trunc(value);
-    }
-    return new SolidityParam(utils.toTwosComplement(value).replace('0x',''));
-};
-
-/**
- * Formats input bytes
- *
- * @method formatInputBytes
- * @param {String} value
- * @returns {SolidityParam}
- */
-var formatInputBytes = function (value) {
-    if(!utils.isHexStrict(value)) {
-        throw new Error('Given parameter is not bytes: "'+ value + '"');
-    }
-
-    var result = value.replace(/^0x/i,'');
-
-    if(result.length % 2 !== 0) {
-        throw new Error('Given parameter bytes has an invalid length: "'+ value + '"');
-    }
-
-    if (result.length > 64) {
-        throw new Error('Given parameter bytes is too long: "' + value + '"');
-    }
-
-    var l = Math.floor((result.length + 63) / 64);
-    result = utils.padRight(result, l * 64);
-    return new SolidityParam(result);
-};
-
-/**
- * Formats input bytes
- *
- * @method formatDynamicInputBytes
- * @param {String} value
- * @returns {SolidityParam}
- */
-var formatInputDynamicBytes = function (value) {
-    if(!utils.isHexStrict(value)) {
-        throw new Error('Given parameter is not bytes: "'+ value + '"');
-    }
-
-    var result = value.replace(/^0x/i,'');
-
-    if(result.length % 2 !== 0) {
-        throw new Error('Given parameter bytes has an invalid length: "'+ value + '"');
-    }
-
-    var length = result.length / 2;
-    var l = Math.floor((result.length + 63) / 64);
-    result = utils.padRight(result, l * 64);
-    return new SolidityParam(formatInputInt(length).value + result);
-};
-
-/**
- * Formats input value to byte representation of string
- *
- * @method formatInputString
- * @param {String}
- * @returns {SolidityParam}
- */
-var formatInputString = function (value) {
-    if(!_.isString(value)) {
-        throw new Error('Given parameter is not a valid string: ' + value);
-    }
-
-    var result = utils.utf8ToHex(value).replace(/^0x/i,'');
-    var length = result.length / 2;
-    var l = Math.floor((result.length + 63) / 64);
-    result = utils.padRight(result, l * 64);
-    return new SolidityParam(formatInputInt(length).value + result);
-};
-
-/**
- * Formats input value to byte representation of bool
- *
- * @method formatInputBool
- * @param {Boolean}
- * @returns {SolidityParam}
- */
-var formatInputBool = function (value) {
-    var result = '000000000000000000000000000000000000000000000000000000000000000' + (value ?  '1' : '0');
-    return new SolidityParam(result);
-};
-
-
-/**
- * Check if input value is negative
- *
- * @method signedIsNegative
- * @param {String} value is hex format
- * @returns {Boolean} true if it is negative, otherwise false
- */
-var signedIsNegative = function (value) {
-    return (new BN(value.substr(0, 1), 16).toString(2).substr(0, 1)) === '1';
-};
-
-/**
- * Formats right-aligned output bytes to int
- *
- * @method formatOutputInt
- * @param {SolidityParam} param
- * @returns {BN} right-aligned output bytes formatted to big number
- */
-var formatOutputInt = function (param) {
-    var value = param.staticPart();
-
-    if(!value && !param.rawValue) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue);
-    }
-
-    // check if it's negative number
-    // it it is, return two's complement
-    if (signedIsNegative(value)) {
-        return new BN(value, 16).fromTwos(256).toString(10);
-    }
-    return new BN(value, 16).toString(10);
-};
-
-/**
- * Formats right-aligned output bytes to uint
- *
- * @method formatOutputUInt
- * @param {SolidityParam} param
- * @returns {BN} right-aligned output bytes formatted to uint
- */
-var formatOutputUInt = function (param, name) {
-    var value = param.staticPart();
-
-    if(!value && !param.rawValue) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue);
-    }
-
-    return new BN(value, 16).toString(10);
-};
-
-
-
-/**
- * Should be used to format output bool
- *
- * @method formatOutputBool
- * @param {SolidityParam} param
- * @param {String} name type name
- * @returns {Boolean} right-aligned input bytes formatted to bool
- */
-var formatOutputBool = function (param, name) {
-    var value = param.staticPart();
-
-    if(!value && !param.rawValue) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue);
-    }
-
-    return (value === '0000000000000000000000000000000000000000000000000000000000000001');
-};
-
-/**
- * Should be used to format output bytes
- *
- * @method formatOutputBytes
- * @param {SolidityParam} param left-aligned hex representation of string
- * @param {String} name type name
- * @returns {String} hex string
- */
-var formatOutputBytes = function (param, name) {
-    var matches = name.match(/^bytes([0-9]*)/);
-    var size = parseInt(matches[1]);
-
-    if(param.staticPart().slice(0, 2 * size).length !== size * 2) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue + ' The size doesn\'t match.');
-    }
-
-    return '0x' + param.staticPart().slice(0, 2 * size);
-};
-
-/**
- * Should be used to format output bytes
- *
- * @method formatOutputDynamicBytes
- * @param {SolidityParam} param left-aligned hex representation of string
- * @param {String} name type name
- * @returns {String} hex string
- */
-var formatOutputDynamicBytes = function (param, name) {
-    var hex = param.dynamicPart().slice(0, 64);
-
-    if (!hex) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue);
-    }
-
-    var length = (new BN(hex, 16)).toNumber() * 2;
-    return '0x' + param.dynamicPart().substr(64, length);
-};
-
-/**
- * Should be used to format output string
- *
- * @method formatOutputString
- * @param {SolidityParam} left-aligned hex representation of string
- * @returns {String} ascii string
- */
-var formatOutputString = function (param) {
-    var hex = param.dynamicPart().slice(0, 64);
-
-    if(!hex) {
-        throw new Error('ERROR: The returned value is not a convertible string:'+ hex);
-    }
-
-    var length = (new BN(hex, 16)).toNumber() * 2;
-    return length ? utils.hexToUtf8('0x'+ param.dynamicPart().substr(64, length).replace(/^0x/i, '')) : '';
-};
-
-/**
- * Should be used to format output address
- *
- * @method formatOutputAddress
- * @param {SolidityParam} param right-aligned input bytes
- * @param {String} name type name
- * @returns {String} address
- */
-var formatOutputAddress = function (param, name) {
-    var value = param.staticPart();
-
-    if (!value) {
-        throw new Error('Couldn\'t decode '+ name +' from ABI: 0x'+ param.rawValue);
-    }
-
-    return utils.toChecksumAddress("0x" + value.slice(value.length - 40, value.length));
-};
-
-module.exports = {
-    formatInputInt: formatInputInt,
-    formatInputBytes: formatInputBytes,
-    formatInputDynamicBytes: formatInputDynamicBytes,
-    formatInputString: formatInputString,
-    formatInputBool: formatInputBool,
-    formatOutputInt: formatOutputInt,
-    formatOutputUInt: formatOutputUInt,
-    formatOutputBool: formatOutputBool,
-    formatOutputBytes: formatOutputBytes,
-    formatOutputDynamicBytes: formatOutputDynamicBytes,
-    formatOutputString: formatOutputString,
-    formatOutputAddress: formatOutputAddress,
-    toTwosComplement: utils.toTwosComplement
-};
-
-},{"./param":283,"bn.js":280,"underscore":263,"web3-utils":303}],282:[function(require,module,exports){
-/*
- This file is part of web3.js.
-
- web3.js is free software: you can redistribute it and/or modify
- it under the terms of the GNU Lesser General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
- web3.js is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU Lesser General Public License for more details.
-
- You should have received a copy of the GNU Lesser General Public License
- along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
- */
-/**
- * @file index.js
- * @author Marek Kotewicz <marek@parity.io>
- * @author Fabian Vogelsteller <fabian@frozeman.de>
- * @date 2017
- */
-
-var _ = require('underscore');
-var utils = require('web3-utils');
-
-var f = require('./formatters');
-
-var SolidityTypeAddress = require('./types/address');
-var SolidityTypeBool = require('./types/bool');
-var SolidityTypeInt = require('./types/int');
-var SolidityTypeUInt = require('./types/uint');
-var SolidityTypeDynamicBytes = require('./types/dynamicbytes');
-var SolidityTypeString = require('./types/string');
-var SolidityTypeBytes = require('./types/bytes');
-
-var isDynamic = function (solidityType, type) {
-    return solidityType.isDynamicType(type) ||
-        solidityType.isDynamicArray(type);
-};
-
-
-// result method
-function Result() {}
-
-
-/**
- * ABICoder prototype should be used to encode/decode solidity params of any type
- */
-var ABICoder = function (types) {
-    this._types = types;
-};
-
-/**
- * This method should be used to transform type to SolidityType
- *
- * @method _requireType
- * @param {String} type
- * @returns {SolidityType}
- * @throws {Error} throws if no matching type is found
- */
-ABICoder.prototype._requireType = function (type) {
-    var solidityType = this._types.filter(function (t) {
-        return t.isType(type);
-    })[0];
-
-    if (!solidityType) {
-        throw Error('Invalid solidity type: ' + type);
-    }
-
-    return solidityType;
-};
-
-
-
-ABICoder.prototype._getOffsets = function (types, solidityTypes) {
-    var lengths =  solidityTypes.map(function (solidityType, index) {
-        return solidityType.staticPartLength(types[index]);
-    });
-
-    for (var i = 1; i < lengths.length; i++) {
-        // sum with length of previous element
-        lengths[i] += lengths[i - 1];
-    }
-
-    return lengths.map(function (length, index) {
-        // remove the current length, so the length is sum of previous elements
-        var staticPartLength = solidityTypes[index].staticPartLength(types[index]);
-        return length - staticPartLength;
-    });
-};
-
-ABICoder.prototype._getSolidityTypes = function (types) {
-    var self = this;
-    return types.map(function (type) {
-        return self._requireType(type);
-    });
-};
-
-
-ABICoder.prototype._encodeMultiWithOffset = function (types, solidityTypes, encodeds, dynamicOffset) {
-    var result = "";
-    var self = this;
-
-    types.forEach(function (type, i) {
-        if (isDynamic(solidityTypes[i], types[i])) {
-            result += f.formatInputInt(dynamicOffset).encode();
-            var e = self._encodeWithOffset(types[i], solidityTypes[i], encodeds[i], dynamicOffset);
-            dynamicOffset += e.length / 2;
-        } else {
-            // don't add length to dynamicOffset. it's already counted
-            result += self._encodeWithOffset(types[i], solidityTypes[i], encodeds[i], dynamicOffset);
-        }
-
-        // TODO: figure out nested arrays
-    });
-
-    types.forEach(function (type, i) {
-        if (isDynamic(solidityTypes[i], types[i])) {
-            var e = self._encodeWithOffset(types[i], solidityTypes[i], encodeds[i], dynamicOffset);
-            dynamicOffset += e.length / 2;
-            result += e;
-        }
-    });
-    return result;
-};
-
-// TODO: refactor whole encoding!
-ABICoder.prototype._encodeWithOffset = function (type, solidityType, encoded, offset) {
-    var self = this;
-    if (solidityType.isDynamicArray(type)) {
-        return (function () {
-            // offset was already set
-            var nestedName = solidityType.nestedName(type);
-            var nestedStaticPartLength = solidityType.staticPartLength(nestedName);
-            var result = encoded[0];
-
-            (function () {
-                var previousLength = 2; // in int
-                if (solidityType.isDynamicArray(nestedName)) {
-                    for (var i = 1; i < encoded.length; i++) {
-                        previousLength += +(encoded[i - 1])[0] || 0;
-                        result += f.formatInputInt(offset + i * nestedStaticPartLength + previousLength * 32).encode();
-                    }
-                }
-            })();
-
-            // first element is length, skip it
-            (function () {
-                for (var i = 0; i < encoded.length - 1; i++) {
-                    var additionalOffset = result / 2;
-                    result += self._encodeWithOffset(nestedName, solidityType, encoded[i + 1], offset +  additionalOffset);
-                }
-            })();
-
-            return result;
-        })();
-
-    } else if (solidityType.isStaticArray(type)) {
-        return (function () {
-            var nestedName = solidityType.nestedName(type);
-            var nestedStaticPartLength = solidityType.staticPartLength(nestedName);
-            var result = "";
-
-
-            if (solidityType.isDynamicArray(nestedName)) {
-                (function () {
-                    var previousLength = 0; // in int
-                    for (var i = 0; i < encoded.length; i++) {
-                        // calculate length of previous item
-                        previousLength += +(encoded[i - 1] || [])[0] || 0;
-                        result += f.formatInputInt(offset + i * nestedStaticPartLength + previousLength * 32).encode();
-                    }
-                })();
-            }
-
-            (function () {
-                for (var i = 0; i < encoded.length; i++) {
-                    var additionalOffset = result / 2;
-                    result += self._encodeWithOffset(nestedName, solidityType, encoded[i], offset + additionalOffset);
-                }
-            })();
-
-            return result;
-        })();
-    }
-
-    return encoded;
-};
-
-
-/**
- * Encodes the function name to its ABI representation, which are the first 4 bytes of the sha3 of the function name including  types.
- *
- * @method encodeFunctionSignature
- * @param {String|Object} functionName
- * @return {String} encoded function name
- */
-ABICoder.prototype.encodeFunctionSignature = function (functionName) {
-    if(_.isObject(functionName)) {
-        functionName = utils._jsonInterfaceMethodToString(functionName);
-    }
-
-    return utils.sha3(functionName).slice(0, 10);
-};
-
-
-/**
- * Encodes the function name to its ABI representation, which are the first 4 bytes of the sha3 of the function name including  types.
- *
- * @method encodeEventSignature
- * @param {String|Object} functionName
- * @return {String} encoded function name
- */
-ABICoder.prototype.encodeEventSignature = function (functionName) {
-    if(_.isObject(functionName)) {
-        functionName = utils._jsonInterfaceMethodToString(functionName);
-    }
-
-    return utils.sha3(functionName);
-};
-
-
-/**
- * Should be used to encode plain param
- *
- * @method encodeParameter
- * @param {String} type
- * @param {Object} param
- * @return {String} encoded plain param
- */
-ABICoder.prototype.encodeParameter = function (type, param) {
-    return this.encodeParameters([type], [param]);
-};
-
-/**
- * Should be used to encode list of params
- *
- * @method encodeParameters
- * @param {Array} types
- * @param {Array} params
- * @return {String} encoded list of params
- */
-ABICoder.prototype.encodeParameters = function (types, params) {
-    // given a json interface
-    if(_.isObject(types) && types.inputs) {
-        types = _.map(types.inputs, function (input) {
-            return input.type;
-        });
-    }
-
-    var solidityTypes = this._getSolidityTypes(types);
-
-    var encodeds = solidityTypes.map(function (solidityType, index) {
-        return solidityType.encode(params[index], types[index]);
-    });
-
-    var dynamicOffset = solidityTypes.reduce(function (acc, solidityType, index) {
-        var staticPartLength = solidityType.staticPartLength(types[index]);
-        var roundedStaticPartLength = Math.floor((staticPartLength + 31) / 32) * 32;
-
-        return acc + (isDynamic(solidityTypes[index], types[index]) ?
-                32 :
-                roundedStaticPartLength);
-    }, 0);
-
-    return '0x'+ this._encodeMultiWithOffset(types, solidityTypes, encodeds, dynamicOffset);
-};
-
-
-/**
- * Encodes a function call from its json interface and parameters.
- *
- * @method encodeFunctionCall
- * @param {Array} jsonInterface
- * @param {Array} params
- * @return {String} The encoded ABI for this function call
- */
-ABICoder.prototype.encodeFunctionCall = function (jsonInterface, params) {
-    return this.encodeFunctionSignature(jsonInterface) + this.encodeParameters(jsonInterface, params).replace('0x','');
-};
-
-
-/**
- * Should be used to decode bytes to plain param
- *
- * @method decodeParameter
- * @param {String} type
- * @param {String} bytes
- * @return {Object} plain param
- */
-ABICoder.prototype.decodeParameter = function (type, bytes) {
-
-    if (!_.isString(type)) {
-        throw new Error('Given parameter type is not a string: '+ type);
-    }
-
-    return this.decodeParameters([{type: type}], bytes)[0];
-};
-
-/**
- * Should be used to decode list of params
- *
- * @method decodeParameter
- * @param {Array} outputs
- * @param {String} bytes
- * @return {Array} array of plain params
- */
-ABICoder.prototype.decodeParameters = function (outputs, bytes) {
-    var isTypeArray = _.isArray(outputs) && _.isString(outputs[0]);
-    var types = (isTypeArray) ? outputs : [];
-
-    if(!isTypeArray) {
-        outputs.forEach(function (output) {
-            types.push(output.type);
-        });
-    }
-
-    var solidityTypes = this._getSolidityTypes(types);
-    var offsets = this._getOffsets(types, solidityTypes);
-
-    var returnValue = new Result();
-    returnValue.__length__ = 0;
-    var count = 0;
-
-    outputs.forEach(function (output, i) {
-        var decodedValue = solidityTypes[count].decode(bytes.replace(/^0x/i,''), offsets[count],  types[count], count);
-        decodedValue = (decodedValue === '0x') ? null : decodedValue;
-
-        returnValue[i] = decodedValue;
-
-        if (_.isObject(output) && output.name) {
-            returnValue[output.name] = decodedValue;
-        }
-
-        returnValue.__length__++;
-        count++;
-    });
-
-    return returnValue;
-};
-
-/**
- * Decodes events non- and indexed parameters.
- *
- * @method decodeLog
- * @param {Object} inputs
- * @param {String} data
- * * @param {Array} topics
- * @return {Array} array of plain params
- */
-ABICoder.prototype.decodeLog = function (inputs, data, topics) {
-
-    data = data || '';
-
-    var notIndexedInputs = [];
-    var indexedInputs = [];
-
-    inputs.forEach(function (input, i) {
-        if (input.indexed) {
-            indexedInputs[i] = input;
-        } else {
-            notIndexedInputs[i] = input;
-        }
-    });
-
-    var nonIndexedData = data.slice(2);
-    var indexedData = _.isArray(topics) ? topics.map(function (topic) { return topic.slice(2); }).join('') : topics;
-
-    var notIndexedParams = this.decodeParameters(notIndexedInputs, nonIndexedData);
-    var indexedParams = this.decodeParameters(indexedInputs, indexedData);
-
-
-    var returnValue = new Result();
-    returnValue.__length__ = 0;
-
-    inputs.forEach(function (res, i) {
-        returnValue[i] = (res.type === 'string') ? '' : null;
-
-        if (notIndexedParams[i]) {
-            returnValue[i] = notIndexedParams[i];
-        }
-        if (indexedParams[i]) {
-            returnValue[i] = indexedParams[i];
-        }
-
-        if(res.name) {
-            returnValue[res.name] = returnValue[i];
-        }
-
-        returnValue.__length__++;
-    });
-
-    return returnValue;
-};
-
-
-var coder = new ABICoder([
-    new SolidityTypeAddress(),
-    new SolidityTypeBool(),
-    new SolidityTypeInt(),
-    new SolidityTypeUInt(),
-    new SolidityTypeDynamicBytes(),
-    new SolidityTypeBytes(),
-    new SolidityTypeString()
-]);
-
-module.exports = coder;
-
-},{"./formatters":281,"./types/address":285,"./types/bool":286,"./types/bytes":287,"./types/dynamicbytes":288,"./types/int":289,"./types/string":290,"./types/uint":291,"underscore":263,"web3-utils":303}],283:[function(require,module,exports){
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/**
- * @file param.js
- * @author Marek Kotewicz <marek@parity.io>
- * @date 2015
- */
-
-var formatters = require('./formatters.js');
-
-/**
- * SolidityParam object prototype.
- * Should be used when encoding, decoding solidity bytes
- */
-var SolidityParam = function (value, offset, rawValue) {
-    this.value = value || '';
-    this.offset = offset; // offset in bytes
-    this.rawValue = rawValue; // used for debugging
-};
-
-/**
- * This method should be used to get length of params's dynamic part
- *
- * @method dynamicPartLength
- * @returns {Number} length of dynamic part (in bytes)
- */
-SolidityParam.prototype.dynamicPartLength = function () {
-    return this.dynamicPart().length / 2;
-};
-
-/**
- * This method should be used to create copy of solidity param with different offset
- *
- * @method withOffset
- * @param {Number} offset length in bytes
- * @returns {SolidityParam} new solidity param with applied offset
- */
-SolidityParam.prototype.withOffset = function (offset) {
-    return new SolidityParam(this.value, offset);
-};
-
-/**
- * This method should be used to combine solidity params together
- * eg. when appending an array
- *
- * @method combine
- * @param {SolidityParam} param with which we should combine
- * @param {SolidityParam} result of combination
- */
-SolidityParam.prototype.combine = function (param) {
-    return new SolidityParam(this.value + param.value);
-};
-
-/**
- * This method should be called to check if param has dynamic size.
- * If it has, it returns true, otherwise false
- *
- * @method isDynamic
- * @returns {Boolean}
- */
-SolidityParam.prototype.isDynamic = function () {
-    return this.offset !== undefined;
-};
-
-/**
- * This method should be called to transform offset to bytes
- *
- * @method offsetAsBytes
- * @returns {String} bytes representation of offset
- */
-SolidityParam.prototype.offsetAsBytes = function () {
-    return !this.isDynamic() ? '' : formatters.toTwosComplement(this.offset).replace('0x','');
-};
-
-/**
- * This method should be called to get static part of param
- *
- * @method staticPart
- * @returns {String} offset if it is a dynamic param, otherwise value
- */
-SolidityParam.prototype.staticPart = function () {
-    if (!this.isDynamic()) {
-        return this.value;
-    }
-    return this.offsetAsBytes();
-};
-
-/**
- * This method should be called to get dynamic part of param
- *
- * @method dynamicPart
- * @returns {String} returns a value if it is a dynamic param, otherwise empty string
- */
-SolidityParam.prototype.dynamicPart = function () {
-    return this.isDynamic() ? this.value : '';
-};
-
-/**
- * This method should be called to encode param
- *
- * @method encode
- * @returns {String}
- */
-SolidityParam.prototype.encode = function () {
-    return this.staticPart() + this.dynamicPart();
-};
-
-/**
- * This method should be called to encode array of params
- *
- * @method encodeList
- * @param {Array[SolidityParam]} params
- * @returns {String}
- */
-SolidityParam.encodeList = function (params) {
-
-    // updating offsets
-    var totalOffset = params.length * 32;
-    var offsetParams = params.map(function (param) {
-        if (!param.isDynamic()) {
-            return param;
-        }
-        var offset = totalOffset;
-        totalOffset += param.dynamicPartLength();
-        return param.withOffset(offset);
-    });
-
-    // encode everything!
-    return offsetParams.reduce(function (result, param) {
-        return result + param.dynamicPart();
-    }, offsetParams.reduce(function (result, param) {
-        return result + param.staticPart();
-    }, ''));
-};
-
-
-
-module.exports = SolidityParam;
-
-
-},{"./formatters.js":281}],284:[function(require,module,exports){
-var f = require('./formatters');
-var SolidityParam = require('./param');
-
-/**
- * SolidityType prototype is used to encode/decode solidity params of certain type
- */
-var SolidityType = function (config) {
-    this._inputFormatter = config.inputFormatter;
-    this._outputFormatter = config.outputFormatter;
-};
-
-/**
- * Should be used to determine if this SolidityType do match given name
- *
- * @method isType
- * @param {String} name
- * @return {Bool} true if type match this SolidityType, otherwise false
- */
-SolidityType.prototype.isType = function (name) {
-    throw "This method should be overwritten for type " + name;
-};
-
-/**
- * Should be used to determine what is the length of static part in given type
- *
- * @method staticPartLength
- * @param {String} name
- * @return {Number} length of static part in bytes
- */
-SolidityType.prototype.staticPartLength = function (name) {
-    // If name isn't an array then treat it like a single element array.
-    return (this.nestedTypes(name) || ['[1]'])
-        .map(function (type) {
-            // the length of the nested array
-            return parseInt(type.slice(1, -1), 10) || 1;
-        })
-        .reduce(function (previous, current) {
-            return previous * current;
-        // all basic types are 32 bytes long
-        }, 32);
-};
-
-/**
- * Should be used to determine if type is dynamic array
- * eg:
- * "type[]" => true
- * "type[4]" => false
- *
- * @method isDynamicArray
- * @param {String} name
- * @return {Bool} true if the type is dynamic array
- */
-SolidityType.prototype.isDynamicArray = function (name) {
-    var nestedTypes = this.nestedTypes(name);
-    return !!nestedTypes && !nestedTypes[nestedTypes.length - 1].match(/[0-9]{1,}/g);
-};
-
-/**
- * Should be used to determine if type is static array
- * eg:
- * "type[]" => false
- * "type[4]" => true
- *
- * @method isStaticArray
- * @param {String} name
- * @return {Bool} true if the type is static array
- */
-SolidityType.prototype.isStaticArray = function (name) {
-    var nestedTypes = this.nestedTypes(name);
-    return !!nestedTypes && !!nestedTypes[nestedTypes.length - 1].match(/[0-9]{1,}/g);
-};
-
-/**
- * Should return length of static array
- * eg.
- * "int[32]" => 32
- * "int256[14]" => 14
- * "int[2][3]" => 3
- * "int" => 1
- * "int[1]" => 1
- * "int[]" => 1
- *
- * @method staticArrayLength
- * @param {String} name
- * @return {Number} static array length
- */
-SolidityType.prototype.staticArrayLength = function (name) {
-    var nestedTypes = this.nestedTypes(name);
-    if (nestedTypes) {
-       return parseInt(nestedTypes[nestedTypes.length - 1].match(/[0-9]{1,}/g) || 1);
-    }
-    return 1;
-};
-
-/**
- * Should return nested type
- * eg.
- * "int[32]" => "int"
- * "int256[14]" => "int256"
- * "int[2][3]" => "int[2]"
- * "int" => "int"
- * "int[]" => "int"
- *
- * @method nestedName
- * @param {String} name
- * @return {String} nested name
- */
-SolidityType.prototype.nestedName = function (name) {
-    // remove last [] in name
-    var nestedTypes = this.nestedTypes(name);
-    if (!nestedTypes) {
-        return name;
-    }
-
-    return name.substr(0, name.length - nestedTypes[nestedTypes.length - 1].length);
-};
-
-/**
- * Should return true if type has dynamic size by default
- * such types are "string", "bytes"
- *
- * @method isDynamicType
- * @param {String} name
- * @return {Bool} true if is dynamic, otherwise false
- */
-SolidityType.prototype.isDynamicType = function () {
-    return false;
-};
-
-/**
- * Should return array of nested types
- * eg.
- * "int[2][3][]" => ["[2]", "[3]", "[]"]
- * "int[] => ["[]"]
- * "int" => null
- *
- * @method nestedTypes
- * @param {String} name
- * @return {Array} array of nested types
- */
-SolidityType.prototype.nestedTypes = function (name) {
-    // return list of strings eg. "[]", "[3]", "[]", "[2]"
-    return name.match(/(\[[0-9]*\])/g);
-};
-
-/**
- * Should be used to encode the value
- *
- * @method encode
- * @param {Object} value
- * @param {String} name
- * @return {String} encoded value
- */
-SolidityType.prototype.encode = function (value, name) {
-    var self = this;
-    if (this.isDynamicArray(name)) {
-
-        return (function () {
-            var length = value.length;                          // in int
-            var nestedName = self.nestedName(name);
-
-            var result = [];
-            result.push(f.formatInputInt(length).encode());
-
-            value.forEach(function (v) {
-                result.push(self.encode(v, nestedName));
-            });
-
-            return result;
-        })();
-
-    } else if (this.isStaticArray(name)) {
-
-        return (function () {
-            var length = self.staticArrayLength(name);          // in int
-            var nestedName = self.nestedName(name);
-
-            var result = [];
-            for (var i = 0; i < length; i++) {
-                result.push(self.encode(value[i], nestedName));
-            }
-
-            return result;
-        })();
-
-    }
-
-    return this._inputFormatter(value, name).encode();
-};
-
-/**
- * Should be used to decode value from bytes
- *
- * @method decode
- * @param {String} bytes
- * @param {Number} offset in bytes
- * @param {String} name type name
- * @returns {Object} decoded value
- */
-SolidityType.prototype.decode = function (bytes, offset, name) {
-    var self = this;
-
-    if (this.isDynamicArray(name)) {
-
-        return (function () {
-            var arrayOffset = parseInt('0x' + bytes.substr(offset * 2, 64)); // in bytes
-            var length = parseInt('0x' + bytes.substr(arrayOffset * 2, 64)); // in int
-            var arrayStart = arrayOffset + 32; // array starts after length; // in bytes
-
-            var nestedName = self.nestedName(name);
-            var nestedStaticPartLength = self.staticPartLength(nestedName);  // in bytes
-            var roundedNestedStaticPartLength = Math.floor((nestedStaticPartLength + 31) / 32) * 32;
-            var result = [];
-
-            for (var i = 0; i < length * roundedNestedStaticPartLength; i += roundedNestedStaticPartLength) {
-                result.push(self.decode(bytes, arrayStart + i, nestedName));
-            }
-
-            return result;
-        })();
-
-    } else if (this.isStaticArray(name)) {
-
-        return (function () {
-            var length = self.staticArrayLength(name);                      // in int
-            var arrayStart = offset;                                        // in bytes
-
-            var nestedName = self.nestedName(name);
-            var nestedStaticPartLength = self.staticPartLength(nestedName); // in bytes
-            var roundedNestedStaticPartLength = Math.floor((nestedStaticPartLength + 31) / 32) * 32;
-            var result = [];
-
-            for (var i = 0; i < length * roundedNestedStaticPartLength; i += roundedNestedStaticPartLength) {
-                result.push(self.decode(bytes, arrayStart + i, nestedName));
-            }
-
-            return result;
-        })();
-    } else if (this.isDynamicType(name)) {
-
-        return (function () {
-            var dynamicOffset = parseInt('0x' + bytes.substr(offset * 2, 64));      // in bytes
-            var length = parseInt('0x' + bytes.substr(dynamicOffset * 2, 64));      // in bytes
-            var roundedLength = Math.floor((length + 31) / 32);                     // in int
-            var param = new SolidityParam(bytes.substr(dynamicOffset * 2, ( 1 + roundedLength) * 64), 0, bytes);
-            return self._outputFormatter(param, name);
-        })();
-    }
-
-    var length = this.staticPartLength(name);
-    var param = new SolidityParam(bytes.substr(offset * 2, length * 2), undefined, bytes);
-    return this._outputFormatter(param, name);
-};
-
-module.exports = SolidityType;
-
-},{"./formatters":281,"./param":283}],285:[function(require,module,exports){
-var f = require('../formatters');
-var formatters = require('web3-core-helpers').formatters;
-var SolidityType = require('../type');
-
-/**
- * SolidityTypeAddress is a protoype that represents address type
- * It matches:
- * address
- * address[]
- * address[4]
- * address[][]
- * address[3][]
- * address[][6][], ...
- */
-var SolidityTypeAddress = function () {
-    this._inputFormatter = function(){
-        var args = Array.prototype.slice.call(arguments);
-        args[0] = (!args[0] || args[0] === '0x0') ? '' : formatters.inputAddressFormatter(args[0]);
-        return f.formatInputInt.apply(this, args);
-    };
-    this._outputFormatter = f.formatOutputAddress;
-};
-
-SolidityTypeAddress.prototype = new SolidityType({});
-SolidityTypeAddress.prototype.constructor = SolidityTypeAddress;
-
-SolidityTypeAddress.prototype.isType = function (name) {
-    return !!name.match(/address(\[([0-9]*)\])?/);
-};
-
-module.exports = SolidityTypeAddress;
-
-},{"../formatters":281,"../type":284,"web3-core-helpers":269}],286:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-/**
- * SolidityTypeBool is a protoype that represents bool type
- * It matches:
- * bool
- * bool[]
- * bool[4]
- * bool[][]
- * bool[3][]
- * bool[][6][], ...
- */
-var SolidityTypeBool = function () {
-    this._inputFormatter = f.formatInputBool;
-    this._outputFormatter = f.formatOutputBool;
-};
-
-SolidityTypeBool.prototype = new SolidityType({});
-SolidityTypeBool.prototype.constructor = SolidityTypeBool;
-
-SolidityTypeBool.prototype.isType = function (name) {
-    return !!name.match(/^bool(\[([0-9]*)\])*$/);
-};
-
-module.exports = SolidityTypeBool;
-
-},{"../formatters":281,"../type":284}],287:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-/**
- * SolidityTypeBytes is a prototype that represents the bytes type.
- * It matches:
- * bytes
- * bytes[]
- * bytes[4]
- * bytes[][]
- * bytes[3][]
- * bytes[][6][], ...
- * bytes32
- * bytes8[4]
- * bytes[3][]
- */
-var SolidityTypeBytes = function () {
-    this._inputFormatter = f.formatInputBytes;
-    this._outputFormatter = f.formatOutputBytes;
-};
-
-SolidityTypeBytes.prototype = new SolidityType({});
-SolidityTypeBytes.prototype.constructor = SolidityTypeBytes;
-
-SolidityTypeBytes.prototype.isType = function (name) {
-    return !!name.match(/^bytes([0-9]{1,})(\[([0-9]*)\])*$/);
-};
-
-module.exports = SolidityTypeBytes;
-
-},{"../formatters":281,"../type":284}],288:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-var SolidityTypeDynamicBytes = function () {
-    this._inputFormatter = f.formatInputDynamicBytes;
-    this._outputFormatter = f.formatOutputDynamicBytes;
-};
-
-SolidityTypeDynamicBytes.prototype = new SolidityType({});
-SolidityTypeDynamicBytes.prototype.constructor = SolidityTypeDynamicBytes;
-
-SolidityTypeDynamicBytes.prototype.isType = function (name) {
-    return !!name.match(/^bytes(\[([0-9]*)\])*$/);
-};
-
-SolidityTypeDynamicBytes.prototype.isDynamicType = function () {
-    return true;
-};
-
-module.exports = SolidityTypeDynamicBytes;
-
-},{"../formatters":281,"../type":284}],289:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-/**
- * SolidityTypeInt is a protoype that represents int type
- * It matches:
- * int
- * int[]
- * int[4]
- * int[][]
- * int[3][]
- * int[][6][], ...
- * int32
- * int64[]
- * int8[4]
- * int256[][]
- * int[3][]
- * int64[][6][], ...
- */
-var SolidityTypeInt = function () {
-    this._inputFormatter = f.formatInputInt;
-    this._outputFormatter = f.formatOutputInt;
-};
-
-SolidityTypeInt.prototype = new SolidityType({});
-SolidityTypeInt.prototype.constructor = SolidityTypeInt;
-
-SolidityTypeInt.prototype.isType = function (name) {
-    return !!name.match(/^int([0-9]*)?(\[([0-9]*)\])*$/);
-};
-
-module.exports = SolidityTypeInt;
-
-},{"../formatters":281,"../type":284}],290:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-var SolidityTypeString = function () {
-    this._inputFormatter = f.formatInputString;
-    this._outputFormatter = f.formatOutputString;
-};
-
-SolidityTypeString.prototype = new SolidityType({});
-SolidityTypeString.prototype.constructor = SolidityTypeString;
-
-SolidityTypeString.prototype.isType = function (name) {
-    return !!name.match(/^string(\[([0-9]*)\])*$/);
-};
-
-SolidityTypeString.prototype.isDynamicType = function () {
-    return true;
-};
-
-module.exports = SolidityTypeString;
-
-},{"../formatters":281,"../type":284}],291:[function(require,module,exports){
-var f = require('../formatters');
-var SolidityType = require('../type');
-
-/**
- * SolidityTypeUInt is a protoype that represents uint type
- * It matches:
- * uint
- * uint[]
- * uint[4]
- * uint[][]
- * uint[3][]
- * uint[][6][], ...
- * uint32
- * uint64[]
- * uint8[4]
- * uint256[][]
- * uint[3][]
- * uint64[][6][], ...
- */
-var SolidityTypeUInt = function () {
-    this._inputFormatter = f.formatInputInt;
-    this._outputFormatter = f.formatOutputUInt;
-};
-
-SolidityTypeUInt.prototype = new SolidityType({});
-SolidityTypeUInt.prototype.constructor = SolidityTypeUInt;
-
-SolidityTypeUInt.prototype.isType = function (name) {
-    return !!name.match(/^uint([0-9]*)?(\[([0-9]*)\])*$/);
-};
-
-module.exports = SolidityTypeUInt;
-
-},{"../formatters":281,"../type":284}],292:[function(require,module,exports){
+},{"./extend.js":304,"web3-core-requestmanager":300}],306:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -52493,9 +53839,9 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],293:[function(require,module,exports){
-arguments[4][266][0].apply(exports,arguments)
-},{"./rng":292,"dup":266}],294:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
+arguments[4][292][0].apply(exports,arguments)
+},{"./rng":306,"dup":292}],308:[function(require,module,exports){
 (function (global,Buffer){
 /*
  This file is part of web3.js.
@@ -53033,908 +54379,7 @@ if (typeof localStorage === 'undefined') {
 module.exports = Accounts;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"any-promise":50,"buffer":407,"crypto":416,"crypto-browserify":110,"eth-lib/lib/account":171,"eth-lib/lib/bytes":173,"eth-lib/lib/hash":174,"eth-lib/lib/nat":175,"eth-lib/lib/rlp":176,"scrypt.js":246,"underscore":263,"uuid":293,"web3-core":279,"web3-core-helpers":269,"web3-core-method":270,"web3-utils":303}],295:[function(require,module,exports){
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/**
- * @file contract.js
- *
- * To initialize a contract use:
- *
- *  var Contract = require('web3-eth-contract');
- *  Contract.setProvider('ws://localhost:8546');
- *  var contract = new Contract(abi, address, ...);
- *
- * @author Fabian Vogelsteller <fabian@ethereum.org>
- * @date 2017
- */
-
-
-"use strict";
-
-
-var _ = require('underscore');
-var core = require('web3-core');
-var Method = require('web3-core-method');
-var utils = require('web3-utils');
-var Subscription = require('web3-core-subscriptions').subscription;
-var formatters = require('web3-core-helpers').formatters;
-var errors = require('web3-core-helpers').errors;
-var promiEvent = require('web3-core-promievent');
-var abi = require('web3-eth-abi');
-
-
-/**
- * Should be called to create new contract instance
- *
- * @method Contract
- * @constructor
- * @param {Array} jsonInterface
- * @param {String} address
- * @param {Object} options
- */
-var Contract = function Contract(jsonInterface, address, options) {
-    var _this = this,
-        args = Array.prototype.slice.call(arguments);
-
-    if(!(this instanceof Contract)) {
-        throw new Error('Please use the "new" keyword to instantiate a web3.eth.contract() object!');
-    }
-
-    // sets _requestmanager
-    core.packageInit(this, [this.constructor.currentProvider]);
-
-    this.clearSubscriptions = this._requestManager.clearSubscriptions;
-
-
-
-    if(!jsonInterface || !(Array.isArray(jsonInterface))) {
-        throw new Error('You must provide the json interface of the contract when instantiating a contract object.');
-    }
-
-
-
-    // create the options object
-    this.options = {};
-
-    var lastArg = args[args.length - 1];
-    if(_.isObject(lastArg) && !_.isArray(lastArg)) {
-        options = lastArg;
-
-        this.options = _.extend(this.options, this._getOrSetDefaultOptions(options));
-        if(_.isObject(address)) {
-            address = null;
-        }
-    }
-
-    // set address
-    Object.defineProperty(this.options, 'address', {
-        set: function(value){
-            if(value) {
-                _this._address = utils.toChecksumAddress(formatters.inputAddressFormatter(value));
-            }
-        },
-        get: function(){
-            return _this._address;
-        },
-        enumerable: true
-    });
-
-    // add method and event signatures, when the jsonInterface gets set
-    Object.defineProperty(this.options, 'jsonInterface', {
-        set: function(value){
-            _this.methods = {};
-            _this.events = {};
-
-            _this._jsonInterface = value.map(function(method) {
-                var func,
-                    funcName;
-
-                if (method.name) {
-                    funcName = utils._jsonInterfaceMethodToString(method);
-                }
-
-
-                // function
-                if (method.type === 'function') {
-                    method.signature = abi.encodeFunctionSignature(funcName);
-                    func = _this._createTxObject.bind({
-                        method: method,
-                        parent: _this
-                    });
-
-
-                    // add method only if not one already exists
-                    if(!_this.methods[method.name]) {
-                        _this.methods[method.name] = func;
-                    } else {
-                        var cascadeFunc = _this._createTxObject.bind({
-                            method: method,
-                            parent: _this,
-                            nextMethod: _this.methods[method.name]
-                        });
-                        _this.methods[method.name] = cascadeFunc;
-                    }
-
-                    // definitely add the method based on its signature
-                    _this.methods[method.signature] = func;
-
-                    // add method by name
-                    _this.methods[funcName] = func;
-
-
-                // event
-                } else if (method.type === 'event') {
-                    method.signature = abi.encodeEventSignature(funcName);
-                    var event = _this._on.bind(_this, method.signature);
-
-                    // add method only if not already exists
-                    if(!_this.events[method.name] || _this.events[method.name].name === 'bound ')
-                        _this.events[method.name] = event;
-
-                    // definitely add the method based on its signature
-                    _this.events[method.signature] = event;
-
-                    // add event by name
-                    _this.events[funcName] = event;
-                }
-
-
-                return method;
-            });
-
-            // add allEvents
-            _this.events.allEvents = _this._on.bind(_this, 'allevents');
-
-            return _this._jsonInterface;
-        },
-        get: function(){
-            return _this._jsonInterface;
-        },
-        enumerable: true
-    });
-
-    // get default account from the Class
-    var defaultAccount = this.constructor.defaultAccount;
-    var defaultBlock = this.constructor.defaultBlock || 'latest';
-
-    Object.defineProperty(this, 'defaultAccount', {
-        get: function () {
-            return defaultAccount;
-        },
-        set: function (val) {
-            if(val) {
-                defaultAccount = utils.toChecksumAddress(formatters.inputAddressFormatter(val));
-            }
-
-            return val;
-        },
-        enumerable: true
-    });
-    Object.defineProperty(this, 'defaultBlock', {
-        get: function () {
-            return defaultBlock;
-        },
-        set: function (val) {
-            defaultBlock = val;
-
-            return val;
-        },
-        enumerable: true
-    });
-
-    // properties
-    this.methods = {};
-    this.events = {};
-
-    this._address = null;
-    this._jsonInterface = [];
-
-    // set getter/setter properties
-    this.options.address = address;
-    this.options.jsonInterface = jsonInterface;
-
-};
-
-Contract.setProvider = function(provider, accounts) {
-    // Contract.currentProvider = provider;
-    core.packageInit(this, [provider]);
-
-    this._ethAccounts = accounts;
-};
-
-
-/**
- * Get the callback and modiufy the array if necessary
- *
- * @method _getCallback
- * @param {Array} args
- * @return {Function} the callback
- */
-Contract.prototype._getCallback = function getCallback(args) {
-    if (args && _.isFunction(args[args.length - 1])) {
-        return args.pop(); // modify the args array!
-    }
-};
-
-/**
- * Checks that no listener with name "newListener" or "removeListener" is added.
- *
- * @method _checkListener
- * @param {String} type
- * @param {String} event
- * @return {Object} the contract instance
- */
-Contract.prototype._checkListener = function(type, event){
-    if(event === type) {
-        throw new Error('The event "'+ type +'" is a reserved event name, you can\'t use it.');
-    }
-};
-
-
-/**
- * Use default values, if options are not available
- *
- * @method _getOrSetDefaultOptions
- * @param {Object} options the options gived by the user
- * @return {Object} the options with gaps filled by defaults
- */
-Contract.prototype._getOrSetDefaultOptions = function getOrSetDefaultOptions(options) {
-    var gasPrice = options.gasPrice ? String(options.gasPrice): null;
-    var from = options.from ? utils.toChecksumAddress(formatters.inputAddressFormatter(options.from)) : null;
-
-    options.data = options.data || this.options.data;
-
-    options.from = from || this.options.from;
-    options.gasPrice = gasPrice || this.options.gasPrice;
-    options.gas = options.gas || options.gasLimit || this.options.gas;
-
-    // TODO replace with only gasLimit?
-    delete options.gasLimit;
-
-    return options;
-};
-
-
-/**
- * Should be used to encode indexed params and options to one final object
- *
- * @method _encodeEventABI
- * @param {Object} event
- * @param {Object} options
- * @return {Object} everything combined together and encoded
- */
-Contract.prototype._encodeEventABI = function (event, options) {
-    options = options || {};
-    var filter = options.filter || {},
-        result = {};
-
-    ['fromBlock', 'toBlock'].filter(function (f) {
-        return options[f] !== undefined;
-    }).forEach(function (f) {
-        result[f] = formatters.inputBlockNumberFormatter(options[f]);
-    });
-
-    // use given topics
-    if(_.isArray(options.topics)) {
-        result.topics = options.topics;
-
-    // create topics based on filter
-    } else {
-
-        result.topics = [];
-
-        // add event signature
-        if (event && !event.anonymous && event.name !== 'ALLEVENTS') {
-            result.topics.push(event.signature);
-        }
-
-        // add event topics (indexed arguments)
-        if (event.name !== 'ALLEVENTS') {
-            var indexedTopics = event.inputs.filter(function (i) {
-                return i.indexed === true;
-            }).map(function (i) {
-                var value = filter[i.name];
-                if (!value) {
-                    return null;
-                }
-
-                // TODO: https://github.com/ethereum/web3.js/issues/344
-
-                if (_.isArray(value)) {
-                    return value.map(function (v) {
-                        return abi.encodeParameter(i.type, v);
-                    });
-                }
-                return abi.encodeParameter(i.type, value);
-            });
-
-            result.topics = result.topics.concat(indexedTopics);
-        }
-
-        if(!result.topics.length)
-            delete result.topics;
-    }
-
-    if(this.options.address) {
-        result.address = this.options.address.toLowerCase();
-    }
-
-    return result;
-};
-
-/**
- * Should be used to decode indexed params and options
- *
- * @method _decodeEventABI
- * @param {Object} data
- * @return {Object} result object with decoded indexed && not indexed params
- */
-Contract.prototype._decodeEventABI = function (data) {
-    var event = this;
-
-    data.data = data.data || '';
-    data.topics = data.topics || [];
-    var result = formatters.outputLogFormatter(data);
-
-    // if allEvents get the right event
-    if(event.name === 'ALLEVENTS') {
-        event = event.jsonInterface.find(function (intf) {
-            return (intf.signature === data.topics[0]);
-        }) || {anonymous: true};
-    }
-
-    // create empty inputs if none are present (e.g. anonymous events on allEvents)
-    event.inputs = event.inputs || [];
-
-
-    var argTopics = event.anonymous ? data.topics : data.topics.slice(1);
-
-    result.returnValues = abi.decodeLog(event.inputs, data.data, argTopics);
-    delete result.returnValues.__length__;
-
-    // add name
-    result.event = event.name;
-
-    // add signature
-    result.signature = (event.anonymous || !data.topics[0]) ? null : data.topics[0];
-
-    // move the data and topics to "raw"
-    result.raw = {
-        data: result.data,
-        topics: result.topics
-    };
-    delete result.data;
-    delete result.topics;
-
-
-    return result;
-};
-
-/**
- * Encodes an ABI for a method, including signature or the method.
- * Or when constructor encodes only the constructor parameters.
- *
- * @method _encodeMethodABI
- * @param {Mixed} args the arguments to encode
- * @param {String} the encoded ABI
- */
-Contract.prototype._encodeMethodABI = function _encodeMethodABI() {
-    var methodSignature = this._method.signature,
-        args = this.arguments || [];
-
-    var signature = false,
-        paramsABI = this._parent.options.jsonInterface.filter(function (json) {
-            return ((methodSignature === 'constructor' && json.type === methodSignature) ||
-                ((json.signature === methodSignature || json.signature === methodSignature.replace('0x','') || json.name === methodSignature) && json.type === 'function'));
-        }).map(function (json) {
-            var inputLength = (_.isArray(json.inputs)) ? json.inputs.length : 0;
-
-            if (inputLength !== args.length) {
-                throw new Error('The number of arguments is not matching the methods required number. You need to pass '+ inputLength +' arguments.');
-            }
-
-            if (json.type === 'function') {
-                signature = json.signature;
-            }
-            return _.isArray(json.inputs) ? json.inputs.map(function (input) { return input.type; }) : [];
-        }).map(function (types) {
-            return abi.encodeParameters(types, args).replace('0x','');
-        })[0] || '';
-
-    // return constructor
-    if(methodSignature === 'constructor') {
-        if(!this._deployData)
-            throw new Error('The contract has no contract data option set. This is necessary to append the constructor parameters.');
-
-        return this._deployData + paramsABI;
-
-    // return method
-    } else {
-
-        var returnValue = (signature) ? signature + paramsABI : paramsABI;
-
-        if(!returnValue) {
-            throw new Error('Couldn\'t find a matching contract method named "'+ this._method.name +'".');
-        } else {
-            return returnValue;
-        }
-    }
-
-};
-
-
-/**
- * Decode method return values
- *
- * @method _decodeMethodReturn
- * @param {Array} outputs
- * @param {String} returnValues
- * @return {Object} decoded output return values
- */
-Contract.prototype._decodeMethodReturn = function (outputs, returnValues) {
-    if (!returnValues) {
-        return null;
-    }
-
-    returnValues = returnValues.length >= 2 ? returnValues.slice(2) : returnValues;
-    var result = abi.decodeParameters(outputs, returnValues);
-
-    if (result.__length__ === 1) {
-        return result[0];
-    } else {
-        delete result.__length__;
-        return result;
-    }
-};
-
-
-/**
- * Deploys a contract and fire events based on its state: transactionHash, receipt
- *
- * All event listeners will be removed, once the last possible event is fired ("error", or "receipt")
- *
- * @method deploy
- * @param {Object} options
- * @param {Function} callback
- * @return {Object} EventEmitter possible events are "error", "transactionHash" and "receipt"
- */
-Contract.prototype.deploy = function(options, callback){
-
-    options = options || {};
-
-    options.arguments = options.arguments || [];
-    options = this._getOrSetDefaultOptions(options);
-
-
-    // return error, if no "data" is specified
-    if(!options.data) {
-        return utils._fireError(new Error('No "data" specified in neither the given options, nor the default options.'), null, null, callback);
-    }
-
-    var constructor = _.find(this.options.jsonInterface, function (method) {
-        return (method.type === 'constructor');
-    }) || {};
-    constructor.signature = 'constructor';
-
-    return this._createTxObject.apply({
-        method: constructor,
-        parent: this,
-        deployData: options.data,
-        _ethAccounts: this.constructor._ethAccounts
-    }, options.arguments);
-
-};
-
-/**
- * Gets the event signature and outputformatters
- *
- * @method _generateEventOptions
- * @param {Object} event
- * @param {Object} options
- * @param {Function} callback
- * @return {Object} the event options object
- */
-Contract.prototype._generateEventOptions = function() {
-    var args = Array.prototype.slice.call(arguments);
-
-    // get the callback
-    var callback = this._getCallback(args);
-
-    // get the options
-    var options = (_.isObject(args[args.length - 1])) ? args.pop() : {};
-
-    var event = (_.isString(args[0])) ? args[0] : 'allevents';
-    event = (event.toLowerCase() === 'allevents') ? {
-            name: 'ALLEVENTS',
-            jsonInterface: this.options.jsonInterface
-        } : this.options.jsonInterface.find(function (json) {
-            return (json.type === 'event' && (json.name === event || json.signature === '0x'+ event.replace('0x','')));
-        });
-
-    if (!event) {
-        throw new Error('Event "' + event.name + '" doesn\'t exist in this contract.');
-    }
-
-    if (!utils.isAddress(this.options.address)) {
-        throw new Error('This contract object doesn\'t have address set yet, please set an address first.');
-    }
-
-    return {
-        params: this._encodeEventABI(event, options),
-        event: event,
-        callback: callback
-    };
-};
-
-/**
- * Adds event listeners and creates a subscription, and remove it once its fired.
- *
- * @method clone
- * @return {Object} the event subscription
- */
-Contract.prototype.clone = function() {
-    return new this.constructor(this.options.jsonInterface, this.options.address, this.options);
-};
-
-
-/**
- * Adds event listeners and creates a subscription, and remove it once its fired.
- *
- * @method once
- * @param {String} event
- * @param {Object} options
- * @param {Function} callback
- * @return {Object} the event subscription
- */
-Contract.prototype.once = function(event, options, callback) {
-    var args = Array.prototype.slice.call(arguments);
-
-    // get the callback
-    callback = this._getCallback(args);
-
-    if (!callback) {
-        throw new Error('Once requires a callback as the second parameter.');
-    }
-
-    // don't allow fromBlock
-    if (options)
-        delete options.fromBlock;
-
-    // don't return as once shouldn't provide "on"
-    this._on(event, options, function (err, res, sub) {
-        sub.unsubscribe();
-        if(_.isFunction(callback)){
-            callback(err, res, sub);
-        }
-    });
-
-    return undefined;
-};
-
-/**
- * Adds event listeners and creates a subscription.
- *
- * @method _on
- * @param {String} event
- * @param {Object} options
- * @param {Function} callback
- * @return {Object} the event subscription
- */
-Contract.prototype._on = function(){
-    var subOptions = this._generateEventOptions.apply(this, arguments);
-
-
-    // prevent the event "newListener" and "removeListener" from being overwritten
-    this._checkListener('newListener', subOptions.event.name, subOptions.callback);
-    this._checkListener('removeListener', subOptions.event.name, subOptions.callback);
-
-    // TODO check if listener already exists? and reuse subscription if options are the same.
-
-    // create new subscription
-    var subscription = new Subscription({
-        subscription: {
-            params: 1,
-            inputFormatter: [formatters.inputLogFormatter],
-            outputFormatter: this._decodeEventABI.bind(subOptions.event),
-            // DUBLICATE, also in web3-eth
-            subscriptionHandler: function (output) {
-                if(output.removed) {
-                    this.emit('changed', output);
-                } else {
-                    this.emit('data', output);
-                }
-
-                if (_.isFunction(this.callback)) {
-                    this.callback(null, output, this);
-                }
-            }
-        },
-        type: 'eth',
-        requestManager: this._requestManager
-    });
-    subscription.subscribe('logs', subOptions.params, subOptions.callback || function () {});
-
-    return subscription;
-};
-
-/**
- * Get past events from contracts
- *
- * @method getPastEvents
- * @param {String} event
- * @param {Object} options
- * @param {Function} callback
- * @return {Object} the promievent
- */
-Contract.prototype.getPastEvents = function(){
-    var subOptions = this._generateEventOptions.apply(this, arguments);
-
-    var getPastLogs = new Method({
-        name: 'getPastLogs',
-        call: 'eth_getLogs',
-        params: 1,
-        inputFormatter: [formatters.inputLogFormatter],
-        outputFormatter: this._decodeEventABI.bind(subOptions.event)
-    });
-    getPastLogs.setRequestManager(this._requestManager);
-    var call = getPastLogs.buildCall();
-
-    getPastLogs = null;
-
-    return call(subOptions.params, subOptions.callback);
-};
-
-
-/**
- * returns the an object with call, send, estimate functions
- *
- * @method _createTxObject
- * @returns {Object} an object with functions to call the methods
- */
-Contract.prototype._createTxObject =  function _createTxObject(){
-    var args = Array.prototype.slice.call(arguments);
-    var txObject = {};
-
-    if(this.method.type === 'function') {
-
-        txObject.call = this.parent._executeMethod.bind(txObject, 'call');
-        txObject.call.request = this.parent._executeMethod.bind(txObject, 'call', true); // to make batch requests
-
-    }
-
-    txObject.send = this.parent._executeMethod.bind(txObject, 'send');
-    txObject.send.request = this.parent._executeMethod.bind(txObject, 'send', true); // to make batch requests
-    txObject.encodeABI = this.parent._encodeMethodABI.bind(txObject);
-    txObject.estimateGas = this.parent._executeMethod.bind(txObject, 'estimate');
-
-    if (args && this.method.inputs && args.length !== this.method.inputs.length) {
-        if (this.nextMethod) {
-            return this.nextMethod.apply(null, args);
-        }
-        throw errors.InvalidNumberOfParams(args.length, this.method.inputs.length, this.method.name);
-    }
-
-    txObject.arguments = args || [];
-    txObject._method = this.method;
-    txObject._parent = this.parent;
-    txObject._ethAccounts = this.parent.constructor._ethAccounts || this._ethAccounts;
-
-    if(this.deployData) {
-        txObject._deployData = this.deployData;
-    }
-
-    return txObject;
-};
-
-
-/**
- * Generates the options for the execute call
- *
- * @method _processExecuteArguments
- * @param {Array} args
- * @param {Promise} defer
- */
-Contract.prototype._processExecuteArguments = function _processExecuteArguments(args, defer) {
-    var processedArgs = {};
-
-    processedArgs.type = args.shift();
-
-    // get the callback
-    processedArgs.callback = this._parent._getCallback(args);
-
-    // get block number to use for call
-    if(processedArgs.type === 'call' && args[args.length - 1] !== true && (_.isString(args[args.length - 1]) || isFinite(args[args.length - 1])))
-        processedArgs.defaultBlock = args.pop();
-
-    // get the options
-    processedArgs.options = (_.isObject(args[args.length - 1])) ? args.pop() : {};
-
-    // get the generateRequest argument for batch requests
-    processedArgs.generateRequest = (args[args.length - 1] === true)? args.pop() : false;
-
-    processedArgs.options = this._parent._getOrSetDefaultOptions(processedArgs.options);
-    processedArgs.options.data = this.encodeABI();
-
-    // add contract address
-    if(!this._deployData && !utils.isAddress(this._parent.options.address))
-        throw new Error('This contract object doesn\'t have address set yet, please set an address first.');
-
-    if(!this._deployData)
-        processedArgs.options.to = this._parent.options.address;
-
-    // return error, if no "data" is specified
-    if(!processedArgs.options.data)
-        return utils._fireError(new Error('Couldn\'t find a matching contract method, or the number of parameters is wrong.'), defer.eventEmitter, defer.reject, processedArgs.callback);
-
-    return processedArgs;
-};
-
-/**
- * Executes a call, transact or estimateGas on a contract function
- *
- * @method _executeMethod
- * @param {String} type the type this execute function should execute
- * @param {Boolean} makeRequest if true, it simply returns the request parameters, rather than executing it
- */
-Contract.prototype._executeMethod = function _executeMethod(){
-    var _this = this,
-        args = this._parent._processExecuteArguments.call(this, Array.prototype.slice.call(arguments), defer),
-        defer = promiEvent((args.type !== 'send')),
-        ethAccounts = _this.constructor._ethAccounts || _this._ethAccounts;
-
-    // simple return request for batch requests
-    if(args.generateRequest) {
-
-        var payload = {
-            params: [formatters.inputCallFormatter.call(this._parent, args.options)],
-            callback: args.callback
-        };
-
-        if(args.type === 'call') {
-            payload.params.push(formatters.inputDefaultBlockNumberFormatter.call(this._parent, args.defaultBlock));
-            payload.method = 'eth_call';
-            payload.format = this._parent._decodeMethodReturn.bind(null, this._method.outputs);
-        } else {
-            payload.method = 'eth_sendTransaction';
-        }
-
-        return payload;
-
-    } else {
-
-        switch (args.type) {
-            case 'estimate':
-
-                var estimateGas = (new Method({
-                    name: 'estimateGas',
-                    call: 'eth_estimateGas',
-                    params: 1,
-                    inputFormatter: [formatters.inputCallFormatter],
-                    outputFormatter: utils.hexToNumber,
-                    requestManager: _this._parent._requestManager,
-                    accounts: ethAccounts, // is eth.accounts (necessary for wallet signing)
-                    defaultAccount: _this._parent.defaultAccount,
-                    defaultBlock: _this._parent.defaultBlock
-                })).createFunction();
-
-                return estimateGas(args.options, args.callback);
-
-            case 'call':
-
-                // TODO check errors: missing "from" should give error on deploy and send, call ?
-
-                var call = (new Method({
-                    name: 'call',
-                    call: 'eth_call',
-                    params: 2,
-                    inputFormatter: [formatters.inputCallFormatter, formatters.inputDefaultBlockNumberFormatter],
-                    // add output formatter for decoding
-                    outputFormatter: function (result) {
-                        return _this._parent._decodeMethodReturn(_this._method.outputs, result);
-                    },
-                    requestManager: _this._parent._requestManager,
-                    accounts: ethAccounts, // is eth.accounts (necessary for wallet signing)
-                    defaultAccount: _this._parent.defaultAccount,
-                    defaultBlock: _this._parent.defaultBlock
-                })).createFunction();
-
-                return call(args.options, args.defaultBlock, args.callback);
-
-            case 'send':
-
-                // return error, if no "from" is specified
-                if(!utils.isAddress(args.options.from)) {
-                    return utils._fireError(new Error('No "from" address specified in neither the given options, nor the default options.'), defer.eventEmitter, defer.reject, args.callback);
-                }
-
-                if (_.isBoolean(this._method.payable) && !this._method.payable && args.options.value && args.options.value > 0) {
-                    return utils._fireError(new Error('Can not send value to non-payable contract method or constructor'), defer.eventEmitter, defer.reject, args.callback);
-                }
-
-
-                // make sure receipt logs are decoded
-                var extraFormatters = {
-                    receiptFormatter: function (receipt) {
-                        if (_.isArray(receipt.logs)) {
-
-                            // decode logs
-                            var events = _.map(receipt.logs, function(log) {
-                                return _this._parent._decodeEventABI.call({
-                                    name: 'ALLEVENTS',
-                                    jsonInterface: _this._parent.options.jsonInterface
-                                }, log);
-                            });
-
-                            // make log names keys
-                            receipt.events = {};
-                            var count = 0;
-                            events.forEach(function (ev) {
-                                if (ev.event) {
-                                    // if > 1 of the same event, don't overwrite any existing events
-                                    if (receipt.events[ev.event]) {
-                                        if (Array.isArray(receipt.events[ ev.event ])) {
-                                            receipt.events[ ev.event ].push(ev);
-                                        } else {
-                                            receipt.events[ev.event] = [receipt.events[ev.event], ev];
-                                        }
-                                    } else {
-                                        receipt.events[ ev.event ] = ev;
-                                    }
-                                } else {
-                                    receipt.events[count] = ev;
-                                    count++;
-                                }
-                            });
-
-                            delete receipt.logs;
-                        }
-                        return receipt;
-                    },
-                    contractDeployFormatter: function (receipt) {
-                        var newContract = _this._parent.clone();
-                        newContract.options.address = receipt.contractAddress;
-                        return newContract;
-                    }
-                };
-
-                var sendTransaction = (new Method({
-                    name: 'sendTransaction',
-                    call: 'eth_sendTransaction',
-                    params: 1,
-                    inputFormatter: [formatters.inputTransactionFormatter],
-                    requestManager: _this._parent._requestManager,
-                    accounts: _this.constructor._ethAccounts || _this._ethAccounts, // is eth.accounts (necessary for wallet signing)
-                    defaultAccount: _this._parent.defaultAccount,
-                    defaultBlock: _this._parent.defaultBlock,
-                    extraFormatters: extraFormatters
-                })).createFunction();
-
-                return sendTransaction(args.options, args.callback);
-
-        }
-
-    }
-
-};
-
-module.exports = Contract;
-
-},{"underscore":263,"web3-core":279,"web3-core-helpers":269,"web3-core-method":270,"web3-core-promievent":271,"web3-core-subscriptions":276,"web3-eth-abi":282,"web3-utils":303}],296:[function(require,module,exports){
+},{"any-promise":50,"buffer":421,"crypto":430,"crypto-browserify":110,"eth-lib/lib/account":171,"eth-lib/lib/bytes":173,"eth-lib/lib/hash":174,"eth-lib/lib/nat":175,"eth-lib/lib/rlp":176,"scrypt.js":246,"underscore":289,"uuid":307,"web3-core":305,"web3-core-helpers":295,"web3-core-method":296,"web3-utils":316}],309:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -54203,7 +54648,7 @@ Iban.prototype.toString = function () {
 
 module.exports = Iban;
 
-},{"bn.js":70,"web3-utils":303}],297:[function(require,module,exports){
+},{"bn.js":70,"web3-utils":316}],310:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -54300,7 +54745,7 @@ HttpProvider.prototype.send = function (payload, callback) {
 
 module.exports = HttpProvider;
 
-},{"web3-core-helpers":269,"xhr2":358}],298:[function(require,module,exports){
+},{"web3-core-helpers":295,"xhr2":371}],311:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -54611,7 +55056,7 @@ IpcProvider.prototype.reset = function () {
 module.exports = IpcProvider;
 
 
-},{"oboe":221,"underscore":263,"web3-core-helpers":269}],299:[function(require,module,exports){
+},{"oboe":221,"underscore":289,"web3-core-helpers":295}],312:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -54943,11 +55388,11 @@ WebsocketProvider.prototype.reset = function () {
 
 module.exports = WebsocketProvider;
 
-},{"underscore":263,"web3-core-helpers":269,"websocket":355}],300:[function(require,module,exports){
+},{"underscore":289,"web3-core-helpers":295,"websocket":368}],313:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],301:[function(require,module,exports){
+},{"dup":185}],314:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"dup":174}],302:[function(require,module,exports){
+},{"dup":174}],315:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/utf8js v2.0.0 by @mathias */
 ;(function(root) {
@@ -55195,7 +55640,7 @@ arguments[4][174][0].apply(exports,arguments)
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],303:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -55517,7 +55962,7 @@ module.exports = {
 };
 
 
-},{"./soliditySha3.js":304,"./utils.js":305,"ethjs-unit":184,"randomhex":242,"underscore":263}],304:[function(require,module,exports){
+},{"./soliditySha3.js":317,"./utils.js":318,"ethjs-unit":184,"randomhex":242,"underscore":289}],317:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -55764,7 +56209,7 @@ var soliditySha3 = function () {
 
 module.exports = soliditySha3;
 
-},{"./utils.js":305,"bn.js":300,"underscore":263}],305:[function(require,module,exports){
+},{"./utils.js":318,"bn.js":313,"underscore":289}],318:[function(require,module,exports){
 /*
  This file is part of web3.js.
 
@@ -56233,105 +56678,105 @@ module.exports = {
     sha3: sha3
 };
 
-},{"bn.js":300,"eth-lib/lib/hash":301,"number-to-bn":220,"underscore":263,"utf8":302}],306:[function(require,module,exports){
+},{"bn.js":313,"eth-lib/lib/hash":314,"number-to-bn":220,"underscore":289,"utf8":315}],319:[function(require,module,exports){
 arguments[4][1][0].apply(exports,arguments)
-},{"./lib/web3":328,"dup":1}],307:[function(require,module,exports){
+},{"./lib/web3":341,"dup":1}],320:[function(require,module,exports){
 arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],308:[function(require,module,exports){
+},{"dup":2}],321:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],309:[function(require,module,exports){
+},{"dup":3}],322:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
-},{"dup":4}],310:[function(require,module,exports){
+},{"dup":4}],323:[function(require,module,exports){
 arguments[4][5][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":5}],311:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":5}],324:[function(require,module,exports){
 arguments[4][6][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":6}],312:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":6}],325:[function(require,module,exports){
 arguments[4][7][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":7}],313:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":7}],326:[function(require,module,exports){
 arguments[4][8][0].apply(exports,arguments)
-},{"./address":310,"./bool":311,"./bytes":312,"./dynamicbytes":314,"./formatters":315,"./int":316,"./real":318,"./string":319,"./uint":321,"./ureal":322,"dup":8}],314:[function(require,module,exports){
+},{"./address":323,"./bool":324,"./bytes":325,"./dynamicbytes":327,"./formatters":328,"./int":329,"./real":331,"./string":332,"./uint":334,"./ureal":335,"dup":8}],327:[function(require,module,exports){
 arguments[4][9][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":9}],315:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":9}],328:[function(require,module,exports){
 arguments[4][10][0].apply(exports,arguments)
-},{"../utils/config":324,"../utils/utils":326,"./param":317,"bignumber.js":68,"dup":10}],316:[function(require,module,exports){
+},{"../utils/config":337,"../utils/utils":339,"./param":330,"bignumber.js":68,"dup":10}],329:[function(require,module,exports){
 arguments[4][11][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":11}],317:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":11}],330:[function(require,module,exports){
 arguments[4][12][0].apply(exports,arguments)
-},{"../utils/utils":326,"dup":12}],318:[function(require,module,exports){
+},{"../utils/utils":339,"dup":12}],331:[function(require,module,exports){
 arguments[4][13][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":13}],319:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":13}],332:[function(require,module,exports){
 arguments[4][14][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":14}],320:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":14}],333:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"./formatters":315,"./param":317,"dup":15}],321:[function(require,module,exports){
+},{"./formatters":328,"./param":330,"dup":15}],334:[function(require,module,exports){
 arguments[4][16][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":16}],322:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":16}],335:[function(require,module,exports){
 arguments[4][17][0].apply(exports,arguments)
-},{"./formatters":315,"./type":320,"dup":17}],323:[function(require,module,exports){
+},{"./formatters":328,"./type":333,"dup":17}],336:[function(require,module,exports){
 arguments[4][18][0].apply(exports,arguments)
-},{"dup":18}],324:[function(require,module,exports){
+},{"dup":18}],337:[function(require,module,exports){
 arguments[4][19][0].apply(exports,arguments)
-},{"bignumber.js":68,"dup":19}],325:[function(require,module,exports){
+},{"bignumber.js":68,"dup":19}],338:[function(require,module,exports){
 arguments[4][20][0].apply(exports,arguments)
-},{"crypto-js":119,"crypto-js/sha3":140,"dup":20}],326:[function(require,module,exports){
+},{"crypto-js":119,"crypto-js/sha3":140,"dup":20}],339:[function(require,module,exports){
 arguments[4][21][0].apply(exports,arguments)
-},{"./sha3.js":325,"bignumber.js":68,"dup":21,"utf8":264}],327:[function(require,module,exports){
+},{"./sha3.js":338,"bignumber.js":68,"dup":21,"utf8":290}],340:[function(require,module,exports){
 arguments[4][22][0].apply(exports,arguments)
-},{"dup":22}],328:[function(require,module,exports){
+},{"dup":22}],341:[function(require,module,exports){
 arguments[4][23][0].apply(exports,arguments)
-},{"./utils/sha3":325,"./utils/utils":326,"./version.json":327,"./web3/batch":330,"./web3/extend":334,"./web3/httpprovider":338,"./web3/iban":339,"./web3/ipcprovider":340,"./web3/methods/db":343,"./web3/methods/eth":344,"./web3/methods/net":345,"./web3/methods/personal":346,"./web3/methods/shh":347,"./web3/property":350,"./web3/requestmanager":351,"./web3/settings":352,"dup":23}],329:[function(require,module,exports){
+},{"./utils/sha3":338,"./utils/utils":339,"./version.json":340,"./web3/batch":343,"./web3/extend":347,"./web3/httpprovider":351,"./web3/iban":352,"./web3/ipcprovider":353,"./web3/methods/db":356,"./web3/methods/eth":357,"./web3/methods/net":358,"./web3/methods/personal":359,"./web3/methods/shh":360,"./web3/property":363,"./web3/requestmanager":364,"./web3/settings":365,"dup":23}],342:[function(require,module,exports){
 arguments[4][24][0].apply(exports,arguments)
-},{"../utils/sha3":325,"../utils/utils":326,"./event":333,"./filter":335,"./formatters":336,"./methods/watches":348,"dup":24}],330:[function(require,module,exports){
+},{"../utils/sha3":338,"../utils/utils":339,"./event":346,"./filter":348,"./formatters":349,"./methods/watches":361,"dup":24}],343:[function(require,module,exports){
 arguments[4][25][0].apply(exports,arguments)
-},{"./errors":332,"./jsonrpc":341,"dup":25}],331:[function(require,module,exports){
+},{"./errors":345,"./jsonrpc":354,"dup":25}],344:[function(require,module,exports){
 arguments[4][26][0].apply(exports,arguments)
-},{"../solidity/coder":313,"../utils/utils":326,"./allevents":329,"./event":333,"./function":337,"dup":26}],332:[function(require,module,exports){
+},{"../solidity/coder":326,"../utils/utils":339,"./allevents":342,"./event":346,"./function":350,"dup":26}],345:[function(require,module,exports){
 arguments[4][27][0].apply(exports,arguments)
-},{"dup":27}],333:[function(require,module,exports){
+},{"dup":27}],346:[function(require,module,exports){
 arguments[4][28][0].apply(exports,arguments)
-},{"../solidity/coder":313,"../utils/sha3":325,"../utils/utils":326,"./filter":335,"./formatters":336,"./methods/watches":348,"dup":28}],334:[function(require,module,exports){
+},{"../solidity/coder":326,"../utils/sha3":338,"../utils/utils":339,"./filter":348,"./formatters":349,"./methods/watches":361,"dup":28}],347:[function(require,module,exports){
 arguments[4][29][0].apply(exports,arguments)
-},{"./../utils/utils":326,"./formatters":336,"./method":342,"./property":350,"dup":29}],335:[function(require,module,exports){
+},{"./../utils/utils":339,"./formatters":349,"./method":355,"./property":363,"dup":29}],348:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"../utils/utils":326,"./formatters":336,"dup":30}],336:[function(require,module,exports){
+},{"../utils/utils":339,"./formatters":349,"dup":30}],349:[function(require,module,exports){
 arguments[4][31][0].apply(exports,arguments)
-},{"../utils/config":324,"../utils/utils":326,"./iban":339,"dup":31}],337:[function(require,module,exports){
+},{"../utils/config":337,"../utils/utils":339,"./iban":352,"dup":31}],350:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"../solidity/coder":313,"../utils/sha3":325,"../utils/utils":326,"./formatters":336,"dup":32}],338:[function(require,module,exports){
+},{"../solidity/coder":326,"../utils/sha3":338,"../utils/utils":339,"./formatters":349,"dup":32}],351:[function(require,module,exports){
 arguments[4][33][0].apply(exports,arguments)
-},{"./errors":332,"dup":33,"xmlhttprequest":323}],339:[function(require,module,exports){
+},{"./errors":345,"dup":33,"xmlhttprequest":336}],352:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"bignumber.js":68,"dup":34}],340:[function(require,module,exports){
+},{"bignumber.js":68,"dup":34}],353:[function(require,module,exports){
 arguments[4][35][0].apply(exports,arguments)
-},{"../utils/utils":326,"./errors":332,"dup":35}],341:[function(require,module,exports){
+},{"../utils/utils":339,"./errors":345,"dup":35}],354:[function(require,module,exports){
 arguments[4][36][0].apply(exports,arguments)
-},{"dup":36}],342:[function(require,module,exports){
+},{"dup":36}],355:[function(require,module,exports){
 arguments[4][37][0].apply(exports,arguments)
-},{"../utils/utils":326,"./errors":332,"dup":37}],343:[function(require,module,exports){
+},{"../utils/utils":339,"./errors":345,"dup":37}],356:[function(require,module,exports){
 arguments[4][38][0].apply(exports,arguments)
-},{"../method":342,"dup":38}],344:[function(require,module,exports){
+},{"../method":355,"dup":38}],357:[function(require,module,exports){
 arguments[4][39][0].apply(exports,arguments)
-},{"../../utils/config":324,"../../utils/utils":326,"../contract":331,"../filter":335,"../formatters":336,"../iban":339,"../method":342,"../namereg":349,"../property":350,"../syncing":353,"../transfer":354,"./watches":348,"dup":39}],345:[function(require,module,exports){
+},{"../../utils/config":337,"../../utils/utils":339,"../contract":344,"../filter":348,"../formatters":349,"../iban":352,"../method":355,"../namereg":362,"../property":363,"../syncing":366,"../transfer":367,"./watches":361,"dup":39}],358:[function(require,module,exports){
 arguments[4][40][0].apply(exports,arguments)
-},{"../../utils/utils":326,"../property":350,"dup":40}],346:[function(require,module,exports){
+},{"../../utils/utils":339,"../property":363,"dup":40}],359:[function(require,module,exports){
 arguments[4][41][0].apply(exports,arguments)
-},{"../method":342,"../property":350,"dup":41}],347:[function(require,module,exports){
+},{"../method":355,"../property":363,"dup":41}],360:[function(require,module,exports){
 arguments[4][42][0].apply(exports,arguments)
-},{"../filter":335,"../formatters":336,"../method":342,"./watches":348,"dup":42}],348:[function(require,module,exports){
+},{"../filter":348,"../formatters":349,"../method":355,"./watches":361,"dup":42}],361:[function(require,module,exports){
 arguments[4][43][0].apply(exports,arguments)
-},{"../method":342,"dup":43}],349:[function(require,module,exports){
+},{"../method":355,"dup":43}],362:[function(require,module,exports){
 arguments[4][44][0].apply(exports,arguments)
-},{"../contracts/GlobalRegistrar.json":307,"../contracts/ICAPRegistrar.json":308,"dup":44}],350:[function(require,module,exports){
+},{"../contracts/GlobalRegistrar.json":320,"../contracts/ICAPRegistrar.json":321,"dup":44}],363:[function(require,module,exports){
 arguments[4][45][0].apply(exports,arguments)
-},{"../utils/utils":326,"dup":45}],351:[function(require,module,exports){
+},{"../utils/utils":339,"dup":45}],364:[function(require,module,exports){
 arguments[4][46][0].apply(exports,arguments)
-},{"../utils/config":324,"../utils/utils":326,"./errors":332,"./jsonrpc":341,"dup":46}],352:[function(require,module,exports){
+},{"../utils/config":337,"../utils/utils":339,"./errors":345,"./jsonrpc":354,"dup":46}],365:[function(require,module,exports){
 arguments[4][47][0].apply(exports,arguments)
-},{"dup":47}],353:[function(require,module,exports){
+},{"dup":47}],366:[function(require,module,exports){
 arguments[4][48][0].apply(exports,arguments)
-},{"../utils/utils":326,"./formatters":336,"dup":48}],354:[function(require,module,exports){
+},{"../utils/utils":339,"./formatters":349,"dup":48}],367:[function(require,module,exports){
 arguments[4][49][0].apply(exports,arguments)
-},{"../contracts/SmartExchange.json":309,"./iban":339,"dup":49}],355:[function(require,module,exports){
+},{"../contracts/SmartExchange.json":322,"./iban":352,"dup":49}],368:[function(require,module,exports){
 var _global = (function() { return this || {}; })();
 var NativeWebSocket = _global.WebSocket || _global.MozWebSocket;
 var websocket_version = require('./version');
@@ -56369,10 +56814,10 @@ module.exports = {
     'version'      : websocket_version
 };
 
-},{"./version":356}],356:[function(require,module,exports){
+},{"./version":369}],369:[function(require,module,exports){
 module.exports = require('../package.json').version;
 
-},{"../package.json":357}],357:[function(require,module,exports){
+},{"../package.json":370}],370:[function(require,module,exports){
 module.exports={
   "_from": "git://github.com/frozeman/WebSocket-Node.git#browserifyCompatible",
   "_id": "websocket@1.0.24",
@@ -56469,19 +56914,26 @@ module.exports={
   "version": "1.0.24"
 }
 
-},{}],358:[function(require,module,exports){
+},{}],371:[function(require,module,exports){
 module.exports = XMLHttpRequest;
 
-},{}],359:[function(require,module,exports){
+},{}],372:[function(require,module,exports){
 var Web3 = require('Web3')
+var shell = require('shelljs')
 // var Contract = require('web3-eth-contract')
 // var solc = require('solc')
 // var fs = require('fs')
 
-var web3 = new Web3()
+const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 var ABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"burn","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_value","type":"uint256"}],"name":"burnFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"initialSupply","type":"uint256"},{"name":"tokenName","type":"string"},{"name":"tokenSymbol","type":"string"},{"name":"tokenDecimals","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burn","type":"event"}]
 var pubAddress = '0x50089de735D7cecc8499666d0645EF6E3c837435'
 var curGasPrice = '30000000000000'
+
+var piece1 = "pragma solidity ^0.4.16;interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; }contract TokenERC20 {string public name;string public symbol;uint8 public decimals;uint256 public totalSupply;mapping (address => uint256) public balanceOf;mapping (address => mapping (address => uint256)) public allowance;event Transfer(address indexed from, address indexed to, uint256 value);event Burn(address indexed from, uint256 value);function TokenERC20(uint256 "
+var piece2 = ",string "
+var piece3 = ",string "
+var piece4 = ",uint8 "
+var piece5 = ") public {totalSupply = initialSupply * 10 ** uint256(decimals);balanceOf[msg.sender] = totalSupply;name = tokenName;symbol = tokenSymbol;decimals = tokenDecimals;} function _transfer(address _from, address _to, uint _value) internal {require(_to != 0x0);require(balanceOf[_from] >= _value);require(balanceOf[_to] + _value > balanceOf[_to]);uint previousBalances = balanceOf[_from] + balanceOf[_to];balanceOf[_from] -= _value;balanceOf[_to] += _value;Transfer(_from, _to, _value);assert(balanceOf[_from] + balanceOf[_to] == previousBalances);} function transfer(address _to, uint256 _value) public {_transfer(msg.sender, _to, _value);} function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) { require(_value <= allowance[_from][msg.sender]);allowance[_from][msg.sender] -= _value; _transfer(_from, _to, _value); return true;} function approve(address _spender, uint256 _value) public returns (bool success) { allowance[msg.sender][_spender] = _value; return true;} function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) { tokenRecipient spender = tokenRecipient(_spender); if (approve(_spender, _value)) {spender.receiveApproval(msg.sender, _value, this, _extraData);return true;}} function burn(uint256 _value) public returns (bool success) { require(balanceOf[msg.sender] >= _value);balanceOf[msg.sender] -= _value;totalSupply -= _value;Burn(msg.sender, _value); return true;} function burnFrom(address _from, uint256 _value) public returns (bool success) { require(balanceOf[_from] >= _value);require(_value <= allowance[_from][msg.sender]);balanceOf[_from] -= _value;allowance[_from][msg.sender] -= _value;totalSupply -= _value;Burn(_from, _value); return true;}}"
 
 // code = fs.readFileSync('../stdERC20contract.sol').toString()
 // console.log("contract source", )
@@ -56497,10 +56949,15 @@ var curGasPrice = '30000000000000'
 
 var Builder = {
 	build: function(initialSupply, tokenName, tokenSymbol, tokenDecimals) {
+		var completeContract = piece1 + initialSupply + piece2 + tokenName + piece3 + tokenSymbol + piece4 + tokenDecimals + piece5
 		var args = [initialSupply, tokenName, tokenSymbol, tokenDecimals]
-		var myContract = new  web3.eth.contract(ABI, contractData)
+		// web3.eth.compile.solidity(completeContract)
+		// .then(console.log)
+		// shell.config.execPath = shell.which('node')
+		shell.exec('solc -o ./bin --bin --abi --optimize --overwrite ' + completeContract)
+		// var myContract = new  web3.eth.contract(ABI, contractData)
 		// var myContractWithArgs = myContract.new([initialSupply, tokenName, tokenSymbol, tokenDecimals])
-		console.log("CONTRACT", myContract)
+		// console.log("CONTRACT", myContract)
 		// console.log("CONTRACT W ARGS", myContractWithArgs)
 		// myContract.deploy({
 		//     arguments: [initialSupply, tokenName, tokenSymbol, tokenDecimals]
@@ -56517,28 +56974,29 @@ var Builder = {
 };
 
 module.exports = Builder
-},{"Web3":1}],360:[function(require,module,exports){
+},{"Web3":1,"shelljs":262}],373:[function(require,module,exports){
 (function (Buffer){
 // Home.js
 var ethUtil = require('ethereumjs-util')
 var ethWallet = require('ethereumjs-wallet')
-var crypto = require('crypto')
-var scryptsy = require('scrypt.js')
-var uuid = require('uuid')
-var bs58check = require('bs58check')
+// var crypto = require('crypto')
+// var scryptsy = require('scrypt.js')
+// var uuid = require('uuid')
+// var bs58check = require('bs58check')
 var Web3 = require('web3')
 const EthereumTx = require('ethereumjs-tx')
-var rlp = require('rlp')
+// var rlp = require('rlp')
 var Accounts = require('web3-eth-accounts')
-var Contract = require('web3-eth-contract')
+// var Contract = require('web3-eth-contract')
 var abi = require('ethereumjs-abi')
 
 var privKey = new Buffer('829d544af8cc722696975702845522bdaf60e72de5b1deecf9656f4184070706', 'hex')
-var pubKey = '0x50089de735D7cecc8499666d0645EF6E3c837435'
-// var curNonce = "0x12"
+var pubAddr = '0x50089de735D7cecc8499666d0645EF6E3c837435'
+
 var curGasPrice = '0x20000000000'
 var curGasLimit = '0xea00'
 var chain = 3
+
 var contractAddr = '0x851312A022267E37f107a04818eBd20E98230485'
 var contractABI = '[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_value","type":"uint256"}],"name":"burn","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_value","type":"uint256"}],"name":"burnFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"initialSupply","type":"uint256"},{"name":"tokenName","type":"string"},{"name":"tokenSymbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burn","type":"event"}]'
 
@@ -56561,31 +57019,43 @@ console.log(web3)
 // })
 
 var BlockRewards = {
-    // startWallet: function() {}
 
-    generateWallet: function(password, salt) {
+    startWallet: function(password, salt) {
         var combined = password + salt
         var newWallet = ethWallet.fromPrivateKey(ethUtil.sha3(combined))
-        privKey = ethUtil.bufferToHex(ethUtil.sha3(combined))
-        var pudAddr = ethUtil.bufferToHex(ethUtil.pubToAddress(newWallet.pubKey))
-        console.log(privKey)
+        privKey = ethUtil.sha3(combined)
+        console.log("GENERATED PRIV KEY", ethUtil.bufferToHex(privKey))
+        pubAddr = ethUtil.bufferToHex(ethUtil.pubToAddress(newWallet.pubKey))
+        console.log("GENERATED PUB KEY", ethUtil.bufferToHex(pubAddr))
+
+        return pubAddr
     },
 
-    // migrateWallet: function () {}
-    createTx: function (toAddress, amount, data, privateKey = privKey, address = pubKey) { 
-        console.log("NOUNCE", web3.eth.getTransactionCount(address))
+    // migrateWallet: function (oldPassword, oldSalt, newPassword, newSalt) {
+    //   var amnt = this.queryBalance(pubAddr)
+    //   var combined = oldPassword + oldSalt
+    //   var newWallet1 = ethWallet.fromPrivateKey(ethUtil.sha3(combined))
+    //   privKey1 = ethUtil.sha3(combined)
+    //   console.log("GENERATED PRIV KEY", ethUtil.bufferToHex(privKey1))
+    //   pubAddr1 = ethUtil.bufferToHex(ethUtil.pubToAddress(newWallet1.pubKey))
+    //   console.log("GENERATED PUB KEY", ethUtil.bufferToHex(pubAddr1))
+    //   var data = abi.simpleEncode('transfer(address,uint256)', pubAddr1, amnt ).toString('hex')
+    // },
+
+    createTx: function (toAddress, amount, data) { 
+        console.log("NOUNCE", pubAddr, web3.eth.getTransactionCount(pubAddr))
 
         var txParams = new EthereumTx({
-          nonce: web3.eth.getTransactionCount(address),
+          nonce: web3.eth.getTransactionCount(pubAddr),
           gasPrice: curGasPrice, 
           gasLimit: curGasLimit,
           to: toAddress,
-          value: amount, 
+          value: amount,
           data: '0x' + data,
           chainId: chain
         })
 
-        txParams.sign(privateKey)
+        txParams.sign(privKey)
         var rawTx = '0x' + txParams.serialize().toString('hex')
         console.log("RAWTX", rawTx)
 
@@ -56595,18 +57065,15 @@ var BlockRewards = {
     // Function to award customers reward points.
     // 
     giveFunds: function(toAddress, amount) {
-      var data = abi.simpleEncode('transfer(address,uint256)', '0xaC3Fea682D63E3dDAb07e66b84061A29DF510Ca1', '5000000000000000000' ).toString('hex')
+      var data = abi.simpleEncode('transfer(address,uint256)', toAddress, amount ).toString('hex')
       var tx = this.createTx(contractAddr, 0.0, data)
       this.publishTx(tx)
     },
 
-    sendFunds: function(amount, privateKey = privKey, address = pubKey) {
-      if (privateKey !== privKey) {
-        privateKey = new Buffer(privateKey, 'hex')
-      }
-      console.log("ADDRRESS", address)
-      var data = abi.simpleEncode('transfer(address,uint256)', address, amount).toString('hex')
-      var tx = this.createTx(contractAddr, 0.0, data, privateKey, address)
+    sendFunds: function(amount, to) {
+      console.log("ADDRRESS", pubAddr)
+      var data = abi.simpleEncode('transfer(address,uint256)', to, amount).toString('hex')
+      var tx = this.createTx(contractAddr, 0.0, data)
       this.publishTx(tx)
     },
 
@@ -56615,6 +57082,12 @@ var BlockRewards = {
           if (err) { console.log(err); return; }
           console.log('tx hash: ' + hash);
       })
+    },
+
+    queryBalance: function(pubAddr) {
+      var data = abi.simpleEncode('balanceOf(address)', pubAddr).toString('hex')
+      var tx = this.createTx(contractAddr, 0.0, data)
+      this.publishTx(tx)
     }
     // currencySwap: function () {}
     // checkPrice: function () {}
@@ -56623,7 +57096,7 @@ var BlockRewards = {
 
 module.exports = BlockRewards
 }).call(this,require("buffer").Buffer)
-},{"bs58check":101,"buffer":407,"crypto":416,"ethereumjs-abi":178,"ethereumjs-tx":180,"ethereumjs-util":182,"ethereumjs-wallet":183,"rlp":244,"scrypt.js":246,"uuid":266,"web3":306,"web3-eth-accounts":294,"web3-eth-contract":295}],361:[function(require,module,exports){
+},{"buffer":421,"ethereumjs-abi":178,"ethereumjs-tx":180,"ethereumjs-util":182,"ethereumjs-wallet":183,"web3":319,"web3-eth-accounts":308}],374:[function(require,module,exports){
 var blckR = require('./Home.js')
 var m = require("mithril")
 var Web3 = require('web3')
@@ -56644,7 +57117,11 @@ var root = document.body
 
 m.render(root, [
 	m("button",
-	{onclick:() => {blckR.giveFunds("aC3Fea682D63E3dDAb07e66b84061A29DF510Ca1", 5)}},
+	{onclick:() => {blckR.startWallet("William", "Elm St.")}},
+	"Make Me!"),
+
+	m("button",
+	{onclick:() => {blckR.giveFunds('0x50089de735D7cecc8499666d0645EF6E3c837435', 5000000000000000)}},
 	"Give Away My Money!"),
 
 	m("button",
@@ -56652,19 +57129,25 @@ m.render(root, [
 	"Make My Money!"),
 
 	m("button",
-	{onclick:() => {blckR.sendFunds('500000000000000000', 'c3a3ac8e011f2e0674bce1f3a9feeb39d7893a44fb21b060e1fd0b36dbe6748e', '0x50089de735D7cecc8499666d0645EF6E3c837435')}},
-	"Send from acct #2")
+	{onclick:() => {blckR.sendFunds('500000000000000000', '0x50089de735D7cecc8499666d0645EF6E3c837435', 'c3a3ac8e011f2e0674bce1f3a9feeb39d7893a44fb21b060e1fd0b36dbe6748e', '0xaC3Fea682D63E3dDAb07e66b84061A29DF510Ca1')}},
+	"Send from acct #2"),
+
+	m("button",
+	{onclick:() => {blckR.queryBalance('0x50089de735D7cecc8499666d0645EF6E3c837435')}},
+	"Do I Have Money?"),
 	
 	])
-},{"./ContractMaker.js":359,"./Home.js":360,"mithril":218,"web3":306}],362:[function(require,module,exports){
+},{"./ContractMaker.js":372,"./Home.js":373,"mithril":218,"web3":319}],375:[function(require,module,exports){
+
+},{}],376:[function(require,module,exports){
 arguments[4][53][0].apply(exports,arguments)
-},{"./asn1/api":363,"./asn1/base":365,"./asn1/constants":369,"./asn1/decoders":371,"./asn1/encoders":374,"bn.js":378,"dup":53}],363:[function(require,module,exports){
+},{"./asn1/api":377,"./asn1/base":379,"./asn1/constants":383,"./asn1/decoders":385,"./asn1/encoders":388,"bn.js":392,"dup":53}],377:[function(require,module,exports){
 arguments[4][54][0].apply(exports,arguments)
-},{"../asn1":362,"dup":54,"inherits":455,"vm":508}],364:[function(require,module,exports){
+},{"../asn1":376,"dup":54,"inherits":469,"vm":524}],378:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"../base":365,"buffer":407,"dup":55,"inherits":455}],365:[function(require,module,exports){
+},{"../base":379,"buffer":421,"dup":55,"inherits":469}],379:[function(require,module,exports){
 arguments[4][56][0].apply(exports,arguments)
-},{"./buffer":364,"./node":366,"./reporter":367,"dup":56}],366:[function(require,module,exports){
+},{"./buffer":378,"./node":380,"./reporter":381,"dup":56}],380:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var DecoderBuffer = require('../base').DecoderBuffer;
@@ -57300,25 +57783,25 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 
-},{"../base":365,"minimalistic-assert":459}],367:[function(require,module,exports){
+},{"../base":379,"minimalistic-assert":473}],381:[function(require,module,exports){
 arguments[4][58][0].apply(exports,arguments)
-},{"dup":58,"inherits":455}],368:[function(require,module,exports){
+},{"dup":58,"inherits":469}],382:[function(require,module,exports){
 arguments[4][59][0].apply(exports,arguments)
-},{"../constants":369,"dup":59}],369:[function(require,module,exports){
+},{"../constants":383,"dup":59}],383:[function(require,module,exports){
 arguments[4][60][0].apply(exports,arguments)
-},{"./der":368,"dup":60}],370:[function(require,module,exports){
+},{"./der":382,"dup":60}],384:[function(require,module,exports){
 arguments[4][61][0].apply(exports,arguments)
-},{"../../asn1":362,"dup":61,"inherits":455}],371:[function(require,module,exports){
+},{"../../asn1":376,"dup":61,"inherits":469}],385:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"./der":370,"./pem":372,"dup":62}],372:[function(require,module,exports){
+},{"./der":384,"./pem":386,"dup":62}],386:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"./der":370,"buffer":407,"dup":63,"inherits":455}],373:[function(require,module,exports){
+},{"./der":384,"buffer":421,"dup":63,"inherits":469}],387:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"../../asn1":362,"buffer":407,"dup":64,"inherits":455}],374:[function(require,module,exports){
+},{"../../asn1":376,"buffer":421,"dup":64,"inherits":469}],388:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
-},{"./der":373,"./pem":375,"dup":65}],375:[function(require,module,exports){
+},{"./der":387,"./pem":389,"dup":65}],389:[function(require,module,exports){
 arguments[4][66][0].apply(exports,arguments)
-},{"./der":373,"dup":66,"inherits":455}],376:[function(require,module,exports){
+},{"./der":387,"dup":66,"inherits":469}],390:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -57812,7 +58295,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":507}],377:[function(require,module,exports){
+},{"util/":523}],391:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -57928,13 +58411,13 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],378:[function(require,module,exports){
+},{}],392:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],379:[function(require,module,exports){
+},{"dup":185}],393:[function(require,module,exports){
 arguments[4][71][0].apply(exports,arguments)
-},{"crypto":380,"dup":71}],380:[function(require,module,exports){
-
-},{}],381:[function(require,module,exports){
+},{"crypto":394,"dup":71}],394:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"dup":375}],395:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -58115,7 +58598,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],382:[function(require,module,exports){
+},{"buffer":421}],396:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -58216,7 +58699,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":381,"./ghash":386,"buffer":407,"buffer-xor":406,"cipher-base":408,"inherits":455}],383:[function(require,module,exports){
+},{"./aes":395,"./ghash":400,"buffer":421,"buffer-xor":420,"cipher-base":422,"inherits":469}],397:[function(require,module,exports){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -58229,7 +58712,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":384,"./encrypter":385,"./modes":387}],384:[function(require,module,exports){
+},{"./decrypter":398,"./encrypter":399,"./modes":401}],398:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -58370,7 +58853,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":381,"./authCipher":382,"./modes":387,"./modes/cbc":388,"./modes/cfb":389,"./modes/cfb1":390,"./modes/cfb8":391,"./modes/ctr":392,"./modes/ecb":393,"./modes/ofb":394,"./streamCipher":395,"buffer":407,"cipher-base":408,"evp_bytestokey":444,"inherits":455}],385:[function(require,module,exports){
+},{"./aes":395,"./authCipher":396,"./modes":401,"./modes/cbc":402,"./modes/cfb":403,"./modes/cfb1":404,"./modes/cfb8":405,"./modes/ctr":406,"./modes/ecb":407,"./modes/ofb":408,"./streamCipher":409,"buffer":421,"cipher-base":422,"evp_bytestokey":458,"inherits":469}],399:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -58496,7 +58979,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":381,"./authCipher":382,"./modes":387,"./modes/cbc":388,"./modes/cfb":389,"./modes/cfb1":390,"./modes/cfb8":391,"./modes/ctr":392,"./modes/ecb":393,"./modes/ofb":394,"./streamCipher":395,"buffer":407,"cipher-base":408,"evp_bytestokey":444,"inherits":455}],386:[function(require,module,exports){
+},{"./aes":395,"./authCipher":396,"./modes":401,"./modes/cbc":402,"./modes/cfb":403,"./modes/cfb1":404,"./modes/cfb8":405,"./modes/ctr":406,"./modes/ecb":407,"./modes/ofb":408,"./streamCipher":409,"buffer":421,"cipher-base":422,"evp_bytestokey":458,"inherits":469}],400:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -58598,7 +59081,7 @@ function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],387:[function(require,module,exports){
+},{"buffer":421}],401:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -58771,9 +59254,9 @@ exports['aes-256-gcm'] = {
   type: 'auth'
 }
 
-},{}],388:[function(require,module,exports){
+},{}],402:[function(require,module,exports){
 arguments[4][79][0].apply(exports,arguments)
-},{"buffer-xor":406,"dup":79}],389:[function(require,module,exports){
+},{"buffer-xor":420,"dup":79}],403:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -58808,7 +59291,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"buffer-xor":406}],390:[function(require,module,exports){
+},{"buffer":421,"buffer-xor":420}],404:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -58846,7 +59329,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],391:[function(require,module,exports){
+},{"buffer":421}],405:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -58865,7 +59348,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],392:[function(require,module,exports){
+},{"buffer":421}],406:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -58900,7 +59383,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"buffer-xor":406}],393:[function(require,module,exports){
+},{"buffer":421,"buffer-xor":420}],407:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -58908,9 +59391,9 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],394:[function(require,module,exports){
+},{}],408:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"buffer":407,"buffer-xor":406,"dup":87}],395:[function(require,module,exports){
+},{"buffer":421,"buffer-xor":420,"dup":87}],409:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -58939,29 +59422,29 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":381,"buffer":407,"cipher-base":408,"inherits":455}],396:[function(require,module,exports){
+},{"./aes":395,"buffer":421,"cipher-base":422,"inherits":469}],410:[function(require,module,exports){
 arguments[4][89][0].apply(exports,arguments)
-},{"browserify-aes/browser":383,"browserify-aes/modes":387,"browserify-des":397,"browserify-des/modes":398,"dup":89,"evp_bytestokey":444}],397:[function(require,module,exports){
+},{"browserify-aes/browser":397,"browserify-aes/modes":401,"browserify-des":411,"browserify-des/modes":412,"dup":89,"evp_bytestokey":458}],411:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"buffer":407,"cipher-base":408,"des.js":417,"dup":90,"inherits":455}],398:[function(require,module,exports){
+},{"buffer":421,"cipher-base":422,"des.js":431,"dup":90,"inherits":469}],412:[function(require,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"dup":91}],399:[function(require,module,exports){
+},{"dup":91}],413:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"bn.js":378,"buffer":407,"dup":92,"randombytes":479}],400:[function(require,module,exports){
+},{"bn.js":392,"buffer":421,"dup":92,"randombytes":495}],414:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./browser/algorithms.json":401,"dup":94}],401:[function(require,module,exports){
+},{"./browser/algorithms.json":415,"dup":94}],415:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95}],402:[function(require,module,exports){
+},{"dup":95}],416:[function(require,module,exports){
 arguments[4][96][0].apply(exports,arguments)
-},{"dup":96}],403:[function(require,module,exports){
+},{"dup":96}],417:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"./algorithms.json":401,"./sign":404,"./verify":405,"buffer":407,"create-hash":411,"dup":97,"inherits":455,"stream":502}],404:[function(require,module,exports){
+},{"./algorithms.json":415,"./sign":418,"./verify":419,"buffer":421,"create-hash":425,"dup":97,"inherits":469,"stream":518}],418:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"./curves.json":402,"bn.js":378,"browserify-rsa":399,"buffer":407,"create-hmac":414,"dup":98,"elliptic":427,"parse-asn1":465}],405:[function(require,module,exports){
+},{"./curves.json":416,"bn.js":392,"browserify-rsa":413,"buffer":421,"create-hmac":428,"dup":98,"elliptic":441,"parse-asn1":480}],419:[function(require,module,exports){
 arguments[4][99][0].apply(exports,arguments)
-},{"./curves.json":402,"bn.js":378,"buffer":407,"dup":99,"elliptic":427,"parse-asn1":465}],406:[function(require,module,exports){
+},{"./curves.json":416,"bn.js":392,"buffer":421,"dup":99,"elliptic":441,"parse-asn1":480}],420:[function(require,module,exports){
 arguments[4][102][0].apply(exports,arguments)
-},{"buffer":407,"dup":102}],407:[function(require,module,exports){
+},{"buffer":421,"dup":102}],421:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -60669,7 +61152,7 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":377,"ieee754":453}],408:[function(require,module,exports){
+},{"base64-js":391,"ieee754":467}],422:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -60763,7 +61246,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"inherits":455,"stream":502,"string_decoder":503}],409:[function(require,module,exports){
+},{"buffer":421,"inherits":469,"stream":518,"string_decoder":519}],423:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -60874,19 +61357,19 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":456}],410:[function(require,module,exports){
+},{"../../is-buffer/index.js":470}],424:[function(require,module,exports){
 arguments[4][104][0].apply(exports,arguments)
-},{"bn.js":378,"buffer":407,"dup":104,"elliptic":427}],411:[function(require,module,exports){
+},{"bn.js":392,"buffer":421,"dup":104,"elliptic":441}],425:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"./md5":413,"buffer":407,"cipher-base":408,"dup":105,"inherits":455,"ripemd160":492,"sha.js":495}],412:[function(require,module,exports){
+},{"./md5":427,"buffer":421,"cipher-base":422,"dup":105,"inherits":469,"ripemd160":508,"sha.js":511}],426:[function(require,module,exports){
 arguments[4][106][0].apply(exports,arguments)
-},{"buffer":407,"dup":106}],413:[function(require,module,exports){
+},{"buffer":421,"dup":106}],427:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"./make-hash":412,"dup":107}],414:[function(require,module,exports){
+},{"./make-hash":426,"dup":107}],428:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"./legacy":415,"cipher-base":408,"create-hash/md5":413,"dup":108,"inherits":455,"ripemd160":492,"safe-buffer":493,"sha.js":495}],415:[function(require,module,exports){
+},{"./legacy":429,"cipher-base":422,"create-hash/md5":427,"dup":108,"inherits":469,"ripemd160":508,"safe-buffer":509,"sha.js":511}],429:[function(require,module,exports){
 arguments[4][109][0].apply(exports,arguments)
-},{"cipher-base":408,"dup":109,"inherits":455,"safe-buffer":493}],416:[function(require,module,exports){
+},{"cipher-base":422,"dup":109,"inherits":469,"safe-buffer":509}],430:[function(require,module,exports){
 'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
@@ -60965,57 +61448,57 @@ var publicEncrypt = require('public-encrypt')
   }
 })
 
-},{"browserify-cipher":396,"browserify-sign":403,"browserify-sign/algos":400,"create-ecdh":410,"create-hash":411,"create-hmac":414,"diffie-hellman":423,"pbkdf2":466,"public-encrypt":473,"randombytes":479}],417:[function(require,module,exports){
+},{"browserify-cipher":410,"browserify-sign":417,"browserify-sign/algos":414,"create-ecdh":424,"create-hash":425,"create-hmac":428,"diffie-hellman":437,"pbkdf2":482,"public-encrypt":489,"randombytes":495}],431:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./des/cbc":418,"./des/cipher":419,"./des/des":420,"./des/ede":421,"./des/utils":422,"dup":145}],418:[function(require,module,exports){
+},{"./des/cbc":432,"./des/cipher":433,"./des/des":434,"./des/ede":435,"./des/utils":436,"dup":145}],432:[function(require,module,exports){
 arguments[4][146][0].apply(exports,arguments)
-},{"dup":146,"inherits":455,"minimalistic-assert":459}],419:[function(require,module,exports){
+},{"dup":146,"inherits":469,"minimalistic-assert":473}],433:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"dup":147,"minimalistic-assert":459}],420:[function(require,module,exports){
+},{"dup":147,"minimalistic-assert":473}],434:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"../des":417,"dup":148,"inherits":455,"minimalistic-assert":459}],421:[function(require,module,exports){
+},{"../des":431,"dup":148,"inherits":469,"minimalistic-assert":473}],435:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"../des":417,"dup":149,"inherits":455,"minimalistic-assert":459}],422:[function(require,module,exports){
+},{"../des":431,"dup":149,"inherits":469,"minimalistic-assert":473}],436:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],423:[function(require,module,exports){
+},{"dup":150}],437:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"./lib/dh":424,"./lib/generatePrime":425,"./lib/primes.json":426,"buffer":407,"dup":151}],424:[function(require,module,exports){
+},{"./lib/dh":438,"./lib/generatePrime":439,"./lib/primes.json":440,"buffer":421,"dup":151}],438:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"./generatePrime":425,"bn.js":378,"buffer":407,"dup":152,"miller-rabin":458,"randombytes":479}],425:[function(require,module,exports){
+},{"./generatePrime":439,"bn.js":392,"buffer":421,"dup":152,"miller-rabin":472,"randombytes":495}],439:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"bn.js":378,"dup":153,"miller-rabin":458,"randombytes":479}],426:[function(require,module,exports){
+},{"bn.js":392,"dup":153,"miller-rabin":472,"randombytes":495}],440:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"dup":154}],427:[function(require,module,exports){
+},{"dup":154}],441:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../package.json":442,"./elliptic/curve":430,"./elliptic/curves":433,"./elliptic/ec":434,"./elliptic/eddsa":437,"./elliptic/utils":441,"brorand":379,"dup":155}],428:[function(require,module,exports){
+},{"../package.json":456,"./elliptic/curve":444,"./elliptic/curves":447,"./elliptic/ec":448,"./elliptic/eddsa":451,"./elliptic/utils":455,"brorand":393,"dup":155}],442:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"../../elliptic":427,"bn.js":378,"dup":156}],429:[function(require,module,exports){
+},{"../../elliptic":441,"bn.js":392,"dup":156}],443:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"../../elliptic":427,"../curve":430,"bn.js":378,"dup":157,"inherits":455}],430:[function(require,module,exports){
+},{"../../elliptic":441,"../curve":444,"bn.js":392,"dup":157,"inherits":469}],444:[function(require,module,exports){
 arguments[4][158][0].apply(exports,arguments)
-},{"./base":428,"./edwards":429,"./mont":431,"./short":432,"dup":158}],431:[function(require,module,exports){
+},{"./base":442,"./edwards":443,"./mont":445,"./short":446,"dup":158}],445:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"../../elliptic":427,"../curve":430,"bn.js":378,"dup":159,"inherits":455}],432:[function(require,module,exports){
+},{"../../elliptic":441,"../curve":444,"bn.js":392,"dup":159,"inherits":469}],446:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"../../elliptic":427,"../curve":430,"bn.js":378,"dup":160,"inherits":455}],433:[function(require,module,exports){
+},{"../../elliptic":441,"../curve":444,"bn.js":392,"dup":160,"inherits":469}],447:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"../elliptic":427,"./precomputed/secp256k1":440,"dup":161,"hash.js":446}],434:[function(require,module,exports){
+},{"../elliptic":441,"./precomputed/secp256k1":454,"dup":161,"hash.js":460}],448:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"../../elliptic":427,"./key":435,"./signature":436,"bn.js":378,"dup":162,"hmac-drbg":452}],435:[function(require,module,exports){
+},{"../../elliptic":441,"./key":449,"./signature":450,"bn.js":392,"dup":162,"hmac-drbg":466}],449:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"../../elliptic":427,"bn.js":378,"dup":163}],436:[function(require,module,exports){
+},{"../../elliptic":441,"bn.js":392,"dup":163}],450:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"../../elliptic":427,"bn.js":378,"dup":164}],437:[function(require,module,exports){
+},{"../../elliptic":441,"bn.js":392,"dup":164}],451:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"../../elliptic":427,"./key":438,"./signature":439,"dup":165,"hash.js":446}],438:[function(require,module,exports){
+},{"../../elliptic":441,"./key":452,"./signature":453,"dup":165,"hash.js":460}],452:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"../../elliptic":427,"dup":166}],439:[function(require,module,exports){
+},{"../../elliptic":441,"dup":166}],453:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"../../elliptic":427,"bn.js":378,"dup":167}],440:[function(require,module,exports){
+},{"../../elliptic":441,"bn.js":392,"dup":167}],454:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"dup":168}],441:[function(require,module,exports){
+},{"dup":168}],455:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"bn.js":378,"dup":169,"minimalistic-assert":459,"minimalistic-crypto-utils":460}],442:[function(require,module,exports){
+},{"bn.js":392,"dup":169,"minimalistic-assert":473,"minimalistic-crypto-utils":474}],456:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -61139,7 +61622,7 @@ module.exports={
   "version": "6.4.0"
 }
 
-},{}],443:[function(require,module,exports){
+},{}],457:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -61443,7 +61926,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],444:[function(require,module,exports){
+},{}],458:[function(require,module,exports){
 (function (Buffer){
 var md5 = require('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -61515,11 +61998,11 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407,"create-hash/md5":413}],445:[function(require,module,exports){
+},{"buffer":421,"create-hash/md5":427}],459:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"buffer":407,"dup":189,"inherits":455,"stream":502}],446:[function(require,module,exports){
+},{"buffer":421,"dup":189,"inherits":469,"stream":518}],460:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"./hash/common":447,"./hash/hmac":448,"./hash/ripemd":449,"./hash/sha":450,"./hash/utils":451,"dup":190}],447:[function(require,module,exports){
+},{"./hash/common":461,"./hash/hmac":462,"./hash/ripemd":463,"./hash/sha":464,"./hash/utils":465,"dup":190}],461:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -61612,7 +62095,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":446}],448:[function(require,module,exports){
+},{"../hash":460}],462:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -61662,7 +62145,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":446}],449:[function(require,module,exports){
+},{"../hash":460}],463:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -61808,7 +62291,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":446}],450:[function(require,module,exports){
+},{"../hash":460}],464:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -62374,7 +62857,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":446}],451:[function(require,module,exports){
+},{"../hash":460}],465:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -62633,9 +63116,9 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":455}],452:[function(require,module,exports){
+},{"inherits":469}],466:[function(require,module,exports){
 arguments[4][202][0].apply(exports,arguments)
-},{"dup":202,"hash.js":446,"minimalistic-assert":459,"minimalistic-crypto-utils":460}],453:[function(require,module,exports){
+},{"dup":202,"hash.js":460,"minimalistic-assert":473,"minimalistic-crypto-utils":474}],467:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -62721,7 +63204,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],454:[function(require,module,exports){
+},{}],468:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -62732,9 +63215,9 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],455:[function(require,module,exports){
+},{}],469:[function(require,module,exports){
 arguments[4][203][0].apply(exports,arguments)
-},{"dup":203}],456:[function(require,module,exports){
+},{"dup":203}],470:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -62757,14 +63240,14 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],457:[function(require,module,exports){
+},{}],471:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],458:[function(require,module,exports){
+},{}],472:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -62879,29 +63362,304 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":378,"brorand":379}],459:[function(require,module,exports){
+},{"bn.js":392,"brorand":393}],473:[function(require,module,exports){
 arguments[4][216][0].apply(exports,arguments)
-},{"dup":216}],460:[function(require,module,exports){
+},{"dup":216}],474:[function(require,module,exports){
 arguments[4][217][0].apply(exports,arguments)
-},{"dup":217}],461:[function(require,module,exports){
+},{"dup":217}],475:[function(require,module,exports){
+exports.endianness = function () { return 'LE' };
+
+exports.hostname = function () {
+    if (typeof location !== 'undefined') {
+        return location.hostname
+    }
+    else return '';
+};
+
+exports.loadavg = function () { return [] };
+
+exports.uptime = function () { return 0 };
+
+exports.freemem = function () {
+    return Number.MAX_VALUE;
+};
+
+exports.totalmem = function () {
+    return Number.MAX_VALUE;
+};
+
+exports.cpus = function () { return [] };
+
+exports.type = function () { return 'Browser' };
+
+exports.release = function () {
+    if (typeof navigator !== 'undefined') {
+        return navigator.appVersion;
+    }
+    return '';
+};
+
+exports.networkInterfaces
+= exports.getNetworkInterfaces
+= function () { return {} };
+
+exports.arch = function () { return 'javascript' };
+
+exports.platform = function () { return 'browser' };
+
+exports.tmpdir = exports.tmpDir = function () {
+    return '/tmp';
+};
+
+exports.EOL = '\n';
+
+},{}],476:[function(require,module,exports){
 arguments[4][222][0].apply(exports,arguments)
-},{"dup":222}],462:[function(require,module,exports){
+},{"dup":222}],477:[function(require,module,exports){
 arguments[4][223][0].apply(exports,arguments)
-},{"./certificate":463,"asn1.js":362,"dup":223}],463:[function(require,module,exports){
+},{"./certificate":478,"asn1.js":376,"dup":223}],478:[function(require,module,exports){
 arguments[4][224][0].apply(exports,arguments)
-},{"asn1.js":362,"dup":224}],464:[function(require,module,exports){
+},{"asn1.js":376,"dup":224}],479:[function(require,module,exports){
 arguments[4][225][0].apply(exports,arguments)
-},{"browserify-aes":383,"buffer":407,"dup":225,"evp_bytestokey":444}],465:[function(require,module,exports){
+},{"browserify-aes":397,"buffer":421,"dup":225,"evp_bytestokey":458}],480:[function(require,module,exports){
 arguments[4][226][0].apply(exports,arguments)
-},{"./aesid.json":461,"./asn1":462,"./fixProc":464,"browserify-aes":383,"buffer":407,"dup":226,"pbkdf2":466}],466:[function(require,module,exports){
+},{"./aesid.json":476,"./asn1":477,"./fixProc":479,"browserify-aes":397,"buffer":421,"dup":226,"pbkdf2":482}],481:[function(require,module,exports){
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+}).call(this,require('_process'))
+},{"_process":488}],482:[function(require,module,exports){
 arguments[4][227][0].apply(exports,arguments)
-},{"./lib/async":467,"./lib/sync":470,"dup":227}],467:[function(require,module,exports){
+},{"./lib/async":483,"./lib/sync":486,"dup":227}],483:[function(require,module,exports){
 arguments[4][228][0].apply(exports,arguments)
-},{"./default-encoding":468,"./precondition":469,"./sync":470,"_process":472,"dup":228,"safe-buffer":493}],468:[function(require,module,exports){
+},{"./default-encoding":484,"./precondition":485,"./sync":486,"_process":488,"dup":228,"safe-buffer":509}],484:[function(require,module,exports){
 arguments[4][229][0].apply(exports,arguments)
-},{"_process":472,"dup":229}],469:[function(require,module,exports){
+},{"_process":488,"dup":229}],485:[function(require,module,exports){
 arguments[4][230][0].apply(exports,arguments)
-},{"dup":230}],470:[function(require,module,exports){
+},{"dup":230}],486:[function(require,module,exports){
 var md5 = require('create-hash/md5')
 var rmd160 = require('ripemd160')
 var sha = require('sha.js')
@@ -63005,7 +63763,7 @@ module.exports = function (password, salt, iterations, keylen, digest) {
   return DK
 }
 
-},{"./default-encoding":468,"./precondition":469,"create-hash/md5":413,"ripemd160":492,"safe-buffer":493,"sha.js":495}],471:[function(require,module,exports){
+},{"./default-encoding":484,"./precondition":485,"create-hash/md5":427,"ripemd160":508,"safe-buffer":509,"sha.js":511}],487:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -63052,7 +63810,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":472}],472:[function(require,module,exports){
+},{"_process":488}],488:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -63238,19 +63996,19 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],473:[function(require,module,exports){
+},{}],489:[function(require,module,exports){
 arguments[4][232][0].apply(exports,arguments)
-},{"./privateDecrypt":475,"./publicEncrypt":476,"dup":232}],474:[function(require,module,exports){
+},{"./privateDecrypt":491,"./publicEncrypt":492,"dup":232}],490:[function(require,module,exports){
 arguments[4][233][0].apply(exports,arguments)
-},{"buffer":407,"create-hash":411,"dup":233}],475:[function(require,module,exports){
+},{"buffer":421,"create-hash":425,"dup":233}],491:[function(require,module,exports){
 arguments[4][234][0].apply(exports,arguments)
-},{"./mgf":474,"./withPublic":477,"./xor":478,"bn.js":378,"browserify-rsa":399,"buffer":407,"create-hash":411,"dup":234,"parse-asn1":465}],476:[function(require,module,exports){
+},{"./mgf":490,"./withPublic":493,"./xor":494,"bn.js":392,"browserify-rsa":413,"buffer":421,"create-hash":425,"dup":234,"parse-asn1":480}],492:[function(require,module,exports){
 arguments[4][235][0].apply(exports,arguments)
-},{"./mgf":474,"./withPublic":477,"./xor":478,"bn.js":378,"browserify-rsa":399,"buffer":407,"create-hash":411,"dup":235,"parse-asn1":465,"randombytes":479}],477:[function(require,module,exports){
+},{"./mgf":490,"./withPublic":493,"./xor":494,"bn.js":392,"browserify-rsa":413,"buffer":421,"create-hash":425,"dup":235,"parse-asn1":480,"randombytes":495}],493:[function(require,module,exports){
 arguments[4][236][0].apply(exports,arguments)
-},{"bn.js":378,"buffer":407,"dup":236}],478:[function(require,module,exports){
+},{"bn.js":392,"buffer":421,"dup":236}],494:[function(require,module,exports){
 arguments[4][237][0].apply(exports,arguments)
-},{"dup":237}],479:[function(require,module,exports){
+},{"dup":237}],495:[function(require,module,exports){
 (function (process,global){
 'use strict'
 
@@ -63292,10 +64050,10 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":472,"safe-buffer":493}],480:[function(require,module,exports){
+},{"_process":488,"safe-buffer":509}],496:[function(require,module,exports){
 module.exports = require('./lib/_stream_duplex.js');
 
-},{"./lib/_stream_duplex.js":481}],481:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":497}],497:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -63371,7 +64129,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":483,"./_stream_writable":485,"core-util-is":409,"inherits":455,"process-nextick-args":471}],482:[function(require,module,exports){
+},{"./_stream_readable":499,"./_stream_writable":501,"core-util-is":423,"inherits":469,"process-nextick-args":487}],498:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -63398,7 +64156,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":484,"core-util-is":409,"inherits":455}],483:[function(require,module,exports){
+},{"./_stream_transform":500,"core-util-is":423,"inherits":469}],499:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -64335,7 +65093,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":481,"./internal/streams/BufferList":486,"./internal/streams/stream":487,"_process":472,"core-util-is":409,"events":443,"inherits":455,"isarray":457,"process-nextick-args":471,"safe-buffer":493,"string_decoder/":503,"util":380}],484:[function(require,module,exports){
+},{"./_stream_duplex":497,"./internal/streams/BufferList":502,"./internal/streams/stream":503,"_process":488,"core-util-is":423,"events":457,"inherits":469,"isarray":471,"process-nextick-args":487,"safe-buffer":509,"string_decoder/":519,"util":394}],500:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -64518,7 +65276,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":481,"core-util-is":409,"inherits":455}],485:[function(require,module,exports){
+},{"./_stream_duplex":497,"core-util-is":423,"inherits":469}],501:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -65064,7 +65822,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":481,"./internal/streams/stream":487,"_process":472,"core-util-is":409,"inherits":455,"process-nextick-args":471,"safe-buffer":493,"util-deprecate":504}],486:[function(require,module,exports){
+},{"./_stream_duplex":497,"./internal/streams/stream":503,"_process":488,"core-util-is":423,"inherits":469,"process-nextick-args":487,"safe-buffer":509,"util-deprecate":520}],502:[function(require,module,exports){
 'use strict';
 
 /*<replacement>*/
@@ -65129,13 +65887,13 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"safe-buffer":493}],487:[function(require,module,exports){
+},{"safe-buffer":509}],503:[function(require,module,exports){
 module.exports = require('events').EventEmitter;
 
-},{"events":443}],488:[function(require,module,exports){
+},{"events":457}],504:[function(require,module,exports){
 module.exports = require('./readable').PassThrough
 
-},{"./readable":489}],489:[function(require,module,exports){
+},{"./readable":505}],505:[function(require,module,exports){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -65144,15 +65902,15 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":481,"./lib/_stream_passthrough.js":482,"./lib/_stream_readable.js":483,"./lib/_stream_transform.js":484,"./lib/_stream_writable.js":485}],490:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":497,"./lib/_stream_passthrough.js":498,"./lib/_stream_readable.js":499,"./lib/_stream_transform.js":500,"./lib/_stream_writable.js":501}],506:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
-},{"./readable":489}],491:[function(require,module,exports){
+},{"./readable":505}],507:[function(require,module,exports){
 module.exports = require('./lib/_stream_writable.js');
 
-},{"./lib/_stream_writable.js":485}],492:[function(require,module,exports){
+},{"./lib/_stream_writable.js":501}],508:[function(require,module,exports){
 arguments[4][243][0].apply(exports,arguments)
-},{"buffer":407,"dup":243,"hash-base":445,"inherits":455}],493:[function(require,module,exports){
+},{"buffer":421,"dup":243,"hash-base":459,"inherits":469}],509:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -65214,7 +65972,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":407}],494:[function(require,module,exports){
+},{"buffer":421}],510:[function(require,module,exports){
 (function (Buffer){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -65287,9 +66045,9 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":407}],495:[function(require,module,exports){
+},{"buffer":421}],511:[function(require,module,exports){
 arguments[4][255][0].apply(exports,arguments)
-},{"./sha":496,"./sha1":497,"./sha224":498,"./sha256":499,"./sha384":500,"./sha512":501,"dup":255}],496:[function(require,module,exports){
+},{"./sha":512,"./sha1":513,"./sha224":514,"./sha256":515,"./sha384":516,"./sha512":517,"dup":255}],512:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -65386,7 +66144,7 @@ Sha.prototype._hash = function () {
 module.exports = Sha
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"buffer":407,"inherits":455}],497:[function(require,module,exports){
+},{"./hash":510,"buffer":421,"inherits":469}],513:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -65488,7 +66246,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"buffer":407,"inherits":455}],498:[function(require,module,exports){
+},{"./hash":510,"buffer":421,"inherits":469}],514:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -65544,7 +66302,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"./sha256":499,"buffer":407,"inherits":455}],499:[function(require,module,exports){
+},{"./hash":510,"./sha256":515,"buffer":421,"inherits":469}],515:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -65682,7 +66440,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"buffer":407,"inherits":455}],500:[function(require,module,exports){
+},{"./hash":510,"buffer":421,"inherits":469}],516:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -65742,7 +66500,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"./sha512":501,"buffer":407,"inherits":455}],501:[function(require,module,exports){
+},{"./hash":510,"./sha512":517,"buffer":421,"inherits":469}],517:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -66005,7 +66763,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":494,"buffer":407,"inherits":455}],502:[function(require,module,exports){
+},{"./hash":510,"buffer":421,"inherits":469}],518:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -66134,7 +66892,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":443,"inherits":455,"readable-stream/duplex.js":480,"readable-stream/passthrough.js":488,"readable-stream/readable.js":489,"readable-stream/transform.js":490,"readable-stream/writable.js":491}],503:[function(require,module,exports){
+},{"events":457,"inherits":469,"readable-stream/duplex.js":496,"readable-stream/passthrough.js":504,"readable-stream/readable.js":505,"readable-stream/transform.js":506,"readable-stream/writable.js":507}],519:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('safe-buffer').Buffer;
@@ -66407,7 +67165,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":493}],504:[function(require,module,exports){
+},{"safe-buffer":509}],520:[function(require,module,exports){
 (function (global){
 
 /**
@@ -66478,16 +67236,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],505:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 arguments[4][203][0].apply(exports,arguments)
-},{"dup":203}],506:[function(require,module,exports){
+},{"dup":203}],522:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],507:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -67077,7 +67835,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":506,"_process":472,"inherits":505}],508:[function(require,module,exports){
+},{"./support/isBuffer":522,"_process":488,"inherits":521}],524:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -67217,4 +67975,4 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":454}]},{},[361]);
+},{"indexof":468}]},{},[374]);
