@@ -18,11 +18,11 @@ var root = document.body
 
 m.render(root, [
 	m("button",
-	{onclick:() => {blckR.startWallet("William", "Elm St.")}},
+	{onclick:() => {blckR.startWallet("WillGay")}},
 	"Make Me!"),
 
 	m("button",
-	{onclick:() => {blckR.giveFunds('0x50089de735D7cecc8499666d0645EF6E3c837435', 5000000000000000)}},
+	{onclick:() => {blckR.sendFunds('5000000000000000', '0x50089de735D7cecc8499666d0645EF6E3c837435')}},
 	"Give Away My Money!"),
 
 	m("button",
@@ -36,5 +36,9 @@ m.render(root, [
 	m("button",
 	{onclick:() => {blckR.queryBalance('0x50089de735D7cecc8499666d0645EF6E3c837435')}},
 	"Do I Have Money?"),
+	
+	m("button", 
+	{onclick:() => {blckR.deployContract()}},
+	"Launch!!"),
 	
 	])
