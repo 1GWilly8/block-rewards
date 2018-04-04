@@ -21,13 +21,6 @@ const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 var BlockRewards = {
 
-    // TODO FOR TURN IN:
-    // -delete non-functioning functions & comment
-    // -Delete unnecessary files
-    // -polish README
-    // -add to gitignore
-    // -final commit
-
     /**
      * Function to envoke a public/private key pair to be used for interacting
      * with the ethereum blockchain during this session.

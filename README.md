@@ -4,20 +4,10 @@ The intent of this project is to simplify the steps necessary to issue a token o
 
 This is a project for a college course and is not rigrously tested and likely has security vulnerabilities, however, perhaps it will be useful as a tool for learning how to interact with the ethereum blockchain from the browser.
 
-Look how easy it is to use:
-
-    import project
-    # Get your stuff done
-    project.do_stuff()
-
-Features
---------
-
-- Be awesome
-- Make things faster
-
 Installation & Set-Up
 ---------------------
+
+Clone this repository into your project then run npm init.
 
 In order to use this library you will need the Solc compilier and to either run a Parity node locally or connect to a remote node.
 
