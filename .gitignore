@@ -1,6 +1,4 @@
 # node modules
 node_modules
-src/index.js
 index.html
-TokenMaker
-bin/MyPoints.bin
+gulpfile.js

@@ -1,5 +1,4 @@
 # block-rewards
-========
 
 The intent of this project is to simplify the steps necessary to issue a token on the Ethereum blockchain, specifically for the use case of issuing reward points as part of a loyality program.
 
@@ -22,6 +21,8 @@ Installation & Set-Up
 
 In order to use this library you will need the Solc compilier and to either run a Parity node locally or connect to a remote node.
 
+    npm install --g solc
+
 Parity can be installed with the Node Package Manager (npm) using the following command:
 
     npm install --save parity
@@ -31,9 +32,16 @@ Following the install, you can start running your Parity node. The following com
     parity --chain=ropsten --light --rpccorsdomain "*" -lrpc=trace
 
 
-Finally, you will need to create an Ethereum smart contract that creates and manages the tokens used as the currency of your loyality program. A standard contract for doing this is provided in this package.
+Finally, you will need to create an Ethereum smart contract that creates and manages the tokens used as the currency of your loyality program. A standard contract for doing this is provided in this package. under the title MyPoints.sol. Open this file and there will be four fields marked with:
 
+    ##PLACE_HOLDER_NAME##
+
+Replace these with the indicated values and save. Next, compile the contract by running the following command:
+
+    solc -o ./ --bin --abi --optimize
+
+This will produce a file called MyPoints.bin, copy the contents of this file and navigate to https://remix.ethereum.org/ and paste. Hit compile then run.
 This command will compile your contract that you can then deploy through the remix ide. Upon deployment, you will need to copy and paste the contract address and ABI into the appropiate variables.
 
-solc -o ./bin --bin --abi --optimize --overwrite ' + completeContract
+solc -o ./bin --bin --abi --optimize --overwrite
 

@@ -15,9 +15,9 @@ function TokenERC20() public {
 
 
         // CHAGE VALUES BELOW. DELETE PLACHOLDER NAME AND POUND SIGNS (##)
-        totalSupply = 20 * 10 ** uint256(18);
-        name        = 'NAME' ;  
-        symbol      = 'H' ;  
+        totalSupply = ##TOTAL_SUPPLY## * 10 ** uint256(18);
+        name        = ##NAME## ;  
+        symbol      = ##SYMBOL## ;  
         // CHAGE VALUES ABOVE. DELETE PLACHOLDER NAME AND POUND SIGNS (##)
 
 
