@@ -7,13 +7,15 @@ This is a project for a college course and is not rigrously tested and likely ha
 Installation & Set-Up
 ---------------------
 
-Clone this repository into your project then run npm init.
+Clone this repository into your project then run:
+
+    npm init
 
 In order to use this library you will need the Solc compilier and to either run a Parity node locally or connect to a remote node.
 
     npm install --g solc
 
-Parity can be installed with the Node Package Manager (npm) using the following command:
+Parity can be installed using the following command:
 
     npm install --save parity
 
@@ -28,10 +30,8 @@ Finally, you will need to create an Ethereum smart contract that creates and man
 
 Replace these with the indicated values and save. Next, compile the contract by running the following command:
 
-    solc -o ./ --bin --abi --optimize
+    solc -o ./ --bin --optimize
 
 This will produce a file called MyPoints.bin, copy the contents of this file and navigate to https://remix.ethereum.org/ and paste. Hit compile then run.
-This command will compile your contract that you can then deploy through the remix ide. Upon deployment, you will need to copy and paste the contract address and ABI into the appropiate variables.
-
-solc -o ./bin --bin --abi --optimize --overwrite
+This command will compile your contract that you can then deploy through the remix ide. Upon deployment, you will need to copy and paste the contract address and ABI into the appropiate variables in the index.js of this package.
 
